@@ -1,0 +1,137 @@
+fileFormatVersion: 2
+guid: 04071da9278044f9083e879c483f1da3
+timeCreated: 1438743500
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: extrudedSurface1
+    100002: extrudedSurface2
+    100004: loftedSurface1
+    100006: loftedSurface2
+    100008: loftedSurface3
+    100010: loftedSurface4
+    100012: loftedSurface5
+    100014: loftedSurface6
+    100016: Reference_Anchor
+    100018: Reference_Smooth
+    100020: Reference_Weight
+    100022: Reference_Wing
+    100024: Reference_Wing_O2
+    100026: //RootNode
+    400000: extrudedSurface1
+    400002: extrudedSurface2
+    400004: loftedSurface1
+    400006: loftedSurface2
+    400008: loftedSurface3
+    400010: loftedSurface4
+    400012: loftedSurface5
+    400014: loftedSurface6
+    400016: Reference_Anchor
+    400018: Reference_Smooth
+    400020: Reference_Weight
+    400022: Reference_Wing
+    400024: Reference_Wing_O2
+    400026: //RootNode
+    2300000: extrudedSurface1
+    2300002: extrudedSurface2
+    2300004: loftedSurface1
+    2300006: loftedSurface2
+    2300008: loftedSurface3
+    2300010: loftedSurface4
+    2300012: loftedSurface5
+    2300014: loftedSurface6
+    2300016: Reference_Anchor
+    2300018: Reference_Smooth
+    2300020: Reference_Weight
+    2300022: Reference_Wing
+    2300024: Reference_Wing_O2
+    3300000: extrudedSurface1
+    3300002: extrudedSurface2
+    3300004: loftedSurface1
+    3300006: loftedSurface2
+    3300008: loftedSurface3
+    3300010: loftedSurface4
+    3300012: loftedSurface5
+    3300014: loftedSurface6
+    3300016: Reference_Anchor
+    3300018: Reference_Smooth
+    3300020: Reference_Weight
+    3300022: Reference_Wing
+    3300024: Reference_Wing_O2
+    4300000: Reference_Smooth
+    4300002: Reference_Weight
+    4300004: Reference_Wing
+    4300006: Reference_Wing_O2
+    4300008: Reference_Anchor
+    4300010: extrudedSurface1
+    4300012: loftedSurface1
+    4300014: extrudedSurface2
+    4300016: loftedSurface2
+    4300018: loftedSurface3
+    4300020: loftedSurface4
+    4300022: loftedSurface5
+    4300024: loftedSurface6
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 10
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 0
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 0
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
