@@ -56,7 +56,7 @@ half4 CalculateLight (unity_v2f_deferred i)
 	float3 eyeVec = normalize(wpos-_WorldSpaceCameraPos);
 	half oneMinusReflectivity = 1 - SpecularStrength(specColor.rgb);
 	
-	
+
 	// ---------------------------------------------------------------------------- // 
 	// This Code Selectively Shades The Light Quantities Present On The Selected Mesh
 	light.ndotl = LambertTerm (normalWorld, light.dir);
@@ -64,7 +64,8 @@ half4 CalculateLight (unity_v2f_deferred i)
 	// -------------  -------------   -------------  //
 	if (light.ndotl <= 0.5) 
 	light.ndotl = 0.6; 
-//	
+	
+
 //	if (light.ndotl <= 0.01) 
 //	light.ndotl = 0; 
 //	// -------------  -------------   -------------  //
@@ -85,6 +86,7 @@ half4 CalculateLight (unity_v2f_deferred i)
 	ind.specular = 0;
 
     half4 res = UNITY_BRDF_PBS (baseColor, specColor, oneMinusReflectivity, oneMinusRoughness, normalWorld, -eyeVec, light, ind);
+
 
 	return res;
 }

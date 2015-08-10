@@ -38,6 +38,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _DecalTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
@@ -78,6 +85,20 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SpecGlossMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ToonShade
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -91,6 +112,10 @@ Material:
         first:
           name: _Cutoff
         second: .5
+      data:
+        first:
+          name: _Shininess
+        second: .699999988
       data:
         first:
           name: _Parallax
@@ -136,3 +161,11 @@ Material:
         first:
           name: _Color
         second: {r: 1, g: .871382535, b: .714087963, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _Emission
+        second: {r: 0, g: 0, b: 0, a: 0}
