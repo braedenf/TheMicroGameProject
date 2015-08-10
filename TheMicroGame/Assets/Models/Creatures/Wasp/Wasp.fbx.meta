@@ -1,0 +1,137 @@
+fileFormatVersion: 2
+guid: f54e91433fbb847bfa803ebab8e2c1bf
+timeCreated: 1439178069
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Anchor
+    100002: Antenna_O1
+    100004: Antenna_O3
+    100006: Head
+    100008: //RootNode
+    100010: Wasp_Leg_O2
+    100012: Wasp_Leg_O3
+    100014: Wasp_Leg_O4
+    100016: Wasp_Leg_O5
+    100018: Wasp_Leg_O6
+    100020: Wasp_Leg_O7
+    100022: Weight
+    100024: Wing_O2
+    100026: Wing_O3
+    400000: Anchor
+    400002: Antenna_O1
+    400004: Antenna_O3
+    400006: Head
+    400008: //RootNode
+    400010: Wasp_Leg_O2
+    400012: Wasp_Leg_O3
+    400014: Wasp_Leg_O4
+    400016: Wasp_Leg_O5
+    400018: Wasp_Leg_O6
+    400020: Wasp_Leg_O7
+    400022: Weight
+    400024: Wing_O2
+    400026: Wing_O3
+    2300000: Anchor
+    2300002: Antenna_O1
+    2300004: Antenna_O3
+    2300006: Head
+    2300008: Wasp_Leg_O2
+    2300010: Wasp_Leg_O3
+    2300012: Wasp_Leg_O4
+    2300014: Wasp_Leg_O5
+    2300016: Wasp_Leg_O6
+    2300018: Wasp_Leg_O7
+    2300020: Weight
+    2300022: Wing_O2
+    2300024: Wing_O3
+    3300000: Anchor
+    3300002: Antenna_O1
+    3300004: Antenna_O3
+    3300006: Head
+    3300008: Wasp_Leg_O2
+    3300010: Wasp_Leg_O3
+    3300012: Wasp_Leg_O4
+    3300014: Wasp_Leg_O5
+    3300016: Wasp_Leg_O6
+    3300018: Wasp_Leg_O7
+    3300020: Weight
+    3300022: Wing_O2
+    3300024: Wing_O3
+    4300000: Head
+    4300002: Weight
+    4300004: Wing_O2
+    4300006: Anchor
+    4300008: Antenna_O1
+    4300010: Wasp_Leg_O2
+    4300012: Antenna_O3
+    4300014: Wing_O3
+    4300016: Wasp_Leg_O3
+    4300018: Wasp_Leg_O4
+    4300020: Wasp_Leg_O5
+    4300022: Wasp_Leg_O6
+    4300024: Wasp_Leg_O7
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 10
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 0
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

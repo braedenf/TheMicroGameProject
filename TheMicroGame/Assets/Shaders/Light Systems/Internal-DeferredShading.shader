@@ -61,14 +61,18 @@ half4 CalculateLight (unity_v2f_deferred i)
 	// This Code Selectively Shades The Light Quantities Present On The Selected Mesh
 	light.ndotl = LambertTerm (normalWorld, light.dir);
 	
-	if (light.ndotl <= 0.01) 
-	light.ndotl = 0; 
 	// -------------  -------------   -------------  //
-    if (light.ndotl > 0.01 &&  light.ndotl <= 0.3) 
-	light.ndotl = 0.3; 
-	// -------------  -------------   -------------  //
-    if (light.ndotl > 0.3 &&  light.ndotl <= 0.5) 
-	light.ndotl = 0.5; 
+	if (light.ndotl <= 0.5) 
+	light.ndotl = 0.6; 
+//	
+//	if (light.ndotl <= 0.01) 
+//	light.ndotl = 0; 
+//	// -------------  -------------   -------------  //
+//    if (light.ndotl > 0.01 &&  light.ndotl <= 0.3) 
+//	light.ndotl = 0.3; 
+//	// -------------  -------------   -------------  //
+//    if (light.ndotl > 0.3 &&  light.ndotl <= 0.5) 
+//	light.ndotl = 0.5; 
 
 
 
