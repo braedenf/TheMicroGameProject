@@ -1,10 +1,13 @@
 Shader "Hidden/Internal-DeferredShading" {
-Properties {
+Properties 
+{
+
 	_LightTexture0 ("", any) = "" {}
 	_LightTextureB0 ("", 2D) = "" {}
 	_ShadowMapTexture ("", any) = "" {}
 	_SrcBlend ("", Float) = 1
 	_DstBlend ("", Float) = 1
+
 }
 SubShader {
 
@@ -46,6 +49,8 @@ half4 CalculateLight (unity_v2f_deferred i)
 	half4 gbuffer0 = tex2D (_CameraGBufferTexture0, uv);
 	half4 gbuffer1 = tex2D (_CameraGBufferTexture1, uv);
 	half4 gbuffer2 = tex2D (_CameraGBufferTexture2, uv);
+ 
+    half3 shadow = (34, 56, 78);
 
 	light.color = _LightColor.rgb * atten;
 	half3 baseColor = gbuffer0.rgb;
@@ -62,32 +67,19 @@ half4 CalculateLight (unity_v2f_deferred i)
 	light.ndotl = LambertTerm (normalWorld, light.dir);
 	
 	// -------------  -------------   -------------  //
-	if (light.ndotl <= 0.5) 
-	light.ndotl = 0.6; 
+	if (light.ndotl <= 0.3) 
+	light.ndotl = 0.3; 
+	// -------------  -------------   -------------  //
+	if (light.ndotl > 0.3) 
+	light.ndotl = 0.7; 
 	
-
-//	if (light.ndotl <= 0.01) 
-//	light.ndotl = 0; 
-//	// -------------  -------------   -------------  //
-//    if (light.ndotl > 0.01 &&  light.ndotl <= 0.3) 
-//	light.ndotl = 0.3; 
-//	// -------------  -------------   -------------  //
-//    if (light.ndotl > 0.3 &&  light.ndotl <= 0.5) 
-//	light.ndotl = 0.5; 
-
-
-
 	
-
-
 	UnityIndirect ind;
 	UNITY_INITIALIZE_OUTPUT(UnityIndirect, ind);
 	ind.diffuse = 0;
 	ind.specular = 0;
 
     half4 res = UNITY_BRDF_PBS (baseColor, specColor, oneMinusReflectivity, oneMinusRoughness, normalWorld, -eyeVec, light, ind);
-
-
 	return res;
 }
 

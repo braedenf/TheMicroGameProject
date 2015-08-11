@@ -24,6 +24,27 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _ShadowMapTexture
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _LightTexture0
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _LightTextureB0
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _BumpMap
         second:
           m_Texture: {fileID: 0}
@@ -52,6 +73,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _OcclusionMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _EmissionMap
         second:
           m_Texture: {fileID: 2800000, guid: c26ed260f4d12424187103d0325c5d9e, type: 3}
@@ -67,13 +95,6 @@ Material:
       data:
         first:
           name: _DetailAlbedoMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _OcclusionMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -156,11 +177,11 @@ Material:
       data:
         first:
           name: _EmissionColor
-        second: {r: .463235319, g: .390414357, b: .357644916, a: 1}
+        second: {r: .379000008, g: .319420904, b: .292610317, a: 1}
       data:
         first:
           name: _Color
-        second: {r: 1, g: .871382535, b: .714087963, a: 1}
+        second: {r: 1, g: .984684408, b: .880161047, a: 1}
       data:
         first:
           name: _SpecColor
@@ -169,3 +190,11 @@ Material:
         first:
           name: _Emission
         second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _ShadowColor
+        second: {r: 1, g: .572767019, b: .35117197, a: 1}
+      data:
+        first:
+          name: _Shadow
+        second: {r: 1, g: 1, b: 1, a: 1}
