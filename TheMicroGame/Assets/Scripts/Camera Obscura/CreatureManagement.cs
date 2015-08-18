@@ -10,7 +10,7 @@ public class CreatureManagement : MonoBehaviour
 {
 
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
-	// Defines All Attributes And Instances That'll Be Run On Awake
+	// Defines All Attributes And Instances That'll Be Run On Within The Heirachy Class
 	public class Heirachy
 	{ 
 	
@@ -26,8 +26,7 @@ public class CreatureManagement : MonoBehaviour
 	    { 
 	    creatures.Add (value);  
 	    print ( creatures [creatures.Count - 1].name); 
-	    }
-				
+	    }		
 	    } 
 	
 	}
