@@ -6,7 +6,8 @@ using System.Collections;
 // Manages The Over-Arching Organization And Attributes Of The Specified Audience Behaviour Relating To The Camera
 public class CameraBehaviour : MonoBehaviour 
 {
-
+	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
+	// Defines All Attributes And Instances That'll Be Run On Within The Camera Obscura Class
 	private int counter; 
 	
 	//  -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
