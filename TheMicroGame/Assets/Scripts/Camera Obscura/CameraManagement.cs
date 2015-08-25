@@ -5,17 +5,12 @@ using System.Collections.Generic;
 // -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 // Manages The Over-Arching Organization And Attributes Of The Camera Obscura 
 // - Captures A Static Photograph Of The Camera View
-public class CameraManagement : MonoBehaviour 
-{
-
-// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
-// Defines All Attributes And Instances That'll Be Run On Within The Camera Obscura Class
 public class CameraObscura 
 {
 
 	// ----------  ----------    ----------   ---------- //
 	// Defines All Public Attributes Utilized Within The Following Code
-	public List <string> discoverablity = new List <string> (); 
+	public List <Texture2D> discoverablity  = new List <Texture2D> (); 
 	// ----------  ----------    ----------   ---------- //
  
 	
@@ -25,15 +20,17 @@ public class CameraObscura
 	{ 
 	set
 	{
-	Application.CaptureScreenshot ("Assets/Screenshots/screenshot" + value + ".png");
-	discoverablity.Add ("screenshot" + value + ".png"); 
+	 Texture2D texture  = new Texture2D ( Screen.width, Screen.height, TextureFormat.RGB24, false );
+	  texture.ReadPixels ( new Rect ( 0, 0, Screen.width, Screen.height), 0, 0 );
+	  texture.Apply ();
+	  // ----------  ----------    ----------   ---------- //
+	 discoverablity.Add (texture); 
 	}
 	}
 	
 	
+	
 	}
 	
-	
-}
 	
 	
