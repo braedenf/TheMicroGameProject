@@ -16,7 +16,7 @@ public class CreatureManagement : MonoBehaviour
 	
 		// ----------  ----------    ----------   ---------- //
 		// Defines All Public Attributes Utilized Within The Following Code
-	    public List <GameObject> creatures = new List <GameObject> (); 
+	    public List <GameObject> creatures = new List <GameObject> (1); 
 	
 		// ----------  ----------    ----------   ---------- //
 		// Defines An Attribute That'll Actively Attach Fresh Creatures To The Creatures List
@@ -25,7 +25,7 @@ public class CreatureManagement : MonoBehaviour
 	    set  
 	    { 
 	    creatures.Add (value);  
-	    print ( creatures [creatures.Count - 1].name); 
+	    // print ( creatures [creatures.Count - 1].name); 
 	    }		
 	    } 
 	
