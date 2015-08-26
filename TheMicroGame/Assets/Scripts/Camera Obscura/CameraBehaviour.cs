@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
-using System.
 
 //  -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 // Manages The Over-Arching Organization And Attributes Of The Specified Audience Behaviour Relating To The Camera
@@ -9,7 +9,7 @@ public class CameraBehaviour : MonoBehaviour
 {
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Public Attributes That'll Be Run On Within The "Camera Obscura" Class
-	
+	public Image   visual; 
     public string     button = "space";
 	// ----------  ----------    ----------   ---------- //
 	public List <Sprite> photographic = new List <Sprite> (1); 
@@ -36,6 +36,7 @@ public class CameraBehaviour : MonoBehaviour
 	{
 	// ----------  ----------    ----------   ---------- //
 	// - Publishes A Photograph And Attaches It To The 'CameraObscura' Discoverability List
+	// - Converts To A Sprite File (To Make It Useable Within The Audience Interface)
     if (Input.GetKeyDown (button) )
     {
    
@@ -48,8 +49,9 @@ public class CameraBehaviour : MonoBehaviour
 		Sprite        sprite          = SpriteDesigner.conversion ( camera.discoverablity [item] );
 		// ----------  ----------    ----------   ---------- //
 		photographic.Add  (sprite);
-		
-	 	
+		// ----------  ----------    ----------   ---------- //
+		Sprite texture              = photographic [ (int) (photographic.Count - 1.00f) ];
+		visual.sprite                 = texture;
       }
 
 }
