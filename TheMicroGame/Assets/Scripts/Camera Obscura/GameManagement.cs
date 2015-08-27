@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 
 //  -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
@@ -10,12 +11,24 @@ public class GameManagement : MonoBehaviour
 
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Public Attributes That'll Be Run On Within The "Game Management" Class
-    public Canvas canvas;
 
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Private Attributes That'll Be Run On Within The "Game Management" Class
 	private AudienceBehaviour audienceBehaviour;
 	private CameraBehaviour   cameraBehaviour;
+	
+	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
+	// Defines All  Public Enum That Represents All Differing Game States
+	public enum GameState 
+    {
+    gallery       = 1,
+    discovery   = 2,
+    }
+    
+	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
+	// Defines All Public GameState Attributes
+    public GameState gameState;
+
 
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All Attributes And Instances That'll Be Run On Awake
@@ -24,18 +37,21 @@ public class GameManagement : MonoBehaviour
 	
 	// ----------  ----------    ----------   ---------- //
 	// Defines The State Of All Necessiary Cross-Connection Codes
-	if (audienceBehaviour == null)
+	if (this.gameObject.GetComponent <AudienceBehaviour> () != null)
 	audienceBehaviour = this.gameObject.GetComponent <AudienceBehaviour> ();
+	else 
+	Mathematics.Logged ("Crikey, It Looks Like",  this.gameObject.name, "Is Missing The AudienceBehaviour Code");
 	// ----------  ----------    ----------   ---------- //
-	if (cameraBehaviour == null)
+	if (this.gameObject.GetComponent <CameraBehaviour> () != null)
 	cameraBehaviour = this.gameObject.GetComponent <CameraBehaviour> ();
+	else 
+	Mathematics.Logged ("Crikey, It Looks Like", this.gameObject.name, "Is Missing The CameraBehaviour Code");
 	
 	// ----------  ----------    ----------   ---------- //
-	// References All Of The Game States That'll Be Operational On Awake
-	audienceBehaviour.enabled = false; 
-	canvas.enabled                    = false;
+	// Defines The Default Game State Present Within The Waking Moments
+	gameState  =  GameState.gallery | GameState.discovery;
 	// ----------  ----------    ----------   ---------- //
-	cameraBehaviour.enabled    = true;
+	gameState ^= GameState.gallery;
 	
 	}
 	
@@ -44,23 +60,32 @@ public class GameManagement : MonoBehaviour
 	void Update () 
 	{
 	
-	 if (Input.GetKeyDown (KeyCode.Z) )
+	// ----------  ----------    ----------   ---------- //
+	// Toggles The Game State Depending On Audience Interaction
+	 if (Input.GetKeyDown (KeyCode.Return) )
 	 {
-	 audienceBehaviour.enabled = true; 
-	 canvas.enabled                    = true;
-	 // ----------  ----------    ----------   ---------- //
-	 cameraBehaviour.enabled    = false;
+	 gameState ^= GameState.gallery;
+	 gameState ^= GameState.discovery; 
 	 }
 	 
-	 
-	 if (Input.GetKeyDown (KeyCode.X) )
-	 {
-	 audienceBehaviour.enabled = false; 
-	 canvas.enabled                    = false;
-	 // ----------  ----------    ----------   ---------- //
-	 cameraBehaviour.enabled    = true;
+	// ----------  ----------    ----------   ---------- //
+	// References Whether The Gallery State Has Been Activated
+	// - Expresses All Necessiary Gallery Attributes
+	 if (gameState == GameState.gallery)
+	 audienceBehaviour.enabled = true;
+     else
+     audienceBehaviour.enabled = false;
+     
+     // ----------  ----------    ----------   ---------- //
+	// References Whether The Discovery State Has Been Activated
+	// - Expresses All Necessiary Discovery Attributes
+	 if (gameState == GameState.discovery)
+	 cameraBehaviour.enabled = true;
+     else
+     cameraBehaviour.enabled = false;
+
 	 }
 	
 	
-	}
+	
 }

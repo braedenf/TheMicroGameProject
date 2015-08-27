@@ -13,6 +13,8 @@ public class AudienceBehaviour : MonoBehaviour
 
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Public Attributes That'll Be Run On Within The "Audience Behaviour" Class
+	public Canvas canvas;
+	// ----------  ----------    ----------   ---------- //
 	public float topward; 
 	public float downward;
 	public float center;
@@ -26,14 +28,31 @@ public class AudienceBehaviour : MonoBehaviour
 	private List <float> time = new List <float> (1); 
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
-	// Defines All Attributes And Instances That'll Be Run On Awake
+	// Defines All Attributes And Instances That'll Be Run On Disable
+	void OnDisable ()
+	{  
+		// ----------  ----------    ----------   ---------- //
+		// Causes The Gallery Interface To Become Visual
+		canvas.enabled = false;
+     } 
+	
+	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
+	// Defines All Attributes And Instances That'll Be Run On Enable
 	void OnEnable () 
 	{
 		
 	// ----------  ----------    ----------   ---------- //
-	// Defines The State Of All Selected Attributes
+	// Defines The State Of All Selected Attributes On Awake
 	if (GameDirectory.photographic.Count != null)
 	count = (int) (GameDirectory.photographic.Count - 1.00f);
+	
+	// ----------  ----------    ----------   ---------- //\
+	// Causes The Gallery Interface To Become Visual
+	if (canvas == null)
+	Mathematics.Logged ("Crikey, It Looks Like AudienceBehaviour Is Missing The Canvas Attribute");
+	// ----------  ----------    ----------   ---------- //\
+	canvas.enabled = true;
+	
 	
 	// ----------  ----------    ----------   ---------- //
 	// Incrementally Goes Through The List Of Captured Photographes 
