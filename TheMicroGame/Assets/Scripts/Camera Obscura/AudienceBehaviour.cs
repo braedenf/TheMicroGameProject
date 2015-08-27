@@ -46,7 +46,7 @@ public class AudienceBehaviour : MonoBehaviour
 	if (GameDirectory.photographic.Count != null)
 	count = (int) (GameDirectory.photographic.Count - 1.00f);
 	
-	// ----------  ----------    ----------   ---------- //\
+	// ----------  ----------    ----------   ---------- //
 	// Causes The Gallery Interface To Become Visual
 	if (canvas == null)
 	Mathematics.Logged ("Crikey, It Looks Like AudienceBehaviour Is Missing The Canvas Attribute");
@@ -64,16 +64,16 @@ public class AudienceBehaviour : MonoBehaviour
 	//  Manuevers The Selected Photograph To Be Present Within The Interface  If So Required
 	if (item == count)
 	{
-	Vector3 orientation  = (GameDirectory.photographic [item].position);
-	GameDirectory.photographic [item].position = new Vector3 (orientation.x, center, orientation.z);
+	Vector3 orientation  = (GameDirectory.photographic [item].representation.position);
+	GameDirectory.photographic [item].representation.position = new Vector3 (orientation.x, center, orientation.z);
 	}
 	
 	 // ----------  ----------    ----------   ---------- //
 	// Manuevers The Selected Photograph Downwards If It's Not Designated To Be Present Within The Interface
 	if (item != count)
 	{
-	Vector3 orientation  = (GameDirectory.photographic [item].position);
-	GameDirectory.photographic [item].position = new Vector3 (orientation.x, downward, orientation.z);
+	Vector3 orientation  = (GameDirectory.photographic [item].representation.position);
+	GameDirectory.photographic [item].representation.position = new Vector3 (orientation.x, downward, orientation.z);
 	}
 	
 	}
@@ -132,15 +132,15 @@ public class AudienceBehaviour : MonoBehaviour
 	if (item > count)
 	{
 	// ----------  ----------    ----------   ---------- //
-	if (GameDirectory.photographic [item].position.y != topward)
+	if (GameDirectory.photographic [item].representation.position.y != topward)
 	{
 	
 	if (time [item] <= 1.00f)
 	time [item] += (Time.deltaTime / acceleration);
 	// ----------  ----------    ----------   ---------- //
-	Vector3 orientation  = (GameDirectory.photographic [item].position);
+	Vector3 orientation  = (GameDirectory.photographic [item].representation.position);
 	Vector3 destination  = new Vector3 (orientation.x, topward, orientation.z);
-	GameDirectory.photographic [item].position = Vector3.Lerp (orientation, destination, time [item]);
+	GameDirectory.photographic [item].representation.position = Vector3.Lerp (orientation, destination, time [item]);
     }
 	}
 	
@@ -150,15 +150,15 @@ public class AudienceBehaviour : MonoBehaviour
 	if (item < count)
 	{
 	// ----------  ----------    ----------   ---------- //
-	if (GameDirectory.photographic [item].position.y != downward)
+	if (GameDirectory.photographic [item].representation.position.y != downward)
 	{
 	
 	if (time [item] <= 1.00f)
 	time [item] += (Time.deltaTime / acceleration);
 	// ----------  ----------    ----------   ---------- //
-	Vector3 orientation  = (GameDirectory.photographic [item].position);
+	Vector3 orientation  = (GameDirectory.photographic [item].representation.position);
 	Vector3 destination  = new Vector3 (orientation.x, downward, orientation.z);
-	GameDirectory.photographic [item].position = Vector3.Lerp (orientation, destination, time [item]);
+	GameDirectory.photographic [item].representation.position = Vector3.Lerp (orientation, destination, time [item]);
     }
 	}
 	
@@ -168,15 +168,15 @@ public class AudienceBehaviour : MonoBehaviour
 	if (item == count)
 	{
 	// ----------  ----------    ----------   ---------- //
-	if (GameDirectory.photographic [item].position.y != center)
+	if (GameDirectory.photographic [item].representation.position.y != center)
 	{
 	
 	if (time [item] <= 1.00f)
 	time [item] += (Time.deltaTime / acceleration);
 	// ----------  ----------    ----------   ---------- //
-	Vector3 orientation  = (GameDirectory.photographic [item].position);
+	Vector3 orientation  = (GameDirectory.photographic [item].representation.position);
 	Vector3 destination  = new Vector3 (orientation.x, center, orientation.z);
-	GameDirectory.photographic [item].position = Vector3.Lerp (orientation, destination, time [item]);
+	GameDirectory.photographic [item].representation.position = Vector3.Lerp (orientation, destination, time [item]);
     }
 	}
 	

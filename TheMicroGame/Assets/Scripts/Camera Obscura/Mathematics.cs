@@ -31,5 +31,18 @@ return text;
 
 
 
+//  -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
+// Calculates The Statistical  Difference Between Two Differing Numbers
+public static float Percentage (float count, float difference)
+{
+float percentage;
+// ----------  ----------    ----------   ---------- //
+percentage = count / difference;
+percentage = percentage * 100.00f;
+// ----------  ----------    ----------   ---------- //
+return percentage;
+}
+
+
 
 }

@@ -10,6 +10,18 @@ public static class GameDirectory
 
 	//  -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	//  A Static List Comprised Exclusively From 'Audience' Captured Photographes
-	public static List <RectTransform> photographic = new List <RectTransform> (1); 
+	//public static List <RectTransform> photographic = new List <RectTransform> (1); 
+	public static List <Photography> photographic = new List <Photography> ();
+	
+	
+	
+	//  -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
+	// A Public Class Container Designed To Possess All Necessiary 'Photography' Attributes
+	// Comprised Exclusively From 'Audience' Captured Photographes
+	public class Photography 
+	{
+	public RectTransform    representation;
+	public int                     scoreboard; 
+	}
 	
 }

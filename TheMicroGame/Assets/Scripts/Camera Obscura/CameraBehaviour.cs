@@ -12,6 +12,9 @@ public class CameraBehaviour : MonoBehaviour
 	public Canvas          canvas;
 	public RectTransform display;
 	// ----------  ----------    ----------   ---------- //
+	public Camera         vision;
+	public GameObject creature;
+	// ----------  ----------    ----------   ---------- //
     public string  button = "space";
 	// ----------  ----------    ----------   ---------- //
 	public List <RectTransform> visualization = new List <RectTransform> (1); 
@@ -19,6 +22,8 @@ public class CameraBehaviour : MonoBehaviour
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Private Attributes That'll Be Run On Within The "Camera Obscura" Class
 	private CameraObscura camera; 
+	// ----------  ----------    ----------   ---------- //
+	private int counter;
 	// ----------  ----------    ----------   ---------- //
 	private List <Sprite> photographic = new List <Sprite> (1); 
 	
@@ -52,9 +57,15 @@ public class CameraBehaviour : MonoBehaviour
 	// - Attaches A Visual Component To The Audience Interface With The Incorporated Sprite
     if (Input.GetKeyDown (button) )
     {
-		
-    	// print ("Photograph taken" + camera.discoverablity.Count); 
+    
 		// ----------  ----------    ----------   ---------- //
+		// Attaches A Fresh Class To The Static "Photographic" List
+		GameDirectory.photographic.Add (new GameDirectory.Photography ());
+    	
+    	
+		// ----------  ----------    ----------   ---------- //
+		// Captures A Screenshot From The Active Camera 
+		// Converts To A Sprite File (To Make It Useable Within The Audience Interface)
 		camera.screenshot      = camera.discoverablity.Count;
 		// ----------  ----------    ----------   ---------- //]
 		int             item            = (int) (camera.discoverablity.Count - 1.00f);
@@ -63,6 +74,7 @@ public class CameraBehaviour : MonoBehaviour
 		photographic.Add  (sprite);
 		// ----------  ----------    ----------   ---------- //
 		Sprite texture              = photographic [ (int) (photographic.Count - 1.00f) ];
+		
 		
 		// ----------  ----------    ----------   ---------- //
 		// Due To The Step-By-Step Shenangins - This Process May Become A Little Finnicky,
@@ -75,9 +87,26 @@ public class CameraBehaviour : MonoBehaviour
 		// ----------  ----------    ----------   ---------- //
         distinction.GetComponent <Image> ().sprite   =   photographic  [ (int) (photographic.Count - 1.00f) ];
 		// ----------  ----------    ----------   ---------- //
-        GameDirectory.photographic.Add (representation);
+        GameDirectory.photographic [counter].representation  = representation;
         
+        
+		// ----------  ----------    ----------   ---------- //
+		// Calculates The Score That Should Be Attributed To The Selected Photograph
+		// - Calculates The Visisble Percentage Of The Mesh Vertices
+		float difference   = creature.GetComponent <MeshFilter> ().mesh.vertexCount;
+		float count          = camera.scoreboard (creature, vision);
+		count                  = Mathematics.Percentage (count, difference); 
+		count                  = (int) count * 10;
+		// ----------  ----------    ----------   ---------- //
+		// Mathematics.Logged ("Percentage Captured", count);
+		// ----------  ----------    ----------   ---------- //
+        GameDirectory.photographic [counter].scoreboard = (int) count;
 		
+		
+		// ----------  ----------    ----------   ---------- //
+		// Progresssively Links The Counter With The Current Length Of The "GameDirectory.photographic" List
+		counter ++;
+        
       }
 
 }
