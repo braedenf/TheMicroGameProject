@@ -100,7 +100,11 @@ public class CameraBehaviour : MonoBehaviour
 		// ----------  ----------    ----------   ---------- //
 		// Mathematics.Logged ("Percentage Captured", count);
 		// ----------  ----------    ----------   ---------- //
-        GameDirectory.photographic [counter].scoreboard = (int) count;
+        distinction            = representation.transform.GetChild (2);
+		// ----------  ----------    ----------   ---------- //
+        distinction.GetComponent <Text> ().text  = ("Score" + "  " + count);
+		// ----------  ----------    ----------   ---------- //
+		GameDirectory.photographic [counter].scoreboard = (int) count;
 		
 		
 		// ----------  ----------    ----------   ---------- //
