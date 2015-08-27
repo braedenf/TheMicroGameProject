@@ -45,4 +45,20 @@ return percentage;
 
 
 
+// ----------  ----------    ----------   ---------- //
+//  Buffers The Selected Attribute Between A Maximum And Minimum Attribute
+public static float limitation (float value, float minimum, float maximum)
+{
+
+if (value <= minimum)
+value = minimum;
+// ----------  ----------    ----------   ---------- //
+if (value >= maximum) 
+value = maximum;
+	
+return value;
+}
+
+
+
 }

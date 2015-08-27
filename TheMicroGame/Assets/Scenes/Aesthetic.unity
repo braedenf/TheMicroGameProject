@@ -424,10 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1284235920}
-  topward: 700
-  downward: -250
-  center: 220
-  acceleration: 150
+  acceleration: 700
 --- !u!4 &1211276801
 Transform:
   m_ObjectHideFlags: 0

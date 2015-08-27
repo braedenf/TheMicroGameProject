@@ -22,7 +22,7 @@ public class CameraObscura
 	{
 	 Texture2D texture  = new Texture2D ( Screen.width, Screen.height, TextureFormat.RGB24, false );
 	  texture.ReadPixels ( new Rect ( 0, 0, Screen.width, Screen.height), 0, 0 );
-	  texture.Apply ();
+	  texture.Apply (); 
 	  // ----------  ----------    ----------   ---------- //
 	 discoverablity.Add (texture); 
 	}
@@ -67,7 +67,7 @@ public class CameraObscura
 
 	
 	// ----------  ----------    ----------   ---------- //
-	// Applies The Selected Percentage To The Photographic Score
+	// Applies The Selected Percentage To The Photographic Score 
 	score = count - percentage;
 	return score;
 	
