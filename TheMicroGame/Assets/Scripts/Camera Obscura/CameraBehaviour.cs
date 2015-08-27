@@ -15,7 +15,7 @@ public class CameraBehaviour : MonoBehaviour
 	public Camera         vision;
 	public GameObject creature;
 	// ----------  ----------    ----------   ---------- //
-    public string  button = "space";
+    public string  button = "shift";
 	// ----------  ----------    ----------   ---------- //
 	public List <RectTransform> visualization = new List <RectTransform> (1); 
 	
@@ -55,7 +55,7 @@ public class CameraBehaviour : MonoBehaviour
 	// - Publishes A Photograph And Attaches It To The 'CameraObscura' Discoverability List
 	// - Converts To A Sprite File (To Make It Useable Within The Audience Interface)
 	// - Attaches A Visual Component To The Audience Interface With The Incorporated Sprite
-    if (Input.GetKeyDown (button) )
+    if (Input.GetKeyDown (KeyCode.RightShift) )
     {
     
 		// ----------  ----------    ----------   ---------- //

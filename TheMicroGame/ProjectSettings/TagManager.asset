@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Creature
   - Gallery
+  - Discovery
   layers:
   - Default
   - TransparentFX

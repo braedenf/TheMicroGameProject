@@ -11,11 +11,15 @@ public class GameManagement : MonoBehaviour
 
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Public Attributes That'll Be Run On Within The "Game Management" Class
+   public string discovery = "discovery";
+   public string gallery     = "gallery";
+
 
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Private Attributes That'll Be Run On Within The "Game Management" Class
 	private AudienceBehaviour audienceBehaviour;
 	private CameraBehaviour   cameraBehaviour;
+
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Public Enum That Represents All Differing Game States
@@ -36,17 +40,16 @@ public class GameManagement : MonoBehaviour
 	{
 	
 	// ----------  ----------    ----------   ---------- //
-	// Defines The State Of All Necessiary Cross-Connection Codes
-	if (this.gameObject.GetComponent <AudienceBehaviour> () != null)
-	audienceBehaviour = this.gameObject.GetComponent <AudienceBehaviour> ();
-	else 
-	Mathematics.Logged ("Crikey, It Looks Like",  this.gameObject.name, "Is Missing The AudienceBehaviour Code");
+	// Defines The  Attributes Of All Necessiary Game State Lists 
+	GameObject [ ] attributes = GameObject.FindGameObjectsWithTag (discovery);
+	foreach (GameObject attribute in attributes)
+	GameDirectory.discovery.Add (attribute);
 	// ----------  ----------    ----------   ---------- //
-	if (this.gameObject.GetComponent <CameraBehaviour> () != null)
-	cameraBehaviour = this.gameObject.GetComponent <CameraBehaviour> ();
-	else 
-	Mathematics.Logged ("Crikey, It Looks Like", this.gameObject.name, "Is Missing The CameraBehaviour Code");
+	GameObject [ ] atrocities = GameObject.FindGameObjectsWithTag (gallery);
+	foreach (GameObject atrocity in atrocities)
+	GameDirectory.gallery.Add (atrocity);
 	
+
 	// ----------  ----------    ----------   ---------- //
 	// Defines The Default Game State Present Within The Waking Moments
 	gameState  =  GameState.gallery | GameState.discovery;
@@ -61,28 +64,42 @@ public class GameManagement : MonoBehaviour
 	{
 	
 	// ----------  ----------    ----------   ---------- //
+	//  Exists The Application Depending On Audience Interaction
+	if (Input.GetKeyDown (KeyCode.Escape) )
+	Application.Quit ();
+	
+	// ----------  ----------    ----------   ---------- //
 	// Toggles The Game State Depending On Audience Interaction
 	 if (Input.GetKeyDown (KeyCode.Return) )
 	 {
 	 gameState ^= GameState.gallery;
 	 gameState ^= GameState.discovery; 
 	 }
-	 
+
 	// ----------  ----------    ----------   ---------- //
 	// References Whether The Gallery State Has Been Activated
 	// - Expresses All Necessiary Gallery Attributes
 	 if (gameState == GameState.gallery)
-	 audienceBehaviour.enabled = true;
-     else
-     audienceBehaviour.enabled = false;
+	 {
+	 foreach (GameObject attribute in GameDirectory.gallery)
+	 attribute.SetActive (true);
+	 }
+	 else
+	 foreach (GameObject attribute in GameDirectory.gallery)
+	 attribute.SetActive (false);
      
      // ----------  ----------    ----------   ---------- //
 	// References Whether The Discovery State Has Been Activated
 	// - Expresses All Necessiary Discovery Attributes
 	 if (gameState == GameState.discovery)
-	 cameraBehaviour.enabled = true;
+	 {
+	 foreach (GameObject attribute in GameDirectory.discovery)
+	 attribute.SetActive (true);
+	 }
      else
-     cameraBehaviour.enabled = false;
+	 foreach (GameObject attribute in GameDirectory.discovery)
+	 attribute.SetActive (false);
+
 
 	 }
 	
