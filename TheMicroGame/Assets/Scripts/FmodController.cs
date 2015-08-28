@@ -30,5 +30,6 @@ public class FmodController : MonoBehaviour {
 
 		entranceDist.setValue (distance);
 
+
 	}
 }
