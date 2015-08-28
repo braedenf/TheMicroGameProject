@@ -10,6 +10,7 @@ public class CameraBehaviour : MonoBehaviour
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Public Attributes That'll Be Run On Within The "Camera Obscura" Class
 	public Canvas          canvas;
+	public Canvas          tutorial;
 	public RectTransform display;
 	// ----------  ----------    ----------   ---------- //
 	public Camera         vision;
