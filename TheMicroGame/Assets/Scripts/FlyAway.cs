@@ -2,20 +2,28 @@
 using System.Collections;
 
 public class FlyAway : MonoBehaviour {
-
+ 
+	public int beespeed = 0;
+	public Vector3 bee;
+ 
 	// Use this for initialization
 	void Start () {
-		int speed = 0;
+		beespeed = 0;
+		bee = this.gameObject.transform.position;
 	}
 
 	void OnCollosionEnter(Collision collision) {
-		speed++;
-		transform.position.y = speed;
+
+
+
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		bee.y = bee.y + beespeed;
+		this.gameObject.transform.position = bee;
+		beespeed++;
 	}
 }
 
