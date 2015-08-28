@@ -55,7 +55,7 @@ public class CameraBehaviour : MonoBehaviour
 	// - Publishes A Photograph And Attaches It To The 'CameraObscura' Discoverability List
 	// - Converts To A Sprite File (To Make It Useable Within The Audience Interface)
 	// - Attaches A Visual Component To The Audience Interface With The Incorporated Sprite
-    if (Input.GetKeyDown (KeyCode.RightShift) )
+    if (Input.GetMouseButtonDown (0)  )
     {
     
 		// ----------  ----------    ----------   ---------- //
@@ -102,10 +102,11 @@ public class CameraBehaviour : MonoBehaviour
 		// ----------  ----------    ----------   ---------- //
         distinction            = representation.transform.GetChild (2);
 		// ----------  ----------    ----------   ---------- //
-        distinction.GetComponent <Text> ().text  = ("Score" + "  " + count);
+        distinction.GetComponent <Text> ().text  = (count + "   " + "pts");
 		// ----------  ----------    ----------   ---------- //
 		GameDirectory.photographic [counter].scoreboard = (int) count;
 		
+		// ----------  ----------    ----------   ---------- //
 		
 		// ----------  ----------    ----------   ---------- //
 		// Progresssively Links The Counter With The Current Length Of The "GameDirectory.photographic" List

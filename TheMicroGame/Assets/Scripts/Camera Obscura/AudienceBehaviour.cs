@@ -16,6 +16,7 @@ public class AudienceBehaviour : MonoBehaviour
 	public Canvas canvas;
 	// ----------  ----------    ----------   ---------- //
 	public float acceleration;
+	public float transistion;
 
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Private Attributes That'll Be Run On Within The "Audience Behaviour" Class
@@ -100,22 +101,32 @@ public class AudienceBehaviour : MonoBehaviour
 	void Update () 
 	{
 	
-	
+	// ----------  ----------    ----------   ---------- //
+	// Maintains A Certain Transistion Delay For All Audience Interaction
+	time  += Time.deltaTime;
 	
 	// ----------  ----------    ----------   ---------- //
 	// Toggles The Counter State Depending On Certain Audience Interactions
-	// ----------  ----------    ----------   ---------- //	
-	if (Input.GetKeyDown (KeyCode.DownArrow) )
+	if (time >= transistion)
+	{
+	// ----------  ----------    ----------   ---------- //
+	if (Input.GetAxis ( "Mouse ScrollWheel" ) > 0.00f)
+	{
 	counter --;
+	time = (int) 0.00f;
+	}
     // ----------  ----------    ----------   ---------- //
-    if (Input.GetKeyDown (KeyCode.UpArrow) ) 
+   if (Input.GetAxis ( "Mouse ScrollWheel" ) < 0.00f)
+    {
 	counter ++;
+	time = (int) 0.00f;
+	}
 	// ----------  ----------    ----------   ---------- //
 	if (GameDirectory.photographic.Count > (int) 0.00f)
 	counter = (int) Mathematics.limitation (counter, 0.00f, (GameDirectory.photographic.Count - 1) );
 	else
 	counter = (int) 0.00f;
-	
+	}
 	
 	
 	// ----------  ----------    ----------   ---------- //
