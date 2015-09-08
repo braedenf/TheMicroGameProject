@@ -14,7 +14,7 @@ public static class GameDirectory
 	public static List <Photography> photographic = new List <Photography> ();
 	
 	public static List <GameObject> discovery        = new List <GameObject> ();
-	public static List <GameObject> gallery            = new List <GameObject> ();
+	public static List <GameObject> gallery          = new List <GameObject> ();
 	
 	
 	//  -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
@@ -23,7 +23,7 @@ public static class GameDirectory
 	public class Photography 
 	{
 	public RectTransform    representation;
-	public int                     scoreboard; 
+	public int              scoreboard; 
 	}
 	
 }

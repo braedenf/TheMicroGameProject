@@ -46,8 +46,8 @@ public class AudienceBehaviour : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	// Defines The Locations Of All Necessiary 'Vector3' Attributes
 	visited  = new Vector3 ( (Screen.width / 2.00f) , Screen.height + (Screen.height / 2.00f) , 0.00f);
-	central = new Vector3 ( (Screen.width / 2.00f) , (Screen.height / 2.00f) , 0.00f);
-	hidden = new Vector3 ( (Screen.width / 2.00f) , 0.00f - (Screen.height / 2.00f) , 0.00f);
+	central  = new Vector3 ( (Screen.width / 2.00f) , (Screen.height / 2.00f) , 0.00f);
+	hidden   = new Vector3 ( (Screen.width / 2.00f) , 0.00f - (Screen.height / 2.00f) , 0.00f);
 		
 	// ----------  ----------    ----------   ---------- //
 	// Defines The State Of All Selected Attributes On Awake
