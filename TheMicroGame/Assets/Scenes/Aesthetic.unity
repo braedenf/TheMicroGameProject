@@ -437,6 +437,30 @@ Prefab:
       propertyPath: creature
       value: 
       objectReference: {fileID: 670901146}
+    - target: {fileID: 11436154, guid: fca4ca696ef1c40a4bb81faa86ea47ea, type: 2}
+      propertyPath: acceleration
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436154, guid: fca4ca696ef1c40a4bb81faa86ea47ea, type: 2}
+      propertyPath: transistion
+      value: .699999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 139604, guid: fca4ca696ef1c40a4bb81faa86ea47ea, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 184314, guid: fca4ca696ef1c40a4bb81faa86ea47ea, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129494, guid: fca4ca696ef1c40a4bb81faa86ea47ea, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458480, guid: fca4ca696ef1c40a4bb81faa86ea47ea, type: 2}
+      propertyPath: accuracy
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fca4ca696ef1c40a4bb81faa86ea47ea, type: 2}
   m_IsPrefabParent: 0

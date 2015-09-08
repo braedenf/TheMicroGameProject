@@ -31,28 +31,31 @@ public class CameraObscura
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Analyses The Selected Creature And Establishes An Appropriate Score For The Photograph It's Present Within
-	public int scoreboard (GameObject creature, Camera camera)
+	public int scoreboard (GameObject creature, Camera camera, int accuracy)
 	{
 	
-	Transform   transform = creature.transform;
-	Renderer   render    = creature.GetComponent <Renderer> ();
-	Mesh         mesh      = creature.GetComponent <MeshFilter> ().mesh;
-	Vector3 []  vertices  = mesh.vertices;
-	int              count    = mesh.vertexCount;
+	Transform   transform   = creature.transform;
+	Renderer    render      = creature.GetComponent <Renderer> ();
+	Mesh        mesh        = creature.GetComponent <MeshFilter> ().mesh;
+	Vector3 []  vertices    = mesh.vertices;
+	int         count       = (mesh.vertexCount) / accuracy;
 	// ----------  ----------    ----------   ---------- //
-	Plane [ ]    planes = GeometryUtility.CalculateFrustumPlanes (camera);
+	Plane [ ]   planes = GeometryUtility.CalculateFrustumPlanes (camera);
 	// ----------  ----------    ----------   ---------- //
-	int             length          =  (planes.GetLength (0) - 1);
-	int             percentage =  (int) 0.00f;
-	int             score           =  (int) 0.00f;
+	int         length          =  (planes.GetLength (0) - 1);
+	int         percentage      =  (int) 0.00f;
+	int         score           =  (int) 0.00f;
 	
 	// ----------  ----------    ----------   ---------- //
 	// References Whether An Individual Mesh Vertice Is Visible To The Selected Camera
 	// - Calculates The Score Percentage System For The Taken Photograph
-	foreach (Vector3 vertice in vertices)
+	for (int vertex = 0; vertex < vertices.Length; vertex += accuracy)
 	{
-	for (int item = 0; item < length; item ++)
+	for (int item   = 0; item < length; item ++)
 	{	
+	
+	// ----------  ----------    ----------   ---------- //
+	Vector3 vertice = vertices [vertex];
 	
 	// ----------  ----------    ----------   ---------- //
 	// - Overides The For Loop Process If Vertice Is Invisible

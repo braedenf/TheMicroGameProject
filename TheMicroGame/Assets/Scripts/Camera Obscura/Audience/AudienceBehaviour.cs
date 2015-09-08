@@ -20,7 +20,7 @@ public class AudienceBehaviour : MonoBehaviour
 
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Private Attributes That'll Be Run On Within The "Audience Behaviour" Class
-	private int counter;
+	private int   counter;
 	// ----------  ----------    ----------   ---------- //
 	private float momentum;
 	private float time;
