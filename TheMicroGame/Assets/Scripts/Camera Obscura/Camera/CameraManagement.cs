@@ -91,13 +91,14 @@ public class CameraObscura
 	public List <Vector3> raycast (List <Vector3> vertices, Camera camera, GameObject attribute)
 	{
 	
-	// ----------  ----------    ----------   ---------- //z
+	// ----------  ----------    ----------   ---------- //
+	RaycastHit collision;
+		
 	Vector3    central    = new Vector3 (Screen.width / 2.00f, Screen.height / 2.00f, 0.00f);	
 	Vector3    origin     =	camera.ScreenToWorldPoint (central);
-
 	// ----------  ----------    ----------   ---------- //
 	// Progressively Goes Through Each Vertice And Deciphers Whether It's Immidiatly Visible
-	for (int vertex = 0; vertex <= (vertices.Count - 1.00f); vertex++)
+	for (int vertex = 0; vertex <= (vertices.Count - 1.00f); vertex ++)
 	{	
 	
 
@@ -105,23 +106,28 @@ public class CameraObscura
      
 	// ----------  ----------    ----------   ---------- //
 	// Casts A Ray In The Direction Of The Specified Vertice
-	if (Physics.Linecast (camera.transform.position, destination) == true)
+	// - Establishes Whether It's Aligned With The Selected Gameobject
+	if (Physics.Linecast (origin, destination, out collision))
 	{
 	
-	vertices.RemoveAt  (vertex);
-	Mathematics.Logged (vertices.Count);
+	// ----------  ----------    ----------   ---------- //
+	if (collision.transform.name != attribute.transform.name)
+	{
+
+Debug.Log ("cgg");
+	vertices.RemoveAt (vertex);
 	// ----------  ----------    ----------   ---------- //
 	vertex           -= (int) 1.00f;
 	
-	}
+	}	
+	
 	}
 	
-	
+	}
 	
 	// ----------  ----------    ----------   ---------- //
 	// Returns The Remaining Visible Vertices
 	return vertices;
-	
 	}
 	
 	

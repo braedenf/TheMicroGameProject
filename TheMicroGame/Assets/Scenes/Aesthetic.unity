@@ -684,6 +684,54 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: -.999725044
       objectReference: {fileID: 0}
+    - target: {fileID: 182686, guid: 5485ea39ce117450bb1400de918e7fd3, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 173070, guid: 5485ea39ce117450bb1400de918e7fd3, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 194766, guid: 5485ea39ce117450bb1400de918e7fd3, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 167902, guid: 5485ea39ce117450bb1400de918e7fd3, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 137618, guid: 5485ea39ce117450bb1400de918e7fd3, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 124172, guid: 5485ea39ce117450bb1400de918e7fd3, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 189276, guid: 5485ea39ce117450bb1400de918e7fd3, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 110096, guid: 5485ea39ce117450bb1400de918e7fd3, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 127270, guid: 5485ea39ce117450bb1400de918e7fd3, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 125902, guid: 5485ea39ce117450bb1400de918e7fd3, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 131018, guid: 5485ea39ce117450bb1400de918e7fd3, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 163462, guid: 5485ea39ce117450bb1400de918e7fd3, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5485ea39ce117450bb1400de918e7fd3, type: 2}
   m_IsPrefabParent: 0
