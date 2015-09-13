@@ -13,10 +13,9 @@ public class CameraBehaviour : MonoBehaviour
 	public Canvas          tutorial;
 	public RectTransform   display;
 	// ----------  ----------    ----------   ---------- //
-	public Camera         vision;
-	public GameObject     creature;
-	// ----------  ----------    ----------   ---------- //
-	[Range (1, 100)] public int accuracy;
+	public Camera          vision;
+	public GameObject      creature;
+
 
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
@@ -111,13 +110,18 @@ public class CameraBehaviour : MonoBehaviour
 		// Calculates The Score That Should Be Attributed To The Selected Photograph
 		// - Calculates The Visisble Percentage Of The Mesh Vertices
 		float difference       = creature.GetComponent <MeshFilter> ().mesh.vertexCount;
-		float count            = camera.scoreboard (creature, vision, accuracy);
+		List <Vector3> vertice = camera.visibility (creature, vision);
+	
 		
-		print (count);
-		count                  = Mathematics.Percentage (count, difference); 
-		count                  = (int) count * 10;
 		// ----------  ----------    ----------   ---------- //
-		// Mathematics.Logged ("Percentage Captured", count);
+		// Calculates The Remaining Visiblity Of The Mesh Within The Active Viewport
+		vertice                = camera.raycast (vertice, vision, creature);
+
+		
+		// ----------  ----------    ----------   ---------- //
+		// Transfers The Calculated Photograph Percentage And Positions It Alongside The Photograph
+		float count            = Mathematics.Percentage (vertice.Count, difference); 
+		count                  = (int) count * 10;
 		// ----------  ----------    ----------   ---------- //
         distinction            = representation.transform.GetChild (2);
 		// ----------  ----------    ----------   ---------- //
