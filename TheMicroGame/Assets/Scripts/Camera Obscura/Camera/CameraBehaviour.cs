@@ -117,7 +117,6 @@ public class CameraBehaviour : MonoBehaviour
 		// Calculates The Remaining Visiblity Of The Mesh Within The Active Viewport
 		vertice                = camera.raycast (vertice, vision, creature);
 
-		
 		// ----------  ----------    ----------   ---------- //
 		// Transfers The Calculated Photograph Percentage And Positions It Alongside The Photograph
 		float count            = Mathematics.Percentage (vertice.Count, difference); 

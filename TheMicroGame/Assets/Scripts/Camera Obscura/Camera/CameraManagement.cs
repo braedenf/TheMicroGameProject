@@ -13,9 +13,7 @@ public class CameraObscura
 	// Defines All Public Attributes Utilized Within The Following Code
 	public List <Texture2D> discoverablity  = new List <Texture2D> (); 
 	// ----------  ----------    ----------   ---------- //
- 
- 
- 
+
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	//  Captures A Screenshot From The Lead Camera And Positions It Within The Public Screenshot List Library
@@ -96,14 +94,14 @@ public class CameraObscura
 		
 	Vector3    central    = new Vector3 (Screen.width / 2.00f, Screen.height / 2.00f, 0.00f);	
 	Vector3    origin     =	camera.ScreenToWorldPoint (central);
+	
 	// ----------  ----------    ----------   ---------- //
 	// Progressively Goes Through Each Vertice And Deciphers Whether It's Immidiatly Visible
-	for (int vertex = 0; vertex <= (vertices.Count - 1.00f); vertex ++)
+	for (int vertex  = 0; vertex <= (vertices.Count - 1.00f); vertex ++)
 	{	
 	
-
-     Vector3 destination = vertices [vertex];
-     
+	Vector3 destination = attribute.transform.TransformPoint (vertices [vertex]);
+	
 	// ----------  ----------    ----------   ---------- //
 	// Casts A Ray In The Direction Of The Specified Vertice
 	// - Establishes Whether It's Aligned With The Selected Gameobject
@@ -113,16 +111,13 @@ public class CameraObscura
 	// ----------  ----------    ----------   ---------- //
 	if (collision.transform.name != attribute.transform.name)
 	{
-
-Debug.Log ("cgg");
+	
 	vertices.RemoveAt (vertex);
 	// ----------  ----------    ----------   ---------- //
 	vertex           -= (int) 1.00f;
 	
 	}	
-	
 	}
-	
 	}
 	
 	// ----------  ----------    ----------   ---------- //
