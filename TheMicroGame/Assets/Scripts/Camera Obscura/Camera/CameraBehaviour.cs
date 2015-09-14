@@ -77,7 +77,10 @@ public class CameraBehaviour : MonoBehaviour
         // ----------  ----------    ----------   ---------- //
 		// Attaches A Fresh Class To The Static "Photographic" List
 		GameDirectory.photographic.Add (new GameDirectory.Photography ());
-    	
+		
+		// ----------  ----------    ----------   ---------- //
+		// Defines The Creature(s) That'll Be Captured Within The Photograph
+		creature = CreatureManagement.visiblity (vision);
     	
 		// ----------  ----------    ----------   ---------- //
 		// Captures A Screenshot From The Active Camera 
@@ -111,12 +114,11 @@ public class CameraBehaviour : MonoBehaviour
 		// - Calculates The Visisble Percentage Of The Mesh Vertices
 		float difference       = creature.GetComponent <MeshFilter> ().mesh.vertexCount;
 		List <Vector3> vertice = camera.visibility (creature, vision);
-	
+	    
 		
 		// ----------  ----------    ----------   ---------- //
 		// Calculates The Remaining Visiblity Of The Mesh Within The Active Viewport
 		vertice                = camera.raycast (vertice, vision, creature);
-
 		// ----------  ----------    ----------   ---------- //
 		// Transfers The Calculated Photograph Percentage And Positions It Alongside The Photograph
 		float count            = Mathematics.Percentage (vertice.Count, difference); 
@@ -127,6 +129,7 @@ public class CameraBehaviour : MonoBehaviour
         distinction.GetComponent <Text> ().text  = (count + "   " + "pts");
 		// ----------  ----------    ----------   ---------- //
 		GameDirectory.photographic [counter].scoreboard = (int) count;
+
 		
 		
 		// ----------  ----------    ----------   ---------- //
