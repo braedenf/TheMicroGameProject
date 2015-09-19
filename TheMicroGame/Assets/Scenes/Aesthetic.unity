@@ -467,7 +467,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11436154, guid: fca4ca696ef1c40a4bb81faa86ea47ea, type: 2}
       propertyPath: transistion
-      value: .699999988
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 139604, guid: fca4ca696ef1c40a4bb81faa86ea47ea, type: 2}
       propertyPath: m_IsActive
