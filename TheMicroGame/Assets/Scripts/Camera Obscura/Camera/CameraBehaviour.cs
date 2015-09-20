@@ -129,8 +129,32 @@ public class CameraBehaviour : MonoBehaviour
         distinction.GetComponent <Text> ().text  = (count + "   " + "pts");
 		// ----------  ----------    ----------   ---------- //
 		GameDirectory.photographic [counter].scoreboard = (int) count;
-
 		
+
+
+		// ----------  ----------    ----------   ---------- //
+        // Defines The "Narrative" Audio Recording That'll Play In Response To The Photographic Discovery
+        // - Accesses The Creature StateManager Script And Gathers All Necessiary Attributes
+        StateManagement management = creature.GetComponent <StateManagement> ();
+		// ----------  ----------    ----------   ---------- //
+        GameDirectory.photographic [counter].creature     =  management.creature;
+		GameDirectory.photographic [counter].state        =  management.state;
+		GameDirectory.photographic [counter].interaction  =  management.interaction;
+		// ----------  ----------    ----------   ---------- //
+		Narrative      narrative   = NarrativeManagement.Depiction (management.creature, management.state, management.interaction);
+		// ----------  ----------    ----------   ---------- //
+		
+		// ----------  ----------    ----------   ---------- //
+		// Publishes The Discovered "Narrative" Dialogue If It Exists
+		if (narrative != null)
+		{
+		GameDirectory.photographic [counter].text         =  narrative.text;
+		GameDirectory.photographic [counter].audio        =  narrative.audio;
+		// ----------  ----------    ----------   ---------- //
+		Mathematics.Logged (narrative.text);
+		}
+        
+	
 		
 		// ----------  ----------    ----------   ---------- //
 		// Progresssively Links The Counter With The Current Length Of The "GameDirectory.photographic" List

@@ -9,12 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38e1bf2b6b3764c3485a88a3d14ff8ec, type: 3}
-  m_Name: Narrative
+  m_Name: Narrative O6
   m_EditorClassIdentifier: 
   creature: Wasp
-  state: Idle
-  interaction: 
-  text: 'how mysterious, it''s an idling wasp,
-
-    perhaps it''s just quietly slumbering away '
+  state: Death
+  interaction: Null
+  text: "The corpse of a decaying wasp, \nperfect fodder for other little creatures"
   audio: {fileID: 0}

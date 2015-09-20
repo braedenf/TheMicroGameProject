@@ -24,6 +24,13 @@ public static class GameDirectory
 	{
 	public RectTransform    representation;
 	public int              scoreboard; 
+	// ----------  ----------    ----------   ---------- //
+	public string           creature; 
+	public string           state; 
+	public string           interaction; 
+	// ----------  ----------    ----------   ---------- //
+	public string           text; 
+	public AudioClip        audio;
 	}
 	
 

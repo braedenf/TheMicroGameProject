@@ -11,7 +11,7 @@ public class GameManagement : MonoBehaviour
 
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Public Attributes That'll Be Run On Within The "Game Management" Class
-   public string discovery = "discovery";
+   public string discovery   = "discovery";
    public string gallery     = "gallery";
 
 
@@ -26,7 +26,7 @@ public class GameManagement : MonoBehaviour
 	public enum GameState 
     {
     gallery       = 1,
-    discovery   = 2,
+    discovery     = 2,
     }
     
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
@@ -49,12 +49,12 @@ public class GameManagement : MonoBehaviour
 	foreach (GameObject atrocity in atrocities)
 	GameDirectory.gallery.Add (atrocity);
 	
-
 	// ----------  ----------    ----------   ---------- //
 	// Defines The Default Game State Present Within The Waking Moments
 	gameState  =  GameState.gallery | GameState.discovery;
 	// ----------  ----------    ----------   ---------- //
 	gameState ^= GameState.gallery;
+	
 	
 	}
 	
