@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.05.00">
+    <object class="AudioFile" id="{73fdc947-2695-4d82-8fe9-44a0203e8559}">
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>332.30770833333332</value>
+        </property>
+        <property name="audioFilePath">
+            <value>$(AUDIO_BIN_DIR)/discover_pads {d912cca0-f2d3-4cb1-ae64-619567eaeaca}.wav</value>
+        </property>
+        <relationship name="container">
+            <destination>{a670e88c-3127-40c6-9ae6-97ba0b948171}</destination>
+        </relationship>
+    </object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.05.00">
+    <object class="AudioFile" id="{ed25084b-b830-4352-af82-038dc494398f}">
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>21.573041666666665</value>
+        </property>
+        <property name="audioFilePath">
+            <value>$(AUDIO_BIN_DIR)/Rustic_melody {784c7098-6bf9-4f1a-a143-34cdf1d67fca}.wav</value>
+        </property>
+        <relationship name="container">
+            <destination>{a670e88c-3127-40c6-9ae6-97ba0b948171}</destination>
+        </relationship>
+    </object>
+</objects>

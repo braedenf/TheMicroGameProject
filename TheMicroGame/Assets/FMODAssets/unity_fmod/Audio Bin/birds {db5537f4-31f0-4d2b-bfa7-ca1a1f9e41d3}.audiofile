@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.05.00">
+    <object class="AudioFile" id="{db5537f4-31f0-4d2b-bfa7-ca1a1f9e41d3}">
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>48.039183673469388</value>
+        </property>
+        <property name="audioFilePath">
+            <value>$(AUDIO_BIN_DIR)/birds {38e4eef6-1d78-4fc4-9e12-998df8da8ec1}.mp3</value>
+        </property>
+        <relationship name="container">
+            <destination>{a670e88c-3127-40c6-9ae6-97ba0b948171}</destination>
+        </relationship>
+    </object>
+</objects>
