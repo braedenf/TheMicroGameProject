@@ -37,48 +37,50 @@ public class CameraObscura
 	public List <Vector3> visibility (GameObject creature, Camera camera)
 	{
 	
-	Transform   transform   = creature.transform;
-	Renderer    render      = creature.GetComponent <Renderer> ();
-	Mesh        mesh        = creature.GetComponent <MeshFilter> ().mesh;
-	int         count       = mesh.vertexCount;
+	Transform      transform              = creature.transform;
 	// ----------  ----------    ----------   ---------- //
-	var         vertices	= mesh.vertices.ToList ();
+	Plane [ ]       planes                 = GeometryUtility.CalculateFrustumPlanes (camera);
 	// ----------  ----------    ----------   ---------- //
-	Plane [ ]   planes      = GeometryUtility.CalculateFrustumPlanes (camera);
+	int             length                 =  (planes.GetLength (0) - 1);
 	// ----------  ----------    ----------   ---------- //
-	int         length      =  (planes.GetLength (0) - 1);
-	int         percentage  =  (int) 0.00f;
-	int         score       =  (int) 0.00f;
+	Vector3         center                = creature.transform.TransformPoint (-creature.GetComponent <BoxCollider> ().center);
+	// ----------  ----------    ----------   ---------- //
+	List <Vector3>  points                 = new List <Vector3> ();
+	
+	// ----------  ----------    ----------   ---------- //
+	// Calculates The Collider Vertices 
+	points.Add (center );
+
 	
 	// ----------  ----------    ----------   ---------- //
 	// References Whether An Individual Mesh Vertice Is Visible To The Selected Camera
 	// - Calculates The Score Percentage System For The Taken Photograph
-	for (int vertex = 0; vertex <= (vertices.Count - 1.00f); vertex ++)
-	{
-	
-	for (int item   = 0; item   <= length; item ++)
-	{	
-	
-	// ----------  ----------    ----------   ---------- //
-	Vector3 vertice = vertices [vertex];
-	
-	// ----------  ----------    ----------   ---------- //
-	// - Overides The For Loop Process If Vertice Is Invisible
-	// - Removes The Invisible Vertex From The "Vertex" List
-	if (planes [item].GetDistanceToPoint (transform.TransformPoint (vertice) )  < 0) 
-	{
-	vertices.RemoveAt  (vertex);
-	// ----------  ----------    ----------   ---------- //
-	vertex           -= (int) 1.00f;
-	item              = planes.GetLength (0);
-	}
-	
-	}
-	}
+//	for (int vertex = 0; vertex < (points.Count - 1.00f); vertex ++)
+//	{
+//	
+//	for (int item   = 0; item   < length; item ++)
+//	{	
+//	
+//	// ----------  ----------    ----------   ---------- //
+//	Vector3 vertice = points [vertex];
+//	
+//	// ----------  ----------    ----------   ---------- //
+//	// - Overides The For Loop Process If Vertice Is Invisible
+//	// - Removes The Invisible Vertex From The "Vertex" List
+//	if (planes [item].GetDistanceToPoint (transform.TransformPoint (vertice) )  < 0) 
+//	{
+//	points.RemoveAt  (vertex);
+//	// ----------  ----------    ----------   ---------- //
+//	vertex           -= (int) 1.00f;
+//	item              = planes.GetLength (0);
+//	}
+//	
+//	}
+//	}
 
 	// ----------  ----------    ----------   ---------- //
 	// Returns The Remaining Visible Vertices
-	return vertices;
+	return points;
 	
 	} 
 	
@@ -124,6 +126,9 @@ public class CameraObscura
 	// Returns The Remaining Visible Vertices
 	return vertices;
 	}
+	
+	
+	
 	
 	
 	

@@ -14,7 +14,6 @@ public class CameraBehaviour : MonoBehaviour
 	public RectTransform   display;
 	// ----------  ----------    ----------   ---------- //
 	public Camera          vision;
-	public GameObject      creature;
 
 
 	
@@ -80,7 +79,7 @@ public class CameraBehaviour : MonoBehaviour
 		
 		// ----------  ----------    ----------   ---------- //
 		// Defines The Creature(s) That'll Be Captured Within The Photograph
-		creature = CreatureManagement.visiblity (vision);
+		GameObject creature = CreatureManagement.visiblity (vision);
     	
 		// ----------  ----------    ----------   ---------- //
 		// Captures A Screenshot From The Active Camera 
@@ -111,14 +110,18 @@ public class CameraBehaviour : MonoBehaviour
         
 		// ----------  ----------    ----------   ---------- //
 		// Calculates The Score That Should Be Attributed To The Selected Photograph
-		// - Calculates The Visisble Percentage Of The Mesh Vertices
-		float difference       = creature.GetComponent <MeshFilter> ().mesh.vertexCount;
-		List <Vector3> vertice = camera.visibility (creature, vision);
-	    
+		// - Calculates The Visisble Percentage Of The Creature Mesh Vertices
+		if (creature != null)
+		{
 		
+		// ----------  ----------    ----------   ---------- //
+		float difference       = 8.00f;
+		List <Vector3> vertice = camera.visibility (creature, vision);
+	
 		// ----------  ----------    ----------   ---------- //
 		// Calculates The Remaining Visiblity Of The Mesh Within The Active Viewport
 		vertice                = camera.raycast (vertice, vision, creature);
+		
 		// ----------  ----------    ----------   ---------- //
 		// Transfers The Calculated Photograph Percentage And Positions It Alongside The Photograph
 		float count            = Mathematics.Percentage (vertice.Count, difference); 
@@ -129,36 +132,35 @@ public class CameraBehaviour : MonoBehaviour
         distinction.GetComponent <Text> ().text  = (count + "   " + "pts");
 		// ----------  ----------    ----------   ---------- //
 		GameDirectory.photographic [counter].scoreboard = (int) count;
-		
+		}
 
 
 		// ----------  ----------    ----------   ---------- //
         // Defines The "Narrative" Audio Recording That'll Play In Response To The Photographic Discovery
         // - Accesses The Creature StateManager Script And Gathers All Necessiary Attributes
+        if (creature != null)
+        {
         StateManagement management = creature.GetComponent <StateManagement> ();
 		// ----------  ----------    ----------   ---------- //
         GameDirectory.photographic [counter].creature     =  management.creature;
 		GameDirectory.photographic [counter].state        =  management.state;
 		GameDirectory.photographic [counter].interaction  =  management.interaction;
 		// ----------  ----------    ----------   ---------- //
-		Narrative      narrative   = NarrativeManagement.Depiction (management.creature, management.state, management.interaction);
-		// ----------  ----------    ----------   ---------- //
-		
-		// ----------  ----------    ----------   ---------- //
-		// Publishes The Discovered "Narrative" Dialogue If It Exists
-		if (narrative != null)
-		{
-		GameDirectory.photographic [counter].text         =  narrative.text;
+	    Narrative     narrative                           = NarrativeManagement.Depiction (management.creature, management.state, management.interaction);
+	    // ----------  ----------    ----------   ---------- //
+	    GameDirectory.photographic [counter].text         =  narrative.text;
 		GameDirectory.photographic [counter].audio        =  narrative.audio;
 		// ----------  ----------    ----------   ---------- //
 		Mathematics.Logged (narrative.text);
 		}
-        
 	
 		
 		// ----------  ----------    ----------   ---------- //
 		// Progresssively Links The Counter With The Current Length Of The "GameDirectory.photographic" List
 		counter ++;
+		
+		
+		
 
 }
 
