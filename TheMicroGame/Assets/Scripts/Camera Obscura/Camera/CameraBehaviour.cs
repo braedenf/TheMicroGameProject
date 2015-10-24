@@ -115,9 +115,9 @@ public class CameraBehaviour : MonoBehaviour
 		{
 		
 		// ----------  ----------    ----------   ---------- //
-		float difference       = 8.00f;
+		float difference       = creature.GetComponent <MeshFilter> ().mesh.vertices.Length;
 		List <Vector3> vertice = camera.visibility (creature, vision);
-	
+		
 		// ----------  ----------    ----------   ---------- //
 		// Calculates The Remaining Visiblity Of The Mesh Within The Active Viewport
 		vertice                = camera.raycast (vertice, vision, creature);

@@ -43,40 +43,34 @@ public class CameraObscura
 	// ----------  ----------    ----------   ---------- //
 	int             length                 =  (planes.GetLength (0) - 1);
 	// ----------  ----------    ----------   ---------- //
-	Vector3         center                = creature.transform.TransformPoint (-creature.GetComponent <BoxCollider> ().center);
-	// ----------  ----------    ----------   ---------- //
-	List <Vector3>  points                 = new List <Vector3> ();
+	var  points                           = creature.GetComponent <MeshFilter> ().mesh.vertices.ToList ();
 	
-	// ----------  ----------    ----------   ---------- //
-	// Calculates The Collider Vertices 
-	points.Add (center );
 
-	
 	// ----------  ----------    ----------   ---------- //
 	// References Whether An Individual Mesh Vertice Is Visible To The Selected Camera
 	// - Calculates The Score Percentage System For The Taken Photograph
-//	for (int vertex = 0; vertex < (points.Count - 1.00f); vertex ++)
-//	{
-//	
-//	for (int item   = 0; item   < length; item ++)
-//	{	
-//	
-//	// ----------  ----------    ----------   ---------- //
-//	Vector3 vertice = points [vertex];
-//	
-//	// ----------  ----------    ----------   ---------- //
-//	// - Overides The For Loop Process If Vertice Is Invisible
-//	// - Removes The Invisible Vertex From The "Vertex" List
-//	if (planes [item].GetDistanceToPoint (transform.TransformPoint (vertice) )  < 0) 
-//	{
-//	points.RemoveAt  (vertex);
-//	// ----------  ----------    ----------   ---------- //
-//	vertex           -= (int) 1.00f;
-//	item              = planes.GetLength (0);
-//	}
-//	
-//	}
-//	}
+	for (int vertex = 0; vertex < (points.Count - 1.00f); vertex ++)
+	{
+	
+	for (int item   = 0; item   < length; item ++)
+	{	
+	
+	// ----------  ----------    ----------   ---------- //
+	Vector3 vertice = points [vertex];
+	
+	// ----------  ----------    ----------   ---------- //
+	// - Overides The For Loop Process If Vertice Is Invisible
+	// - Removes The Invisible Vertex From The "Vertex" List
+	if (planes [item].GetDistanceToPoint (transform.TransformPoint (vertice) )  < 0) 
+	{
+	points.RemoveAt  (vertex);
+	// ----------  ----------    ----------   ---------- //
+	vertex           -= (int) 1.00f;
+	item              = planes.GetLength (0);
+	}
+	
+	}
+	}
 
 	// ----------  ----------    ----------   ---------- //
 	// Returns The Remaining Visible Vertices
