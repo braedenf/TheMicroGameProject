@@ -45,7 +45,7 @@ return percentage;
 
 
 
-// ----------  ----------    ----------   ---------- //
+//  -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 //  Buffers The Selected Attribute Between A Maximum And Minimum Attribute
 public static float limitation (float value, float minimum, float maximum)
 {
@@ -57,6 +57,20 @@ if (value >= maximum)
 value = maximum;
 	
 return value;
+}
+
+
+//  -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
+// Calculates The Appropriate Framerate Of The Specified Animation Transistion,
+public static Vector2 Framerate (int framerate, Vector2 animation)
+{
+
+	// ----------  ----------    ----------   ---------- //
+	// Converts The Animation Time Into An Applicable Framerate
+	animation.x = (int) (animation.x / framerate);
+	animation.y = (int) (animation.y / framerate);
+    // ----------  ----------    ----------   ---------- //
+    return animation;
 }
 
 

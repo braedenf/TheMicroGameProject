@@ -14,7 +14,8 @@ public class CameraBehaviour : MonoBehaviour
 	public RectTransform   display;
 	// ----------  ----------    ----------   ---------- //
 	public Camera          vision;
-
+	// ----------  ----------    ----------   ---------- //
+	public bool            raycast;
 
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
@@ -79,7 +80,15 @@ public class CameraBehaviour : MonoBehaviour
 		
 		// ----------  ----------    ----------   ---------- //
 		// Defines The Creature(s) That'll Be Captured Within The Photograph
-		GameObject creature = CreatureManagement.visiblity (vision);
+		// Defines Whether The Creature Will Be Selected Through 'Visibility' Or 'Raycast'
+		GameObject creature;
+		// ----------  ----------    ----------   ---------- //
+		if (raycast == false) 
+		creature = CreatureManagement.visiblity (vision);
+		else
+		creature = this.gameObject.GetComponent <RaycastBehaviour> ().creature;
+		
+		
     	
 		// ----------  ----------    ----------   ---------- //
 		// Captures A Screenshot From The Active Camera 

@@ -13,13 +13,13 @@ public class RaycastBehaviour : MonoBehaviour
 	// Defines All  Public Attributes That Can Be Manipulated By The Game Designer
 	public Camera camera; 
 	// ----------  ----------    ----------   ---------- //
-	[ Range (10, 1000) ] public float visibility;
+	[ Range (0, 1000) ] public float visibility;
 	// ----------  ----------    ----------   ---------- //
 	public List <string> distinction = new List <string> ();
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
-	// Defines All  Public Attributes That Can Be Manipulated By The Code
-	[HideInInspector] public GameObject creature;
+	// Defines All  Private Attributes That Can Be Manipulated By The Code
+	public GameObject creature;
 		
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All Necessiary Qualities On Awake
@@ -45,6 +45,10 @@ public class RaycastBehaviour : MonoBehaviour
 	{
 	
 	// ----------  ----------    ----------   ---------- //
+	// Defines All Necessiary Attributes For The Creature Discovery Process
+	creature = null;
+	
+	// ----------  ----------    ----------   ---------- //
 	// Defines All Necessiary Attributes For The Physics Raycast 
 	RaycastHit hit;
 	
@@ -54,7 +58,7 @@ public class RaycastBehaviour : MonoBehaviour
 	
 	// ----------  ----------    ----------   ---------- //
 	// Defines A Raycast From The Camera Position And Orientation
-    Physics.Raycast (raycast, out hit);
+    Physics.Raycast (raycast, out hit, visibility);
    
     // ----------  ----------    ----------   ---------- //
     // Deciphers Whether It's Managed To Hit Any Distinguished Creatures
@@ -62,10 +66,23 @@ public class RaycastBehaviour : MonoBehaviour
     { 
     foreach (string tag in distinction)
     {
+    
+    // ----------  ----------    ----------   ---------- //
     if (hit.transform.gameObject.tag == tag)
-    Activation (hit.transform.gameObject);
+    {
+    Activation   (hit.transform.gameObject);
+    return;
+    }
+    else
+    Deactivation   ();
+    
     }  
     }
+    
+     // ----------  ----------    ----------   ---------- //
+     // Proceeds With The Deactivation Code If No Creature Is Discovered
+     if (hit.transform == null)
+     Deactivation ();
     
 	}
 	
@@ -74,11 +91,28 @@ public class RaycastBehaviour : MonoBehaviour
 	// Progressively Reacts To The Raycast If A Creature Has Been Discovered
 	void Activation (GameObject _raycast)
 	{
-	
+		
 	// ----------  ----------    ----------   ---------- //
 	// Defines The Creature That Was Discovered
 	creature = _raycast;
-
+	
+	// ----------  ----------    ----------   ---------- //
+    Mathematics.Logged ("Creature Discovered");
+	}
+	
+	
+	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
+	// Progressively Reacts To The Raycast If A Creature Has Been Discovered
+	void Deactivation ()
+	{
+		
+	// ----------  ----------    ----------   ---------- //
+	// Defines The Creature That Was Discovered
+	creature = null;
+	
+	// ----------  ----------    ----------   ---------- //
+    Mathematics.Logged ("Nothing To See Here, Move Along Now");
 	
 	}
+	
 }
