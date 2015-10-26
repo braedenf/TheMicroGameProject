@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Text;
-
+using System;
 
 //  -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 //  Possesses All Of The Awkward Yet Slightly Appreciated Noggins And Code
@@ -67,8 +67,11 @@ public static Vector2 Framerate (int framerate, Vector2 animation)
 
 	// ----------  ----------    ----------   ---------- //
 	// Converts The Animation Time Into An Applicable Framerate
-	animation.x = (int) (animation.x / framerate);
-	animation.y = (int) (animation.y / framerate);
+	animation.x = (animation.x / framerate);
+	animation.x = (float) Math.Round (animation.x, 1);
+	// ----------  ----------    ----------   ---------- //
+	animation.y = (animation.y / framerate);
+	animation.y = (float) Math.Round (animation.y, 1);
     // ----------  ----------    ----------   ---------- //
     return animation;
 }
