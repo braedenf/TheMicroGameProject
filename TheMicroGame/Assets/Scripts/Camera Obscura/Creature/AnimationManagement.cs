@@ -18,8 +18,9 @@ public class AnimationManagement : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	public bool                      hardboiled;
 	// ----------  ----------    ----------   ---------- //
-	public List <Vector2> animate = new List <Vector2> (5);
-	
+	public List <Vector2> animate      = new List <Vector2> (5);
+	public List <Vector2> intersection = new List <Vector2> (5);
+	public List <Vector2> obscure      = new List <Vector2> (5);
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Private Attributes That Can Be Manipulated By The System
@@ -27,9 +28,12 @@ public class AnimationManagement : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	private string         name;
 	// ----------  ----------    ----------   ---------- //
-	public Vector2         current;
+	private Vector2        current;
 	// ----------  ----------    ----------   ---------- //
 	private int            quantity;
+	
+	// ----------  ----------    ----------   ---------- //
+	[HideInInspector] public string behaviour;
 	
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
@@ -71,6 +75,15 @@ public class AnimationManagement : MonoBehaviour
 	for (int interger  = 0; interger < animate.Count; interger ++)
 	animate [interger] = Mathematics.Framerate (framerate, animate [interger]);
 	
+	// ----------  ----------    ----------   ---------- //
+	// Calculates The Framerate To Seconds Ratio Of Each Transistion
+	for (int interger  = 0; interger < intersection.Count; interger ++)
+	intersection [interger] = Mathematics.Framerate (framerate, intersection [interger]);
+	
+	// ----------  ----------    ----------   ---------- //
+	// Calculates The Framerate To Seconds Ratio For Obscure Animations
+	for (int interger  = 0; interger < obscure.Count; interger ++)
+	obscure[interger]  = Mathematics.Framerate (framerate, obscure [interger]);
 	
 	// ----------  ----------    ----------   ---------- //
 	// Calculates All The Interluding Animation Transistions
@@ -88,6 +101,10 @@ public class AnimationManagement : MonoBehaviour
 	if (interger       == count)
 	animate.Add ( new Vector2 (animate [interger - 1].y, length) );
 	}
+	
+	// ----------  ----------    ----------   ---------- //
+	// Selects The Default Behaviour State For Awake
+	behaviour        = motion.ToString ();
 	
 	// ----------  ----------    ----------   ---------- //
 	// Starts The Specified Creature Animation At A Selected Timeframe
@@ -148,55 +165,31 @@ public class AnimationManagement : MonoBehaviour
 	
 	
 	// ----------  ----------    ----------   ---------- //
-	// Defines All Transistions For The Walking Animation
-	if (vertex      == animate [0] )
-	{
-	if (animation [name].time > 0.00f && animation [name].time   < 0.00f + approximate)
-    animation [name].time  = transistion.x + approximate;
-    // ----------  ----------    ----------   ---------- //
-	if (animation [name].time > 4.00f && animation [name].time   < 4.00f + approximate)
-    animation [name].time  = transistion.x;
-     // ----------  ----------    ----------   ---------- //
-	if (animation [name].time > 5.83f && animation [name].time   < 5.83f + approximate)
-    animation [name].time  = transistion.x;
-   // ----------  ----------    ----------   ---------- //
-	if (animation [name].time > 11.30f && animation [name].time  < 11.30f + approximate)
-    animation [name].time  = transistion.x;
-	}
-	
+	// Deciphers The Behaviour State Of The Current Animation
+	if (current == vertex)
+	behaviour        = motion.ToString ();
 	
 	// ----------  ----------    ----------   ---------- //
-	// Defines All Transistions For The Flight Animation
-	if (vertex      == animate [2] )
+	// Defines All Transistions For Obscure Animation Transistions 
+	foreach (Vector2 obscurity in obscure)
 	{
-	if (animation [name].time > 0.00f && animation [name].time   < 0.00f + approximate)
-    animation [name].time  = transistion.x;
+	if (vertex      == obscurity)
+	{
     // ----------  ----------    ----------   ---------- //
-	if (animation [name].time > 4.00f && animation [name].time   < 4.00f + approximate)
-    animation [name].time  = transistion.x;
-     // ----------  ----------    ----------   ---------- //
-	if (animation [name].time > 5.83f && animation [name].time   < 5.83f + approximate)
-    animation [name].time  = transistion.x + approximate;
-   // ----------  ----------    ----------   ---------- //
-	if (animation [name].time > 11.30f && animation [name].time  < 11.30f + approximate)
-    animation [name].time  = transistion.x;
+	foreach (Vector3 intersect in intersection)	
+	if (animation [name].time > intersect.x && animation [name].time < intersect.x + approximate)
+    animation [name].time  = transistion.x + approximate;   
+    }
 	}
 	
 	// ----------  ----------    ----------   ---------- //
 	// Defines All Transistions For The Standardized Animations
 	if (animation [name].time < minimum || animation [name].time > maximum)
 	{
-	if (animation [name].time > 0.00f && animation [name].time   < 0.00f + approximate)
-    animation [name].time  = minimum;
-    // ----------  ----------    ----------   ---------- //
-    if (animation [name].time > 4.00f && animation [name].time    < 4.00f + approximate)
-    animation [name].time  = minimum;
-     // ----------  ----------    ----------   ---------- //
-    if (animation [name].time > 5.83f && animation [name].time   < 5.83f + approximate)
-    animation [name].time  = minimum;
-   // ----------  ----------    ----------   ---------- //
-	if (animation [name].time > 11.30f && animation [name].time  < 11.30f + approximate)
-    animation [name].time  = minimum;
+	// ----------  ----------    ----------   ---------- //
+	foreach (Vector3 intersect in intersection)	
+	if (animation [name].time > intersect.x && animation [name].time < intersect.x + approximate)
+    animation [name].time  = minimum;    
 	}
 	
 	

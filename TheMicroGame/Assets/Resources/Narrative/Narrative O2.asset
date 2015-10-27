@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Name: Narrative O2
   m_EditorClassIdentifier: 
   creature: Wasp
-  state: Wander
-  interaction: Null
-  text: "A wandering wasp; \nperhaps it's looking for something scrumptious\nto nibble
-    away at"
+  state: idle
+  interaction: 
+  text: 'how mysterious, it''s an idling wasp,
+
+    perhaps it''s just quietly slumbering away '
+  position: 
+  transistion: 
   audio: {fileID: 0}

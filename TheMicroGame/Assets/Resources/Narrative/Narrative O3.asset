@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Name: Narrative O3
   m_EditorClassIdentifier: 
   creature: Wasp
-  state: Sleep
-  interaction: Null
-  text: "A sleeping wasp; \nbest not to disturb it perhaps\n"
+  state: flight
+  interaction: 
+  text: A flying bee
+  position: 
+  transistion: 
   audio: {fileID: 0}

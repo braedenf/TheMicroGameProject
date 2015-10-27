@@ -97,7 +97,7 @@ public class RaycastBehaviour : MonoBehaviour
 	creature = _raycast;
 	
 	// ----------  ----------    ----------   ---------- //
-    Mathematics.Logged ("Creature Discovered");
+//    Mathematics.Logged ("Creature Discovered");
 	}
 	
 	
@@ -111,7 +111,7 @@ public class RaycastBehaviour : MonoBehaviour
 	creature = null;
 	
 	// ----------  ----------    ----------   ---------- //
-    Mathematics.Logged ("Nothing To See Here, Move Along Now");
+//    Mathematics.Logged ("Nothing To See Here, Move Along Now");
 	
 	}
 	

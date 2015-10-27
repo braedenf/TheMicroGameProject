@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: Narrative O1
   m_EditorClassIdentifier: 
   creature: Wasp
-  state: Idle
-  interaction: Null
-  text: 'how mysterious, it''s an idling wasp,
-
-    perhaps it''s just quietly slumbering away '
+  state: walk
+  interaction: 
+  text: A wandering bee
+  position: 
+  transistion: 
   audio: {fileID: 0}

@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Name: Narrative O4
   m_EditorClassIdentifier: 
   creature: Wasp
-  state: Attack
-  interaction: Null
-  text: Careful, wasps can be incredible territorial
+  state: gather
+  interaction: 
+  text: a gathering bee
+  position: 
+  transistion: 
   audio: {fileID: 0}

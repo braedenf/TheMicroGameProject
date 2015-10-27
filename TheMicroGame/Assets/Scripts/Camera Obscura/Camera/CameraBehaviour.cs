@@ -157,10 +157,13 @@ public class CameraBehaviour : MonoBehaviour
 		// ----------  ----------    ----------   ---------- //
 	    Narrative     narrative                           = NarrativeManagement.Depiction (management.creature, management.state, management.interaction);
 	    // ----------  ----------    ----------   ---------- //
+	    if (narrative == null)
+	    Debug.Log ("null Exception");
+	    // ----------  ----------    ----------   ---------- //
 	    GameDirectory.photographic [counter].text         =  narrative.text;
 		GameDirectory.photographic [counter].audio        =  narrative.audio;
 		// ----------  ----------    ----------   ---------- //
-		Mathematics.Logged (narrative.text);
+		Debug.Log (narrative.state);
 		}
 	
 		

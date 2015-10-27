@@ -16,6 +16,9 @@ public string    interaction;
 // ----------  ----------    ----------   ---------- //
 [Multiline] public string    text;
 // ----------  ----------    ----------   ---------- //
+public string    position;
+public string    transistion;
+// ----------  ----------    ----------   ---------- //
 public AudioClip audio;
 
 }
