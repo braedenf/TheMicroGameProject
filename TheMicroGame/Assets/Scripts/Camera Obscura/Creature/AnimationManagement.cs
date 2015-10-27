@@ -27,7 +27,9 @@ public class AnimationManagement : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	private string         name;
 	// ----------  ----------    ----------   ---------- //
-	private List <Vector2> transistion = new List <Vector2> ();
+	public Vector2         current;
+	// ----------  ----------    ----------   ---------- //
+	private int            quantity;
 	
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
@@ -59,6 +61,10 @@ public class AnimationManagement : MonoBehaviour
 	// Defines The Name Of The Animation File
 	foreach (AnimationState state in animation)
 	name     = state.name;
+	
+	// ----------  ----------    ----------   ---------- //
+	// Defines The Amount Of Pre-Specified Animations
+	quantity    = animate.Count;
 	
 	// ----------  ----------    ----------   ---------- //
 	// Calculates The Framerate To Seconds Ratio Of Each Animation
@@ -97,31 +103,25 @@ public class AnimationManagement : MonoBehaviour
 	{
 	
 	// ----------  ----------    ----------   ---------- //
+	// Defines The Current Animation State In Comparision To The Needed Animation State
+	for (int interger = 0; interger < quantity; interger++)
+	if (animation [name].time > animate [interger].x && animation [name].time < animate [interger].y)
+	current = animate [interger];
+
+	
+	// ----------  ----------    ----------   ---------- //
 	// Defines All "Motion" Enum Animation Transistions
 	if ( (motion & Motion.walk)   == Motion.walk)
-	Metamorphosis (animate [0], animate [4], animate [3]);
+	Metamorphosis (animate [0], animate [04]);
 	// ----------  ----------    ----------   ---------- //
 	if ( (motion & Motion.idle)   == Motion.idle)
-	Metamorphosis (animate [1], animate [5], animate [0]);
+	Metamorphosis (animate [1], animate [05]);
 	// ----------  ----------    ----------   ---------- //
 	if ( (motion & Motion.flight) == Motion.flight)
-	Metamorphosis (animate [2], animate [6], animate [1]);
+	Metamorphosis (animate [2], animate [06]);
 	// ----------  ----------    ----------   ---------- //
 	if ( (motion & Motion.gather) == Motion.gather)
-	Metamorphosis (animate [3], animate [7], animate [0]);
-	
-	}
-	
-	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
-	// Progressively Manipulates The Creature Animation Transistions
-	void Metamorphosis (Vector2 vertex, Vector2 vertice, Vector2 memory)
-	{
-	
-	// ----------  ----------    ----------   ---------- //
-	// Defines All Necessiary Attributes
-	float transistion = vertice.x;
-	float minimum     = vertex.x;
-	float maximum     = vertex.y;
+	Metamorphosis (animate [3], animate [09]);
 	
 	// ----------  ----------    ----------   ---------- //
 	// This Acts As An Exception When Considering Looped Animation Transistions
@@ -129,30 +129,96 @@ public class AnimationManagement : MonoBehaviour
 	animation [name].time      = 0.00f;
 	
 	
+	}
+	
+	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
+	// Progressively Manipulates The Creature Animation Transistions
+	void Metamorphosis (Vector2 vertex, Vector2 transistion)
+	{
+	
+	// ----------  ----------    ----------   ---------- //
+	// Defines All Necessiary Attributes
+	float minimum     = vertex.x;
+	float maximum     = vertex.y;
+	
+	// ----------  ----------    ----------   ---------- //
+	// Captures The Index Of Both Current And Desired Animation States
+	int index         = animate.IndexOf (current);
+	int desire        = animate.IndexOf (vertex);
+	
+	
+	// ----------  ----------    ----------   ---------- //
+	// Defines All Transistions For The Walking Animation
+	if (vertex      == animate [0] )
+	{
+	if (animation [name].time > 0.00f && animation [name].time   < 0.00f + approximate)
+    animation [name].time  = transistion.x + approximate;
+    // ----------  ----------    ----------   ---------- //
+	if (animation [name].time > 4.00f && animation [name].time   < 4.00f + approximate)
+    animation [name].time  = transistion.x;
+     // ----------  ----------    ----------   ---------- //
+	if (animation [name].time > 5.83f && animation [name].time   < 5.83f + approximate)
+    animation [name].time  = transistion.x;
+   // ----------  ----------    ----------   ---------- //
+	if (animation [name].time > 11.30f && animation [name].time  < 11.30f + approximate)
+    animation [name].time  = transistion.x;
+	}
+	
+	
+	// ----------  ----------    ----------   ---------- //
+	// Defines All Transistions For The Flight Animation
+	if (vertex      == animate [2] )
+	{
+	if (animation [name].time > 0.00f && animation [name].time   < 0.00f + approximate)
+    animation [name].time  = transistion.x;
+    // ----------  ----------    ----------   ---------- //
+	if (animation [name].time > 4.00f && animation [name].time   < 4.00f + approximate)
+    animation [name].time  = transistion.x;
+     // ----------  ----------    ----------   ---------- //
+	if (animation [name].time > 5.83f && animation [name].time   < 5.83f + approximate)
+    animation [name].time  = transistion.x + approximate;
+   // ----------  ----------    ----------   ---------- //
+	if (animation [name].time > 11.30f && animation [name].time  < 11.30f + approximate)
+    animation [name].time  = transistion.x;
+	}
+	
+	// ----------  ----------    ----------   ---------- //
+	// Defines All Transistions For The Standardized Animations
+	if (animation [name].time < minimum || animation [name].time > maximum)
+	{
+	if (animation [name].time > 0.00f && animation [name].time   < 0.00f + approximate)
+    animation [name].time  = minimum;
+    // ----------  ----------    ----------   ---------- //
+    if (animation [name].time > 4.00f && animation [name].time    < 4.00f + approximate)
+    animation [name].time  = minimum;
+     // ----------  ----------    ----------   ---------- //
+    if (animation [name].time > 5.83f && animation [name].time   < 5.83f + approximate)
+    animation [name].time  = minimum;
+   // ----------  ----------    ----------   ---------- //
+	if (animation [name].time > 11.30f && animation [name].time  < 11.30f + approximate)
+    animation [name].time  = minimum;
+	}
+	
+	
 	// ----------  ----------    ----------   ---------- //
 	//  -  Begins The Specified Creature Animation At The Selected Timeframe
 	//  -  Loops The Specified Creature Animation If The Animation Has Run Its Course
 	if (hardboiled == false)
-	if (animation [name].time > maximum && animation [name].time < maximum + approximate)
-	{
-	animation [name].speed = speed;
+	if (animation [name].time > maximum  &&  animation [name].time < maximum + approximate)
 	animation [name].time  = minimum;
-	animation.Play (name);
-	}	
 	
 	
 	// ----------  ----------    ----------   ---------- //
 	// Skips Immidiately To The Selected Animation If 'Hardboiled' Remains Active
 	if (hardboiled == true)
 	if (animation [name].time < minimum || animation [name].time > maximum)
-	{
-	animation [name].speed = speed;
 	animation [name].time  = minimum;
-	animation.Play (name);
-	}
 	
-
-    
+	
+	// ----------  ----------    ----------   ---------- //
+	animation [name].speed = speed;
+	animation.Play (name);
+	
 	}
 	
 	

@@ -68,10 +68,10 @@ public static Vector2 Framerate (int framerate, Vector2 animation)
 	// ----------  ----------    ----------   ---------- //
 	// Converts The Animation Time Into An Applicable Framerate
 	animation.x = (animation.x / framerate);
-	animation.x = (float) Math.Round (animation.x, 4);
+	animation.x = (float) Math.Round (animation.x, 2);
 	// ----------  ----------    ----------   ---------- //
 	animation.y = (animation.y / framerate);
-	animation.y = (float) Math.Round (animation.y, 4);
+	animation.y = (float) Math.Round (animation.y, 2);
     // ----------  ----------    ----------   ---------- //
     return animation;
 }
