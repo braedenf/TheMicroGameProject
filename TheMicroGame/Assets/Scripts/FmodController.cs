@@ -12,7 +12,7 @@ public class FmodController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		entry = FMOD_StudioSystem.instance.GetEvent ("event:/entry");
+		entry = FMOD_StudioSystem.instance.GetEvent ("event:/Music/entry");
 		entry.start ();
 		entry.getParameter("entranceDist", out entranceDist);
 	}

@@ -10521,7 +10521,7 @@ MonoBehaviour:
   tutorial: {fileID: 1283893346}
   display: {fileID: 22461266, guid: 7350119d067454e09979b7992a3ea0aa, type: 2}
   vision: {fileID: 1118146231}
-  creature: {fileID: 698165582}
+  raycast: 0
 --- !u!1001 &944052170
 Prefab:
   m_ObjectHideFlags: 0
