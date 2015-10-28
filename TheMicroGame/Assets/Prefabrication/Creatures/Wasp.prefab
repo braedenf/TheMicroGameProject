@@ -942,7 +942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creature: Wasp
-  state: 
+  state: idle
   interaction: 
 --- !u!114 &11497052
 MonoBehaviour:

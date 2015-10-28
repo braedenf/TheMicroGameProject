@@ -16,7 +16,10 @@ public class CameraBehaviour : MonoBehaviour
 	public Camera          vision;
 	// ----------  ----------    ----------   ---------- //
 	public bool            raycast;
-
+	public bool            grayscale;
+	// ----------  ----------    ----------   ---------- //
+	[ Range (0, 1)     ] public float grain;
+	[ Range (1, 10000) ] public float tear;
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Private Attributes That'll Be Run On Within The "Camera Obscura" Class
@@ -92,16 +95,21 @@ public class CameraBehaviour : MonoBehaviour
     	
 		// ----------  ----------    ----------   ---------- //
 		// Captures A Screenshot From The Active Camera 
-		// Converts To A Sprite File (To Make It Useable Within The Audience Interface)
 		camera.screenshot           = camera.discoverablity.Count;
-		// ----------  ----------    ----------   ---------- //]
-		int             item        = (int) (camera.discoverablity.Count - 1.00f);
+		
+		// ----------  ----------    ----------   ---------- //
+		// Converts The Screenshot Into A Grayscale Capture
+		int             item         = (int) (camera.discoverablity.Count - 1.00f);	
+		// ----------  ----------    ----------   ---------- //
+		if (grayscale               == true)
+		camera.discoverablity [item] = camera.Grayscale (camera.discoverablity [item], grain, tear);
+		
+		// ----------  ----------    ----------   ---------- //
+		// Converts To A Sprite File (To Make It Useable Within The Audience Interface)
 		Sprite        sprite        = SpriteDesigner.conversion ( camera.discoverablity [item] );
 		// ----------  ----------    ----------   ---------- //
 		photographic.Add  (sprite);
-		// ----------  ----------    ----------   ---------- //
-		Sprite texture              = photographic [ (int) (photographic.Count - 1.00f) ];
-		
+	
 		
 		// ----------  ----------    ----------   ---------- //
 		// Due To The Step-By-Step Shenangins - This Process May Become A Little Finnicky,
@@ -160,6 +168,7 @@ public class CameraBehaviour : MonoBehaviour
 	    if (narrative == null)
 	    Debug.Log ("null Exception");
 	    // ----------  ----------    ----------   ---------- //
+	    if (narrative.transistion != null)
 	    GameDirectory.photographic [counter].transistion  =  narrative.transistion;
 		// ----------  ----------    ----------   ---------- //
 		Debug.Log (narrative.state);

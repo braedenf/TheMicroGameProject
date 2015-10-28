@@ -138,7 +138,7 @@ public class AnimationManagement : MonoBehaviour
 	Metamorphosis (animate [2], animate [06]);
 	// ----------  ----------    ----------   ---------- //
 	if ( (motion & Motion.gather) == Motion.gather)
-	Metamorphosis (animate [3], animate [09]);
+	Metamorphosis (animate [3], intersection [3]);
 	
 	// ----------  ----------    ----------   ---------- //
 	// This Acts As An Exception When Considering Looped Animation Transistions

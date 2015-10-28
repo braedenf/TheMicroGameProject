@@ -122,6 +122,56 @@ public class CameraObscura
 	}
 	
 	
+	//-----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
+    // Analyzes The Texture Pixels And Converts Them Into A Grayscale Format
+    public Texture2D Grayscale (Texture2D texture, float grain, float tear)
+    {
+		
+		// ----------  ----------    ----------   ---------- //
+		var pixels     = texture.GetPixels ();
+		
+		// ----------  ----------    ----------   ---------- //
+		// Defines The Graininess Of The Texture
+		for (int height = 0; height < texture.height; height ++) 
+		{	
+		for (int width  = 0; width < texture.width; width ++) 
+		{
+		
+		
+	    // ----------  ----------    ----------   ---------- //
+	    // Calculates The Screen Tearing On A Pixel-By-Pixel Basis
+		float screen = (texture.height - height) / tear;
+		
+		// ----------  ----------    ----------   ---------- //
+		// Calculates A Certain Quantity Of Graininess On A Pixel-By-Pixel Basis
+		float red   = texture.GetPixel (width, height).r + Random.Range (- grain, grain) + screen;
+		float green = texture.GetPixel (width, height).g + Random.Range (- grain, grain) + screen;
+		float blue  = texture.GetPixel (width, height).b + Random.Range (- grain, grain) + screen;
+		// ----------  ----------    ----------   ---------- //
+		Color color = new Color (red, green, blue);
+		// ----------  ----------    ----------   ---------- //
+		texture.SetPixel (width, height, color);
+
+		// ----------  ----------    ----------   ---------- //
+		// Progressively Converts All Pixels To Grayscale
+		var grayscale = texture.GetPixel (width, height).grayscale;
+		color         = new Color (grayscale, grayscale, grayscale);
+		// ----------  ----------    ----------   ---------- //
+		texture.SetPixel (width, height, color);
+		
+		}
+		}
+		
+	// ----------  ----------    ----------   ---------- //
+	// Applies The Pixel Changes To The Texture
+	texture.Apply ();
+		
+	
+	// ----------  ----------    ----------   ---------- //
+	// Returns A Grayscale Texture
+	return texture;
+	
+	}
 	
 	
 	
