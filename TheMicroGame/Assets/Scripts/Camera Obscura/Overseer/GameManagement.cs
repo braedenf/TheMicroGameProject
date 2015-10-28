@@ -89,8 +89,8 @@ public class GameManagement : MonoBehaviour
 	 attribute.SetActive (false);
      
      // ----------  ----------    ----------   ---------- //
-	// References Whether The Discovery State Has Been Activated
-	// - Expresses All Necessiary Discovery Attributes
+	 // References Whether The Discovery State Has Been Activated
+	 // - Expresses All Necessiary Discovery Attributes
 	 if (gameState == GameState.discovery)
 	 {
 	 foreach (GameObject attribute in GameDirectory.discovery)

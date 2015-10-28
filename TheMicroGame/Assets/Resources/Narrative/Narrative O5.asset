@@ -9,14 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38e1bf2b6b3764c3485a88a3d14ff8ec, type: 3}
-  m_Name: Narrative O2
+  m_Name: Narrative O5
   m_EditorClassIdentifier: 
   creature: Wasp
-  state: idle
+  state: gather
   interaction: 
-  text: 'how mysterious, it''s an idling wasp,
-
-    perhaps it''s just quietly slumbering away '
+  text: a gathering bee
   position: 
-  transistion: goodSnap
+  transistion: 
   audio: {fileID: 0}

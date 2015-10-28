@@ -16,5 +16,5 @@ MonoBehaviour:
   interaction: 
   text: A flying bee
   position: 
-  transistion: 
+  transistion: badSnap
   audio: {fileID: 0}

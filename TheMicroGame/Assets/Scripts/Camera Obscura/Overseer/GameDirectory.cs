@@ -29,8 +29,7 @@ public static class GameDirectory
 	public string           state; 
 	public string           interaction; 
 	// ----------  ----------    ----------   ---------- //
-	public string           text; 
-	public AudioClip        audio;
+	public string           transistion; 
 	}
 	
 

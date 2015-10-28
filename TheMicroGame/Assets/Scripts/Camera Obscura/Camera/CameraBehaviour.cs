@@ -160,10 +160,10 @@ public class CameraBehaviour : MonoBehaviour
 	    if (narrative == null)
 	    Debug.Log ("null Exception");
 	    // ----------  ----------    ----------   ---------- //
-	    GameDirectory.photographic [counter].text         =  narrative.text;
-		GameDirectory.photographic [counter].audio        =  narrative.audio;
+	    GameDirectory.photographic [counter].transistion  =  narrative.transistion;
 		// ----------  ----------    ----------   ---------- //
 		Debug.Log (narrative.state);
+
 		}
 	
 		
