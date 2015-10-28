@@ -594,11 +594,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11406998, guid: 58aab7f79f4e8406cb563a3eaa12951f, type: 2}
       propertyPath: grain
-      value: .0500000007
+      value: .0299999993
       objectReference: {fileID: 0}
     - target: {fileID: 11406998, guid: 58aab7f79f4e8406cb563a3eaa12951f, type: 2}
       propertyPath: tear
-      value: 10000
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406998, guid: 58aab7f79f4e8406cb563a3eaa12951f, type: 2}
+      propertyPath: border
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406998, guid: 58aab7f79f4e8406cb563a3eaa12951f, type: 2}
+      propertyPath: shadow
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406998, guid: 58aab7f79f4e8406cb563a3eaa12951f, type: 2}
+      propertyPath: light
+      value: .0500000007
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 58aab7f79f4e8406cb563a3eaa12951f, type: 2}

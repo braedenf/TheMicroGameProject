@@ -124,34 +124,66 @@ public class CameraObscura
 	
 	//-----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
     // Analyzes The Texture Pixels And Converts Them Into A Grayscale Format
-    public Texture2D Grayscale (Texture2D texture, float grain, float tear)
+    public Texture2D Grayscale (Texture2D texture, float grain, float tear, float border, float shadow, float light)
     {
 		
 		// ----------  ----------    ----------   ---------- //
-		var pixels     = texture.GetPixels ();
+		// Defines All Possible Attributes
+		var   pixels     = texture.GetPixels ();
+		Color color;
+
 		
 		// ----------  ----------    ----------   ---------- //
-		// Defines The Graininess Of The Texture
+		// Defines The Border Dimensions
+		border          = (Screen.width / 100.00f) * border;
+		
+		
+		// ----------  ----------    ----------   ---------- //
+		// Defines The Visual Affects Within The Texture
 		for (int height = 0; height < texture.height; height ++) 
 		{	
 		for (int width  = 0; width < texture.width; width ++) 
 		{
 		
-		
+		// ----------  ----------    ----------   ---------- //
+        // Manipulates The Texture Contrast Depending On The Discovered Color Hues
+        // - Deciphers Whether A Certain Pixel Should Be Darker, Or Lighter
+        var   pixel       = texture.GetPixel (width, height);
+        float distinction = (pixel.r + pixel.b + pixel.g);
+
+
+		// ----------  ----------    ----------   ---------- //
+        if (distinction   < 1.50f)
+        pixel             = new Color (pixel.r - shadow, pixel.g - shadow, pixel.b - shadow);
+        else
+		pixel             = new Color (pixel.r + light,  pixel.g + light,  pixel.b + light);
+
+
 	    // ----------  ----------    ----------   ---------- //
 	    // Calculates The Screen Tearing On A Pixel-By-Pixel Basis
 		float screen = (texture.height - height) / tear;
-		
+
+
 		// ----------  ----------    ----------   ---------- //
 		// Calculates A Certain Quantity Of Graininess On A Pixel-By-Pixel Basis
-		float red   = texture.GetPixel (width, height).r + Random.Range (- grain, grain) + screen;
-		float green = texture.GetPixel (width, height).g + Random.Range (- grain, grain) + screen;
-		float blue  = texture.GetPixel (width, height).b + Random.Range (- grain, grain) + screen;
+		float red   = pixel.r + Random.Range (- grain, grain) + screen;
+		float green = pixel.g + Random.Range (- grain, grain) + screen;
+		float blue  = pixel.b + Random.Range (- grain, grain) + screen;
 		// ----------  ----------    ----------   ---------- //
-		Color color = new Color (red, green, blue);
+		color       = new Color (red, green, blue);
+		
+		
 		// ----------  ----------    ----------   ---------- //
-		texture.SetPixel (width, height, color);
+		// Applies A Series Of Border Dimensions
+		if (width  < border || width > (texture.width  - border) || height  < border || height > (texture.height  - border) )
+		color       = Color.white;
 
+
+        // ----------  ----------    ----------   ---------- //
+        // Sets The Pixel Colour
+		texture.SetPixel (width, height, color);
+		
+		
 		// ----------  ----------    ----------   ---------- //
 		// Progressively Converts All Pixels To Grayscale
 		var grayscale = texture.GetPixel (width, height).grayscale;
@@ -172,11 +204,7 @@ public class CameraObscura
 	return texture;
 	
 	}
-	
-	
-	
+
 	
 	}
-	
-	
 	

@@ -19,7 +19,10 @@ public class CameraBehaviour : MonoBehaviour
 	public bool            grayscale;
 	// ----------  ----------    ----------   ---------- //
 	[ Range (0, 1)     ] public float grain;
+	[ Range (0, 1)     ] public float shadow;
+	[ Range (0, 1)     ] public float light;
 	[ Range (1, 10000) ] public float tear;
+	[ Range (0, 100)   ] public float border;
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Private Attributes That'll Be Run On Within The "Camera Obscura" Class
@@ -102,7 +105,7 @@ public class CameraBehaviour : MonoBehaviour
 		int             item         = (int) (camera.discoverablity.Count - 1.00f);	
 		// ----------  ----------    ----------   ---------- //
 		if (grayscale               == true)
-		camera.discoverablity [item] = camera.Grayscale (camera.discoverablity [item], grain, tear);
+		camera.discoverablity [item] = camera.Grayscale (camera.discoverablity [item], grain, tear, border, shadow, light);
 		
 		// ----------  ----------    ----------   ---------- //
 		// Converts To A Sprite File (To Make It Useable Within The Audience Interface)
