@@ -14,7 +14,7 @@ MonoBehaviour:
   creature: Wasp
   state: idle
   interaction: 
-  quality: 300
+  quality: 312
   text: Though mostly airbourne, wasps will occasionally wander around to both rest
     their wings and mark their terrority
   transistion: badSnap

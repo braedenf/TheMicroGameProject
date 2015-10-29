@@ -5503,6 +5503,10 @@ Prefab:
       propertyPath: m_Name
       value: Visual Management (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 11475176, guid: 58aab7f79f4e8406cb563a3eaa12951f, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 58aab7f79f4e8406cb563a3eaa12951f, type: 2}
   m_IsPrefabParent: 0
@@ -11929,7 +11933,10 @@ MonoBehaviour:
   raycast: 0
   grayscale: 0
   grain: 0
+  shadow: 0
+  light: 0
   tear: 0
+  border: 0
 --- !u!1001 &944052170
 Prefab:
   m_ObjectHideFlags: 0
