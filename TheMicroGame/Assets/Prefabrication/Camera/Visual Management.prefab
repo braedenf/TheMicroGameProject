@@ -10,7 +10,7 @@ GameObject:
   - 224: {fileID: 22447758}
   - 222: {fileID: 22287888}
   - 114: {fileID: 11458682}
-  - 95: {fileID: 9580592}
+  - 95: {fileID: 9574604}
   m_Layer: 5
   m_Name: Visual Indicator
   m_TagString: Untagged
@@ -405,7 +405,7 @@ Transform:
   - {fileID: 22474118}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!95 &9580592
+--- !u!95 &9574604
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -439,8 +439,11 @@ MonoBehaviour:
   vision: {fileID: 0}
   raycast: 0
   grayscale: 1
-  grain: .0500000007
-  tear: 10000
+  grain: .0299999993
+  shadow: .200000003
+  light: .0500000007
+  tear: 3000
+  border: 1
 --- !u!114 &11408292
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -765,7 +768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
-  animate: {fileID: 9580592}
+  animate: {fileID: 9574604}
   speed: 1.79999995
   visibility: 10
   distinction:

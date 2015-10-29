@@ -151,7 +151,6 @@ public class CameraObscura
         var   pixel       = texture.GetPixel (width, height);
         float distinction = (pixel.r + pixel.b + pixel.g);
 
-
 		// ----------  ----------    ----------   ---------- //
         if (distinction   < 1.50f)
         pixel             = new Color (pixel.r - shadow, pixel.g - shadow, pixel.b - shadow);

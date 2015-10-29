@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e1bf2b6b3764c3485a88a3d14ff8ec, type: 3}
   m_Name: Wasp O3
   m_EditorClassIdentifier: 
-  creature: Wasp
-  state: 
+  creature: wasp
+  state: gather
   interaction: 
   quality: 900
   text: Wasps will often patrol their kingdom in defence against omnious forces. They're

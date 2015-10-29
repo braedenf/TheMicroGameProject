@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e1bf2b6b3764c3485a88a3d14ff8ec, type: 3}
   m_Name: Wasp O2
   m_EditorClassIdentifier: 
-  creature: Wasp
-  state: 
+  creature: wasp
+  state: flight
   interaction: 
   quality: 600
   text: Much like dragons and similar such creatures, wasps are prone to becoming

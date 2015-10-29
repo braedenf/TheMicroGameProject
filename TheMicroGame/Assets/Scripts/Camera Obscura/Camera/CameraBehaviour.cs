@@ -166,12 +166,12 @@ public class CameraBehaviour : MonoBehaviour
 		GameDirectory.photographic [counter].state        =  management.state;
 		GameDirectory.photographic [counter].interaction  =  management.interaction;
 		// ----------  ----------    ----------   ---------- //
-	    Narrative     narrative                           = NarrativeManagement.Depiction (management.creature, management.state, management.interaction);
+	    Narrative     narrative                           = NarrativeManagement.Depiction (management.creature, management.state, management.interaction, GameDirectory.photographic [counter].scoreboard);
 	    // ----------  ----------    ----------   ---------- //
 	    if (narrative == null)
 	    Debug.Log ("null Exception");
 	    // ----------  ----------    ----------   ---------- //
-	    if (narrative.transistion != null)
+	    if (narrative != null)
 	    GameDirectory.photographic [counter].transistion  =  narrative.transistion;
 		// ----------  ----------    ----------   ---------- //
 		Debug.Log (narrative.state);

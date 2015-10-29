@@ -5503,9 +5503,19 @@ Prefab:
       propertyPath: m_Name
       value: Visual Management (1)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 11475176, guid: 58aab7f79f4e8406cb563a3eaa12951f, type: 2}
       propertyPath: m_Enabled
       value: 1
+=======
+    - target: {fileID: 11406998, guid: 58aab7f79f4e8406cb563a3eaa12951f, type: 2}
+      propertyPath: tear
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406998, guid: 58aab7f79f4e8406cb563a3eaa12951f, type: 2}
+      propertyPath: shadow
+      value: .100000001
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 58aab7f79f4e8406cb563a3eaa12951f, type: 2}
