@@ -24,11 +24,17 @@ public class MoveObject : MonoBehaviour
     public void Move(Vector3 pos)
     {
         if (pos - transform.position == Vector3.zero) return;
-        // moving
-        if (lookRotation)
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        else transform.Translate((pos - transform.position).normalized * speed * Time.deltaTime);
-        // look at the target if the option is enabled
-        if (lookRotation) transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation((pos - transform.position).normalized), 0.2f);
+      
+	   // ----------  ----------    ----------   ---------- //
+       if (lookRotation)
+       transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        
+
+		// ----------  ----------    ----------   ---------- //
+		// Orientates The Character Rotation To Match The Spline 
+        if (lookRotation) 
+		transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.LookRotation ((pos - transform.position).normalized), 1.0f);
+
+        
     }
 }

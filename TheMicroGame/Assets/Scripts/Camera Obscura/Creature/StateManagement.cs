@@ -16,6 +16,7 @@ public class StateManagement : MonoBehaviour
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Private Attributes That Can Be Manipulated By The System
 	private AnimationManagement animation;
+	private AntAnimation        acronophobia;
 
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All Attributes And Instances That'll Be Run On Awake
@@ -29,7 +30,12 @@ public class StateManagement : MonoBehaviour
 	
 	// ----------  ----------    ----------   ---------- //
 	// Defines All Necessiary Attributes
+	if (this.gameObject.GetComponent <AnimationManagement> () != null)
 	animation                                        = this.gameObject.GetComponent <AnimationManagement> ();
+	// ----------  ----------    ----------   ---------- //
+	if (this.gameObject.GetComponent <AntAnimation> () != null)
+	acronophobia                                     = this.gameObject.GetComponent <AntAnimation> ();
+	
 		
 	}
 	
@@ -41,8 +47,11 @@ public class StateManagement : MonoBehaviour
 	
 	// ----------  ----------    ----------   ---------- //
 	// Deciphers What The Creature Behaviour State Is
-	if (animation.behaviour != null)
+	if (animation != null)
 	state                                           = animation.behaviour;
+	// ----------  ----------    ----------   ---------- //
+	if (acronophobia != null)
+	state                                           = acronophobia.behaviour;
 	
 	}
 	
