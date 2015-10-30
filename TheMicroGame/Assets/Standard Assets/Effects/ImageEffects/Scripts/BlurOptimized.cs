@@ -20,7 +20,7 @@ namespace UnityStandardAssets.ImageEffects
         [Range(0.0f, 10.0f)]
         public float blurSize = 3.0f;
 
-        [Range(1, 4)]
+        [Range(0, 4)]
         public int blurIterations = 2;
 
         public BlurType blurType= BlurType.StandardGauss;

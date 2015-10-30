@@ -11,11 +11,10 @@ public static class GameDirectory
 	//  -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	//  A Static List Comprised Exclusively From 'Audience' Captured Photographes
 	//  - public static List <RectTransform> photographic = new List <RectTransform> (1); 
-	public static List <Photography> photographic = new List <Photography> ();
-	
+	public static List <Photography> photographic    = new List <Photography> ();
 	public static List <GameObject> discovery        = new List <GameObject> ();
 	public static List <GameObject> gallery          = new List <GameObject> ();
-	
+	 
 	
 	//  -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// A Public Class Container Designed To Possess All Necessiary 'Photography' Attributes
@@ -30,6 +29,9 @@ public static class GameDirectory
 	public string           interaction; 
 	// ----------  ----------    ----------   ---------- //
 	public string           transistion; 
+	// ----------  ----------    ----------   ---------- //
+	public string           text; 
+	public Sprite           sprite;
 	}
 	
 

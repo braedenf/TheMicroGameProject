@@ -21,6 +21,7 @@ public class AnimationManagement : MonoBehaviour
 	public List <Vector2> animate      = new List <Vector2> (5);
 	public List <Vector2> intersection = new List <Vector2> (5);
 	public List <Vector2> obscure      = new List <Vector2> (5);
+	public List <Vector2> transistion  = new List <Vector2> (5);
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Private Attributes That Can Be Manipulated By The System
@@ -83,7 +84,12 @@ public class AnimationManagement : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	// Calculates The Framerate To Seconds Ratio For Obscure Animations
 	for (int interger  = 0; interger < obscure.Count; interger ++)
-	obscure[interger]  = Mathematics.Framerate (framerate, obscure [interger]);
+	obscure [interger]  = Mathematics.Framerate (framerate, obscure [interger]);
+	
+	// ----------  ----------    ----------   ---------- //
+	// Calculates The Framerate To Seconds Ratio For Transistion Animations
+	for (int interger  = 0; interger < transistion.Count; interger ++)
+	transistion [interger]  = Mathematics.Framerate (framerate, transistion [interger]);
 	
 	// ----------  ----------    ----------   ---------- //
 	// Calculates All The Interluding Animation Transistions
@@ -129,16 +135,16 @@ public class AnimationManagement : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	// Defines All "Motion" Enum Animation Transistions
 	if ( (motion & Motion.walk)   == Motion.walk)
-	Metamorphosis (animate [0], animate [04]);
+	Metamorphosis (animate [0], transistion [0]);
 	// ----------  ----------    ----------   ---------- //
 	if ( (motion & Motion.idle)   == Motion.idle)
-	Metamorphosis (animate [1], animate [05]);
+	Metamorphosis (animate [1], transistion [1]);
 	// ----------  ----------    ----------   ---------- //
 	if ( (motion & Motion.flight) == Motion.flight)
-	Metamorphosis (animate [2], animate [06]);
+	Metamorphosis (animate [2], transistion [2]);
 	// ----------  ----------    ----------   ---------- //
 	if ( (motion & Motion.gather) == Motion.gather)
-	Metamorphosis (animate [3], animate [09]);
+	Metamorphosis (animate [3], transistion [3]);
 	
 	// ----------  ----------    ----------   ---------- //
 	// This Acts As An Exception When Considering Looped Animation Transistions

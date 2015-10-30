@@ -16,7 +16,14 @@ public class CameraBehaviour : MonoBehaviour
 	public Camera          vision;
 	// ----------  ----------    ----------   ---------- //
 	public bool            raycast;
-
+	public bool            grayscale;
+	public bool            borderline;
+	// ----------  ----------    ----------   ---------- //
+	[ Range (0, 1)     ] public float grain;
+	[ Range (0, 1)     ] public float shadow;
+	[ Range (0, 1)     ] public float light;
+	[ Range (1, 10000) ] public float tear;
+	[ Range (0, 100)   ] public float border;
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Private Attributes That'll Be Run On Within The "Camera Obscura" Class
@@ -24,7 +31,7 @@ public class CameraBehaviour : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	private int counter;
 	// ----------  ----------    ----------   ---------- //
-	private List <Sprite> photographic = new List <Sprite> (1); 
+	public List <Sprite> photographic = new List <Sprite> (1); 
 	
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
@@ -70,6 +77,9 @@ public class CameraBehaviour : MonoBehaviour
 	IEnumerator Photography () 
 	{
     
+		FMOD.Studio.EventInstance dialogue = FMOD_StudioSystem.instance.GetEvent ("event:/SoundFX/cameraSnap");
+		dialogue.start ();
+    
 		// ----------  ----------    ----------   ---------- //
 		// Waits Until The Frame Has Been Processed Before Progressing The Photography 
 		yield return new WaitForEndOfFrame();
@@ -92,16 +102,24 @@ public class CameraBehaviour : MonoBehaviour
     	
 		// ----------  ----------    ----------   ---------- //
 		// Captures A Screenshot From The Active Camera 
-		// Converts To A Sprite File (To Make It Useable Within The Audience Interface)
 		camera.screenshot           = camera.discoverablity.Count;
-		// ----------  ----------    ----------   ---------- //]
-		int             item        = (int) (camera.discoverablity.Count - 1.00f);
+		
+		// ----------  ----------    ----------   ---------- //
+		// Converts The Screenshot Into A Grayscale Capture
+		int             item         = (int) (camera.discoverablity.Count - 1.00f);	
+		// ----------  ----------    ----------   ---------- //
+		if (grayscale               == true)
+		camera.discoverablity [item] = camera.Grayscale  (camera.discoverablity [item], grain, tear, shadow, light);
+		if (borderline               == true)
+		camera.discoverablity [item] = camera.Borderline (camera.discoverablity [item], border);
+		
+		// ----------  ----------    ----------   ---------- //
+		// Converts To A Sprite File (To Make It Useable Within The Audience Interface)
 		Sprite        sprite        = SpriteDesigner.conversion ( camera.discoverablity [item] );
 		// ----------  ----------    ----------   ---------- //
-		photographic.Add  (sprite);
+		photographic.Add                             (sprite);
 		// ----------  ----------    ----------   ---------- //
-		Sprite texture              = photographic [ (int) (photographic.Count - 1.00f) ];
-		
+		GameDirectory.photographic [counter].sprite  = sprite;
 		
 		// ----------  ----------    ----------   ---------- //
 		// Due To The Step-By-Step Shenangins - This Process May Become A Little Finnicky,
@@ -115,8 +133,8 @@ public class CameraBehaviour : MonoBehaviour
         distinction.GetComponent <Image> ().sprite   =   photographic  [ (int) (photographic.Count - 1.00f) ];
 		// ----------  ----------    ----------   ---------- //
         GameDirectory.photographic [counter].representation  = representation;
-        
-        
+
+			
 		// ----------  ----------    ----------   ---------- //
 		// Calculates The Score That Should Be Attributed To The Selected Photograph
 		// - Calculates The Visisble Percentage Of The Creature Mesh Vertices
@@ -155,15 +173,23 @@ public class CameraBehaviour : MonoBehaviour
 		GameDirectory.photographic [counter].state        =  management.state;
 		GameDirectory.photographic [counter].interaction  =  management.interaction;
 		// ----------  ----------    ----------   ---------- //
-	    Narrative     narrative                           = NarrativeManagement.Depiction (management.creature, management.state, management.interaction);
+	    Narrative     narrative                           = NarrativeManagement.Depiction (management.creature, management.state, management.interaction, GameDirectory.photographic [counter].scoreboard);
 	    // ----------  ----------    ----------   ---------- //
 	    if (narrative == null)
 	    Debug.Log ("null Exception");
 	    // ----------  ----------    ----------   ---------- //
+	    if (narrative != null)
 	    GameDirectory.photographic [counter].transistion  =  narrative.transistion;
+	    GameDirectory.photographic [counter].text         =  narrative.text;
+		}
 		// ----------  ----------    ----------   ---------- //
-		Debug.Log (narrative.state);
-
+		else
+		{
+		Narrative     narrative                           = NarrativeManagement.Depiction (null, null, null, 0.00f);
+	    // ----------  ----------    ----------   ---------- //
+	    if (narrative != null)
+	    GameDirectory.photographic [counter].transistion  =  narrative.transistion;
+	    GameDirectory.photographic [counter].text         =  narrative.text;
 		}
 	
 		

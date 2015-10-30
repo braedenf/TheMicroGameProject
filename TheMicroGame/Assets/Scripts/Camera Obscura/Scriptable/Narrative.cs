@@ -14,11 +14,10 @@ public string    creature;
 public string    state; 
 public string    interaction;
 // ----------  ----------    ----------   ---------- //
+[Range (0, 1000) ] public float     quality;
+// ----------  ----------    ----------   ---------- //
 [Multiline] public string    text;
 // ----------  ----------    ----------   ---------- //
-public string    position;
 public string    transistion;
-// ----------  ----------    ----------   ---------- //
-public AudioClip audio;
 
 }

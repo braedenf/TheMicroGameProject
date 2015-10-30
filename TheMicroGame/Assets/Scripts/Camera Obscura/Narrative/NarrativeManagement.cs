@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 //  -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      //
 // Maintains All Serialiazble "Narrative" Assets 
@@ -44,19 +45,22 @@ public static class NarrativeManagement
 	// - Progressively Goes Through The "Narrative" Script
 	// - Returns The Necessiary "Narrative" Script If Discovered
 	// - Returns "Null" If The Necessiary "Narrative Script Wasn't Discovered
-	public static Narrative Depiction (string creature, string state, string interaction)
+	public static Narrative Depiction (string creature, string state, string interaction, float scoreboard)
 	{
 	
 	// ----------  ----------    ----------   ---------- //
 	foreach (Narrative item in narrative) 
 	{
+
 	// ----------  ----------    ----------   ---------- //
-	if (creature == item.creature && state == item.state && interaction == item.interaction)
+	if (creature    == item.creature         || string.IsNullOrEmpty (item.creature)    )
+	if (state       == item.state            || string.IsNullOrEmpty (item.state)       )
+	if (interaction == item.interaction      || string.IsNullOrEmpty (item.interaction) )
 	return item;
 	}
 	
 	// ----------  ----------    ----------   ---------- //
-	return null;
+	return narrative [0];
 	
 	}
 	
