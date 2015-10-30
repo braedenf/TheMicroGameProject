@@ -16,30 +16,43 @@ public class Transistion : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	public GameObject instance;
 	public GameObject illustration;
-	// ----------  ----------    ----------   ---------- //
-	public Transform  parent;
+	public GameObject description;
 	
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All Private Attributes That'll Be Manipulated By The System
-	private int       zero;
-	private int       count;
-	private int       discover = 0;
-	
+	private int        zero;
+	private int        count;
+	private int        discover = 0;
+	// ----------  ----------    ----------   ---------- //
+	private bool       active;
+	// ----------  ----------    ----------   ---------- //
+	private Transform  parent;
+	// ----------  ----------    ----------   ---------- //
+	private GameManagement management; 
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
-	// Defines All Necessiary Attributes And Qualities On Enable
-	void OnEnable () 
+	// Defines All Necessiary Attributes And Qualities Awake
+	void Awake () 
 	{
 	
 	// ----------  ----------    ----------   ---------- //
 	// Deciphers Whether An "Instance" Has Been Selected
 	if (!instance)
 	Debug.Log ("You Should Possibly Select An 'Instance' For The Transistion Code");
+	if (!illustration)
+	Debug.Log ("You Should Possibly Select An 'Illustration' For The Transistion Code");
+	if (!description)
+	Debug.Log ("You Should Possibly Select A  'Description' For The Transistion Code");
 	
 	// ----------  ----------    ----------   ---------- //
 	// Deciphers The "Instance" Parent
 	parent = instance.transform.parent;
+	
+	// ----------  ----------    ----------   ---------- //
+	// Defines The Game Management Connection
+	management = GameObject.FindGameObjectWithTag ("Management").GetComponent <GameManagement> ();
+	
 	
 	}
 	
@@ -56,11 +69,16 @@ public class Transistion : MonoBehaviour
 	
 	// ----------  ----------    ----------   ---------- //
 	// Manuvers The List Of Images Depending On Certain Interactions From The Audience Members
+	if (management.gameState == GameManagement.GameState.gallery)
 	Manuver ();
 	
 	// ----------  ----------    ----------   ---------- //
 	// Refines The List Count After Each Respective Code Call
 	count    = GameDirectory.photographic.Count;
+	
+	
+
+   
 	
 	}
 	
@@ -108,7 +126,7 @@ public class Transistion : MonoBehaviour
 	// Gives The Image Attribute The Latest Captured Photograph Texture
 	instantiate.GetComponent <Image> ().enabled = true;
 	instantiate.GetComponent <Image> ().sprite  = GameDirectory.photographic [counter].sprite;
-
+	
 	}
 	
 	}
@@ -122,6 +140,7 @@ public class Transistion : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	// Defines The Quantity Of Sprites Within The Sprite List
 	int counter       = GameDirectory.photographic.Count - 1;
+	
 	
 	// ----------  ----------    ----------   ---------- //
 	// Manuvers Through The Image Interface At All Whim Of The Conducter
@@ -154,8 +173,12 @@ public class Transistion : MonoBehaviour
 
 	// ----------  ----------    ----------   ---------- //
 	// Attributes The Selected Sprite To The Illustration Image
+	// Attributes The Text Attribute The Most Approprite Dialogue
 	if (GameDirectory.photographic.Count       != zero)
-	illustration.GetComponent <Image> ().sprite = GameDirectory.photographic [discover].sprite;
+	{
+	illustration.GetComponent <Image> ().sprite  = GameDirectory.photographic [discover].sprite;
+	description.GetComponent  <Text>  ().text    = GameDirectory.photographic [discover].text;
+	}
 
 	
 	}

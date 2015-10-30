@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 // -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 // Manipulates The Creatures Animations And Organizes Them To Remain Synced With One Another
-public class AnimationManagement : MonoBehaviour 
+public class AntAnimation : MonoBehaviour 
 {
 
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
@@ -17,11 +17,10 @@ public class AnimationManagement : MonoBehaviour
 	[Range (0, 1) ]  public float    approximate;
 	// ----------  ----------    ----------   ---------- //
 	public bool                      hardboiled;
-	// ----------  ----------    ----------   ---------- //
-	public List <Vector2> animate      = new List <Vector2> (5);
-	public List <Vector2> intersection = new List <Vector2> (5);
-	public List <Vector2> obscure      = new List <Vector2> (5);
-	public List <Vector2> transistion  = new List <Vector2> (5);
+	
+	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
+	// Defines A Fresh List For All Transistions
+	public List <float> intersection = new List <float> ();
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Private Attributes That Can Be Manipulated By The System
@@ -31,11 +30,28 @@ public class AnimationManagement : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	private Vector2        current;
 	// ----------  ----------    ----------   ---------- //
-	private int            quantity;
-	
+	private int            quantity;	
+	private int            zero;
 	// ----------  ----------    ----------   ---------- //
 	[HideInInspector] public string behaviour;
 	
+	
+	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
+	// Defines A Class For The Animation State Frames
+	[System.Serializable]
+	public class beetlejuice
+	{	
+	public bool    rythm;
+	public Vector2 transistion;
+	public Vector2 loop;
+	}
+	
+	// ----------  ----------    ----------   ---------- //
+	public beetlejuice walk;
+	public beetlejuice idle;
+	public beetlejuice gather;
+	public beetlejuice attack;
+		
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Public Enum That'll Represent All Differing Animation States
@@ -43,13 +59,14 @@ public class AnimationManagement : MonoBehaviour
 	{	
 		walk          = 1,
 		idle          = 2,
-		flight        = 4, 
-		gather        = 8		
+		attack        = 4, 
+		gather        = 8,		
 	}
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All Public Enum Attributes That Can Be Manipulated By The Game Designer
 	public Motion motion;
+	
 	
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
@@ -66,59 +83,28 @@ public class AnimationManagement : MonoBehaviour
 	// Defines The Name Of The Animation File
 	foreach (AnimationState state in animation)
 	name     = state.name;
-	
+
 	// ----------  ----------    ----------   ---------- //
-	// Defines The Amount Of Pre-Specified Animations
-	quantity    = animate.Count;
-	
-	// ----------  ----------    ----------   ---------- //
-	// Calculates The Framerate To Seconds Ratio Of Each Animation
-	for (int interger  = 0; interger < animate.Count; interger ++)
-	animate [interger] = Mathematics.Framerate (framerate, animate [interger]);
-	
-	// ----------  ----------    ----------   ---------- //
-	// Calculates The Framerate To Seconds Ratio Of Each Transistion
-	for (int interger  = 0; interger < intersection.Count; interger ++)
-	intersection [interger] = Mathematics.Framerate (framerate, intersection [interger]);
-	
-	// ----------  ----------    ----------   ---------- //
-	// Calculates The Framerate To Seconds Ratio For Obscure Animations
-	for (int interger  = 0; interger < obscure.Count; interger ++)
-	obscure [interger]  = Mathematics.Framerate (framerate, obscure [interger]);
-	
-	// ----------  ----------    ----------   ---------- //
-	// Calculates The Framerate To Seconds Ratio For Transistion Animations
-	for (int interger  = 0; interger < transistion.Count; interger ++)
-	transistion [interger]  = Mathematics.Framerate (framerate, transistion [interger]);
-	
-	// ----------  ----------    ----------   ---------- //
-	// Calculates All The Interluding Animation Transistions
-	int   count  = animate.Count;
-	float length = (float) Math.Round (animation [name].length, 1);
-	// ----------  ----------    ----------   ---------- //
-	for (int interger  = 0; interger < (count + 1); interger++)
+	// Calculates The Time ALternative For Each Respective Frame
+	for (int interger   = 0; interger < intersection.Count; interger ++)
 	{
-	if (interger       == 0)
-	animate.Add ( new Vector2 (0, animate [interger].x) );
-	// ----------  ----------    ----------   ---------- //
-	if (interger       != 0)
-	animate.Add ( new Vector2 (animate [interger - 1].y, animate [interger].x) );
-	// ----------  ----------    ----------   ---------- //
-	if (interger       == count)
-	animate.Add ( new Vector2 (animate [interger - 1].y, length) );
-	}
-	
+    intersection [interger] = (intersection [interger] / framerate);
+	intersection [interger] = (float) Math.Round (intersection [interger], 2);
+    }
+    
+    
 	// ----------  ----------    ----------   ---------- //
 	// Selects The Default Behaviour State For Awake
 	behaviour        = motion.ToString ();
 	
 	// ----------  ----------    ----------   ---------- //
 	// Starts The Specified Creature Animation At A Selected Timeframe
-	animation[name].time = animate [1].x;
 	animation[name].speed = speed;
 	animation.Play (name);
 	
 	}
+	
+	
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Progressively Goes Through The Creature Animations And Manages Any Necessiary Changes
@@ -127,24 +113,25 @@ public class AnimationManagement : MonoBehaviour
 	
 	// ----------  ----------    ----------   ---------- //
 	// Defines The Current Animation State In Comparision To The Needed Animation State
-	for (int interger = 0; interger < quantity; interger++)
-	if (animation [name].time > animate [interger].x && animation [name].time < animate [interger].y)
-	current = animate [interger];
+//	for (int interger = 0; interger < quantity; interger++)
+//	if (animation [name].time > animate [interger].x && animation [name].time < animate [interger].y)
+//	current = animate [interger];
 
 	
 	// ----------  ----------    ----------   ---------- //
 	// Defines All "Motion" Enum Animation Transistions
 	if ( (motion & Motion.walk)   == Motion.walk)
-	Metamorphosis (animate [0], transistion [0]);
+	Walk (walk.loop, walk.transistion, walk.rythm);
 	// ----------  ----------    ----------   ---------- //
 	if ( (motion & Motion.idle)   == Motion.idle)
-	Metamorphosis (animate [1], transistion [1]);
+	Walk (idle.loop, idle.transistion, idle.rythm);
 	// ----------  ----------    ----------   ---------- //
-	if ( (motion & Motion.flight) == Motion.flight)
-	Metamorphosis (animate [2], transistion [2]);
-	// ----------  ----------    ----------   ---------- //
-	if ( (motion & Motion.gather) == Motion.gather)
-	Metamorphosis (animate [3], transistion [3]);
+	if ( (motion & Motion.attack) == Motion.attack)
+	Walk (attack.loop, attack.transistion, attack.rythm);
+//	// ----------  ----------    ----------   ---------- //
+//	if ( (motion & Motion.gather) == Motion.gather)
+//	Metamorphosis (animate [3], transistion [3]);
+	
 	
 	// ----------  ----------    ----------   ---------- //
 	// This Acts As An Exception When Considering Looped Animation Transistions
@@ -154,71 +141,64 @@ public class AnimationManagement : MonoBehaviour
 	
 	}
 	
+	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
-	// Progressively Manipulates The Creature Animation Transistions
-	void Metamorphosis (Vector2 vertex, Vector2 transistion)
+	// Progressively Manipulates The Creature Animation Transistions Whilst Within The 'Walk' Animation
+	void Walk (Vector2 loop, Vector2 transistion, bool rythm)
 	{
 	
-	// ----------  ----------    ----------   ---------- //
-	// Defines All Necessiary Attributes
-	float minimum     = vertex.x;
-	float maximum     = vertex.y;
 	
 	// ----------  ----------    ----------   ---------- //
-	// Captures The Index Of Both Current And Desired Animation States
-	int index         = animate.IndexOf (current);
-	int desire        = animate.IndexOf (vertex);
+	// Calculates The Time ALternative For Each Respective Frame
+    loop                = Mathematics.Framerate (framerate, loop);
+	transistion         = Mathematics.Framerate (framerate, transistion);
+	
 	
 	
 	// ----------  ----------    ----------   ---------- //
-	// Deciphers The Behaviour State Of The Current Animation
-	if (current == vertex)
-	behaviour        = motion.ToString ();
-	
-	// ----------  ----------    ----------   ---------- //
-	// Defines All Transistions For Obscure Animation Transistions 
-	foreach (Vector2 obscurity in obscure)
+    // Defines All Transistions For The Standardized Animations
+    // - Checks Whether The Animation Has Reached A 'T-Pose' Frame 
+    if (rythm == false)
+    {
+	if (animation [name].time < loop.x || animation [name].time > loop.y + approximate)
 	{
-	if (vertex      == obscurity)
-	{
-    // ----------  ----------    ----------   ---------- //
-	foreach (Vector3 intersect in intersection)	
-	if (animation [name].time > intersect.x && animation [name].time < intersect.x + approximate)
-    animation [name].time  = transistion.x + approximate;   
+	foreach (float intersect in intersection)
+	{	
+	if (animation [name].time > intersect && animation [name].time < intersect + approximate) 
+    animation [name].time = loop.x;
     }
 	}
-	
-	// ----------  ----------    ----------   ---------- //
-	// Defines All Transistions For The Standardized Animations
-	if (animation [name].time < minimum || animation [name].time > maximum)
-	{
-	// ----------  ----------    ----------   ---------- //
-	foreach (Vector3 intersect in intersection)	
-	if (animation [name].time > intersect.x && animation [name].time < intersect.x + approximate)
-    animation [name].time  = minimum;    
 	}
-	
+	// ----------  ----------    ----------   ---------- //
+	if (rythm == true)
+	{
+	if (animation [name].time < loop.x || animation [name].time > loop.y + approximate)
+	{
+	foreach (float intersect in intersection)	
+	if (animation [name].time > intersect && animation [name].time < intersect + approximate) 
+    animation [name].time = transistion.x + approximate;
+	}
+    }
 	
 	// ----------  ----------    ----------   ---------- //
-	//  -  Begins The Specified Creature Animation At The Selected Timeframe
+	//  Begins The Specified Creature Animation At The Selected Timeframe
 	//  -  Loops The Specified Creature Animation If The Animation Has Run Its Course
 	if (hardboiled == false)
-	if (animation [name].time > maximum  &&  animation [name].time < maximum + approximate)
-	animation [name].time  = minimum;
-	
+	if (animation [name].time > loop.y  &&  animation [name].time < loop.y + approximate)
+	animation [name].time  = loop.x;
 	
 	// ----------  ----------    ----------   ---------- //
 	// Skips Immidiately To The Selected Animation If 'Hardboiled' Remains Active
 	if (hardboiled == true)
-	if (animation [name].time < minimum || animation [name].time > maximum)
-	animation [name].time  = minimum;
-	
+	if (animation [name].time < loop.x || animation [name].time > loop.y)
+	animation [name].time  = loop.x;
 	
 	// ----------  ----------    ----------   ---------- //
 	animation [name].speed = speed;
 	animation.Play (name);
 	
-	}
 	
+	}
+
 	
 }

@@ -30,6 +30,7 @@ public static class GameDirectory
 	// ----------  ----------    ----------   ---------- //
 	public string           transistion; 
 	// ----------  ----------    ----------   ---------- //
+	public string           text; 
 	public Sprite           sprite;
 	}
 	

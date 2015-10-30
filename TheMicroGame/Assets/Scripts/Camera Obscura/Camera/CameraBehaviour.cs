@@ -17,6 +17,7 @@ public class CameraBehaviour : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	public bool            raycast;
 	public bool            grayscale;
+	public bool            borderline;
 	// ----------  ----------    ----------   ---------- //
 	[ Range (0, 1)     ] public float grain;
 	[ Range (0, 1)     ] public float shadow;
@@ -108,7 +109,9 @@ public class CameraBehaviour : MonoBehaviour
 		int             item         = (int) (camera.discoverablity.Count - 1.00f);	
 		// ----------  ----------    ----------   ---------- //
 		if (grayscale               == true)
-		camera.discoverablity [item] = camera.Grayscale (camera.discoverablity [item], grain, tear, border, shadow, light);
+		camera.discoverablity [item] = camera.Grayscale  (camera.discoverablity [item], grain, tear, shadow, light);
+		if (borderline               == true)
+		camera.discoverablity [item] = camera.Borderline (camera.discoverablity [item], border);
 		
 		// ----------  ----------    ----------   ---------- //
 		// Converts To A Sprite File (To Make It Useable Within The Audience Interface)
@@ -177,9 +180,16 @@ public class CameraBehaviour : MonoBehaviour
 	    // ----------  ----------    ----------   ---------- //
 	    if (narrative != null)
 	    GameDirectory.photographic [counter].transistion  =  narrative.transistion;
+	    GameDirectory.photographic [counter].text         =  narrative.text;
+		}
 		// ----------  ----------    ----------   ---------- //
-		Debug.Log (narrative.state);
-
+		else
+		{
+		Narrative     narrative                           = NarrativeManagement.Depiction (null, null, null, 0.00f);
+	    // ----------  ----------    ----------   ---------- //
+	    if (narrative != null)
+	    GameDirectory.photographic [counter].transistion  =  narrative.transistion;
+	    GameDirectory.photographic [counter].text         =  narrative.text;
 		}
 	
 		
