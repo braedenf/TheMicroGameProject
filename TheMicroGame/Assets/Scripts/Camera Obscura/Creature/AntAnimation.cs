@@ -33,6 +33,8 @@ public class AntAnimation : MonoBehaviour
 	private int            quantity;	
 	private int            zero;
 	// ----------  ----------    ----------   ---------- //
+	private bool           progression;
+	// ----------  ----------    ----------   ---------- //
 	[HideInInspector] public string behaviour;
 	
 	
@@ -121,16 +123,16 @@ public class AntAnimation : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	// Defines All "Motion" Enum Animation Transistions
 	if ( (motion & Motion.walk)   == Motion.walk)
-	Walk (walk.loop, walk.transistion, walk.rythm);
+	Interference (walk.loop, walk.transistion, walk.rythm);
 	// ----------  ----------    ----------   ---------- //
 	if ( (motion & Motion.idle)   == Motion.idle)
-	Walk (idle.loop, idle.transistion, idle.rythm);
+	Interference (idle.loop, idle.transistion, idle.rythm);
+	// ----------  ----------    ----------   ---------- //
+	if ( (motion & Motion.gather) == Motion.gather)
+	Interference (gather.loop, gather.transistion, gather.rythm);
 	// ----------  ----------    ----------   ---------- //
 	if ( (motion & Motion.attack) == Motion.attack)
-	Walk (attack.loop, attack.transistion, attack.rythm);
-//	// ----------  ----------    ----------   ---------- //
-//	if ( (motion & Motion.gather) == Motion.gather)
-//	Metamorphosis (animate [3], transistion [3]);
+	Attack (attack.loop, attack.transistion);
 	
 	
 	// ----------  ----------    ----------   ---------- //
@@ -138,13 +140,50 @@ public class AntAnimation : MonoBehaviour
 	if (animation [name].time >= animation [name].length - approximate)
 	animation [name].time      = 0.00f;
 	
+	}
+	
+	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
+	// Progressively Manipulates The Creature Attack Animation
+	void Attack (Vector2 loop, Vector2 transistion)
+	{
+	
+	// ----------  ----------    ----------   ---------- //
+	// Calculates The Time ALternative For Each Respective Frame
+    loop                = Mathematics.Framerate (framerate, loop);
+	transistion         = Mathematics.Framerate (framerate, transistion);
+
+	
+	// ----------  ----------    ----------   ---------- //
+    // Defines The Basic Transistion For The Attack Animation
+    // - Checks Whether The Animation Has Reached A 'T-Pose' Frame 
+    if (progression == false)
+	if (animation [name].time < transistion.x || animation [name].time > transistion.y + approximate)
+	{
+	foreach (float intersect in intersection)
+	{	
+	if (animation [name].time > intersect && animation [name].time < intersect + approximate) 
+	{
+    animation [name].time = transistion.x;
+    progression           = true;
+    }
+    }
+	}
+
+	// ----------  ----------    ----------   ---------- //
+	if (progression == true)
+	if (animation [name].time > transistion.y && animation [name].time < transistion.y + approximate) 
+	{
+	animation [name].time = loop.x;
+	progression = false;
+    }
 	
 	}
 	
 	
+
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
-	// Progressively Manipulates The Creature Animation Transistions Whilst Within The 'Walk' Animation
-	void Walk (Vector2 loop, Vector2 transistion, bool rythm)
+	// Progressively Manipulates The Creature Animation Transistions 
+	void  Interference (Vector2 loop, Vector2 transistion, bool rythm)
 	{
 	
 	
@@ -152,7 +191,6 @@ public class AntAnimation : MonoBehaviour
 	// Calculates The Time ALternative For Each Respective Frame
     loop                = Mathematics.Framerate (framerate, loop);
 	transistion         = Mathematics.Framerate (framerate, transistion);
-	
 	
 	
 	// ----------  ----------    ----------   ---------- //
@@ -169,7 +207,10 @@ public class AntAnimation : MonoBehaviour
     }
 	}
 	}
+			
 	// ----------  ----------    ----------   ---------- //
+	// Defines All Transistions For The Standardized Animations
+    // - Checks Whether The Animation Has Reached A 'T-Pose' Frame 
 	if (rythm == true)
 	{
 	if (animation [name].time < loop.x || animation [name].time > loop.y + approximate)
@@ -179,6 +220,7 @@ public class AntAnimation : MonoBehaviour
     animation [name].time = transistion.x + approximate;
 	}
     }
+    
 	
 	// ----------  ----------    ----------   ---------- //
 	//  Begins The Specified Creature Animation At The Selected Timeframe
@@ -187,11 +229,13 @@ public class AntAnimation : MonoBehaviour
 	if (animation [name].time > loop.y  &&  animation [name].time < loop.y + approximate)
 	animation [name].time  = loop.x;
 	
+	
 	// ----------  ----------    ----------   ---------- //
 	// Skips Immidiately To The Selected Animation If 'Hardboiled' Remains Active
 	if (hardboiled == true)
 	if (animation [name].time < loop.x || animation [name].time > loop.y)
 	animation [name].time  = loop.x;
+	
 	
 	// ----------  ----------    ----------   ---------- //
 	animation [name].speed = speed;

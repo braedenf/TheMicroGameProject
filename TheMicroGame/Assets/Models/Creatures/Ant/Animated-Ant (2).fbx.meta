@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 29742ddb7e01c44a3b1d5f11b11249d2
-timeCreated: 1446167679
+guid: 65b323cfad1ed4f6e9fa718350466a4e
+timeCreated: 1446201379
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -34,6 +34,7 @@ ModelImporter:
     100052: Representation1
     100054: Vision
     100056: Weight
+    100058: Ant
     400000: Anchor
     400002: //RootNode
     400004: Ant_Head
@@ -63,6 +64,7 @@ ModelImporter:
     400052: Representation1
     400054: Vision
     400056: Weight
+    400058: Ant
     2300000: Anchor
     2300002: AntennaO1
     2300004: AntennaO2
@@ -145,91 +147,7 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 1
     extraExposedTransformPaths: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Take 001
-      takeName: Take 001
-      firstFrame: 1
-      lastFrame: 354
-      wrapMode: 1
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Anchor
-        weight: 1
-      - path: Ant_Head
-        weight: 1
-      - path: Ant_Head/AntennaO1
-        weight: 1
-      - path: Ant_Head/AntennaO2
-        weight: 1
-      - path: Ant_Head/Vision
-        weight: 1
-      - path: Central
-        weight: 1
-      - path: Leg_Design_O1
-        weight: 1
-      - path: Leg_Design_O1/FilamentO6
-        weight: 1
-      - path: Leg_Design_O1/FilamentO12
-        weight: 1
-      - path: Leg_Design_O2
-        weight: 1
-      - path: Leg_Design_O2/FilamentO6 1
-        weight: 1
-      - path: Leg_Design_O2/FilamentO12 1
-        weight: 1
-      - path: Leg_Design_O3
-        weight: 1
-      - path: Leg_Design_O3/FilamentO6 2
-        weight: 1
-      - path: Leg_Design_O3/FilamentO12 2
-        weight: 1
-      - path: Leg_Design_O4
-        weight: 1
-      - path: Leg_Design_O4/FilamentO6 3
-        weight: 1
-      - path: Leg_Design_O4/FilamentO12 3
-        weight: 1
-      - path: Leg_Design_O5
-        weight: 1
-      - path: Leg_Design_O5/FilamentO6 4
-        weight: 1
-      - path: Leg_Design_O5/FilamentO12 4
-        weight: 1
-      - path: Leg_Design_O6
-        weight: 1
-      - path: Leg_Design_O6/FilamentO6 5
-        weight: 1
-      - path: Leg_Design_O6/FilamentO12 5
-        weight: 1
-      - path: pPyramid1
-        weight: 1
-      - path: pPyramid2
-        weight: 1
-      - path: Representation1
-        weight: 1
-      - path: Weight
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
