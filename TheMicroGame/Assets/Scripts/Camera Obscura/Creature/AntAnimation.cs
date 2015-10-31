@@ -115,10 +115,7 @@ public class AntAnimation : MonoBehaviour
 	
 	// ----------  ----------    ----------   ---------- //
 	// Defines The Current Animation State In Comparision To The Needed Animation State
-//	for (int interger = 0; interger < quantity; interger++)
-//	if (animation [name].time > animate [interger].x && animation [name].time < animate [interger].y)
-//	current = animate [interger];
-
+    behaviour = motion.ToString ();
 	
 	// ----------  ----------    ----------   ---------- //
 	// Defines All "Motion" Enum Animation Transistions

@@ -33,21 +33,15 @@ public class MoveObject : MonoBehaviour
         direction         = direction / magnitude;
         
 
-         // ----------  ----------    ----------   ---------- //
-		Vector3 perception = Vector3.RotateTowards (Vector3.right, direction, 1.0f, 1.0f);
-		transform.rotation = Quaternion.LookRotation (perception, motion);
-		
+        // ----------  ----------    ----------   ---------- //
+		Quaternion rotation   = Quaternion.LookRotation (direction, motion);
+		// ----------  ----------    ----------   ---------- //
+		transform.rotation    = Quaternion.Lerp (transform.rotation, rotation, 0.05f);
 
 
 	    // ----------  ----------    ----------   ---------- //
-        if (lookRotation)
         transform.Translate(direction * speed * Time.deltaTime, Space.World);
       
-
-		// ----------  ----------    ----------   ---------- //
-		// Orientates The Character Rotation To Match The Spline 
-//        if (lookRotation) 
-//		transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.LookRotation ((position - transform.position).normalized), 1.0f);
 
         
     }
