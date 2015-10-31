@@ -128,7 +128,7 @@ public class CameraBehaviour : MonoBehaviour
 	    var representation     = Instantiate (display);
 		var distinction        = representation.transform.GetChild (1).GetChild (0);
 		// ----------  ----------    ----------   ---------- //
-		representation.transform.SetParent (canvas.transform, false);
+//		representation.transform.SetParent (canvas.transform, false);
 		// ----------  ----------    ----------   ---------- //
         distinction.GetComponent <Image> ().sprite   =   photographic  [ (int) (photographic.Count - 1.00f) ];
 		// ----------  ----------    ----------   ---------- //
