@@ -12,9 +12,9 @@ public class MoveObject : MonoBehaviour
 	// Defines All  Public Attributes That Can Be Manipulated By The Game Designer
     #region variables
     [Range (0, 10)  ]  public float   speed;
-	[Range (0, 10)  ]  public float  orientation;
-	[Range (0, 100) ]  public float  clamp;
-	[Range (0, 10)  ]  public float  approximate;
+	[Range (0, 10)  ]  public float   orientation;
+	[Range (0, 100) ]  public float   clamp;
+	[Range (0, 10)  ]  public float   approximate;
 	// ----------  ----------    ----------   ---------- //
     public Vector3 motion;
     
@@ -28,15 +28,19 @@ public class MoveObject : MonoBehaviour
 	private Quaternion history;
 	private Quaternion contempory;
 	// ----------  ----------    ----------   ---------- //
-	private float   transistion;
-	private float   transistor;
-	private float   moment;
+	private float      transistion;
+	private float      transistor;
+	private float      moment;
+	private float      velocity;
+	private float      time;
 	// ----------  ----------    ----------   ---------- //
 	private int     zero;
 	// ----------  ----------    ----------   ---------- //
 	private bool    awake;
 	// ----------  ----------    ----------   ---------- //
 	public SplineWindow         sploot;
+	public AntAnimation         animation;
+	
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines A Public Class That Holds Positional Information About The Animation Transistion Triggers
@@ -45,11 +49,22 @@ public class MoveObject : MonoBehaviour
 	{
 	[Range (0, 100) ]  public int   point; 
 	[Range (0, 100) ]  public float percentage;
+	// ----------  ----------    ----------   ---------- //
+	public Color  color;
+	public AntAnimation.Motion animation;
+	// ----------  ----------    ----------   ---------- //
+	[Range (0, 100) ]   public float pause;
 	}
+	
+	
 	// ----------  ----------    ----------   ---------- //
 	public List <Transistion> node = new List <Transistion> ();
  
+ 
+ 
     #endregion
+    
+    
 
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Connects With This Creatures Registered Spline And Calculates All Necessiary Spline Animations 
@@ -72,6 +87,10 @@ public class MoveObject : MonoBehaviour
 		// ----------  ----------    ----------   ---------- //
 		point                           = position;
 		creature                        = transform.position;	
+		// ----------  ----------    ----------   ---------- //
+		velocity                        = speed;
+		// ----------  ----------    ----------   ---------- //
+		animation                       = this.gameObject.GetComponent <AntAnimation> ();
 		// ----------  ----------    ----------   ---------- //
 		awake                           = true;
 		}
@@ -125,7 +144,7 @@ public class MoveObject : MonoBehaviour
 		// Manuevers The Selected Creature Position Along The Spline Over An Interval Of Time
 		transistion                   += Time.deltaTime;
 		// ----------  ----------    ----------   ---------- //
-        transform.position             = Vector3.Lerp (creature, point, transistion * speed);
+        transform.position             = Vector3.Lerp (creature, point, transistion * velocity);
         
 		
 		// ----------  ----------    ----------   ---------- //
@@ -141,6 +160,7 @@ public class MoveObject : MonoBehaviour
 		
 		// ----------  ----------    ----------   ---------- //
 		// Draws A Representative Symbol On The Spline For Each Defined Animation Trigger
+		// Sets The Selected Animation That's Attributed To The Discovered Spline
 		foreach (Transistion transit in node)
 		{
 			
@@ -159,14 +179,18 @@ public class MoveObject : MonoBehaviour
 	
 		    // ----------  ----------    ----------   ---------- //
 		    // Determines Certain Distance Approxizations Between The Creature And The Animation Trigger
+			// Determines The Set Motion Of The Animation, As Determined By The Current Creature Animation Behaviour
 		    if (distance        >= minimum.x && distance  <= maximum.x)
 			if (distance        >= minimum.y && distance  <= maximum.y)
 			if (distance        >= minimum.z && distance  <= maximum.z)
-		    Mathematics.Logged (note + "  " + transform.position);
+		    animation.motion        = transit.animation;
+		
+			
 		}
-
+	
 		     
-    }
+        }
+    
     
     
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
@@ -189,7 +213,7 @@ public class MoveObject : MonoBehaviour
 	
 	// ----------  ----------    ----------   ---------- //
 	// Draws A Sphere Representing The Trigger Position
-	Gizmos.color        = Color.black;
+	Gizmos.color        = transit.color;
 	Gizmos.DrawSphere (position, 1);
 	}
 	

@@ -113,9 +113,6 @@ public class AntAnimation : MonoBehaviour
 	void Update () 
 	{
 	
-	// ----------  ----------    ----------   ---------- //
-	// Defines The Current Animation State In Comparision To The Needed Animation State
-    behaviour = motion.ToString ();
 	
 	// ----------  ----------    ----------   ---------- //
 	// Defines All "Motion" Enum Animation Transistions
@@ -171,7 +168,7 @@ public class AntAnimation : MonoBehaviour
 	if (animation [name].time > transistion.y && animation [name].time < transistion.y + approximate) 
 	{
 	animation [name].time = loop.x;
-	progression = false;
+	progression           = false;
     }
 	
 	}
@@ -214,7 +211,7 @@ public class AntAnimation : MonoBehaviour
 	{
 	foreach (float intersect in intersection)	
 	if (animation [name].time > intersect && animation [name].time < intersect + approximate) 
-    animation [name].time = transistion.x + approximate;
+    animation [name].time     = transistion.x + approximate;
 	}
     }
     
@@ -224,8 +221,9 @@ public class AntAnimation : MonoBehaviour
 	//  -  Loops The Specified Creature Animation If The Animation Has Run Its Course
 	if (hardboiled == false)
 	if (animation [name].time > loop.y  &&  animation [name].time < loop.y + approximate)
+	{
 	animation [name].time  = loop.x;
-	
+	}
 	
 	// ----------  ----------    ----------   ---------- //
 	// Skips Immidiately To The Selected Animation If 'Hardboiled' Remains Active
