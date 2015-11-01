@@ -24,7 +24,7 @@ namespace SplineTool
         public enum ControlType { PlayerControlled, AIControlled, Random }
         public enum OffsetType { None, Constant, Random }
 
-        public delegate void MoveDelegate(Vector3 pos);
+        public delegate void MoveDelegate(Vector3 pos, Spline note);
         /// <summary>
         /// use this delegate for ChooseSubway method
         /// </summary>
@@ -191,7 +191,7 @@ namespace SplineTool
 
             if (nextPos != progressPoint)
             {
-                Move(nextPos);
+                Move(nextPos, spline);
             }
             else
             {

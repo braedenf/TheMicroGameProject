@@ -13,7 +13,7 @@ public class MotionAwareness : MonoBehaviour
 	public float         speed;
 
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
-	// Defines All  Public Attributes That Can Be Manipulated By The Game Designer
+	// Defines All  Private Attributes That Can Be Manipulated By The System
 	private AntAnimation animation;
 	private MoveObject   movement;
 	// ----------  ----------    ----------   ---------- //
@@ -57,26 +57,26 @@ public class MotionAwareness : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	// Sets The Animation State Depending On Spline Triggers
 	// This Is Determined By The Name Of The Selected GameObject (Set By The Spline System)
-	if (this.gameObject.name != animation.motion.ToString ())
-	animation.motion          = (AntAnimation.Motion) System.Enum.Parse ( typeof (AntAnimation.Motion), term);
+//	if (this.gameObject.name != animation.motion.ToString ())
+//	animation.motion          = (AntAnimation.Motion) System.Enum.Parse ( typeof (AntAnimation.Motion), term);
 	
 	// ----------  ----------    ----------   ---------- //
 	// Determines The Momentum Of The Selected Spline
 	// Pauses The Linear Motion Unti The Creature Animation Has Occurred
-//	foreach (transistion index in motion)	
-//	if      (index.animation   == term)
-//	{	
-//	time                       += Time.deltaTime;  
-//	// ----------  ----------    ----------   ---------- //
-//	if (time                    < index.time)
-//	movement.speed              = 0.00f;
-//	// ----------  ----------    ----------   ---------- //
-//	else
-//	{
-//	movement.speed              = speed;	
-//	this.gameObject.name        = "walk";
-//	}
-//	}
+	foreach (transistion index in motion)	
+	if      (index.animation   == term)
+	{	
+	time                       += Time.deltaTime;  
+	// ----------  ----------    ----------   ---------- //
+	if (time                    < index.time)
+	movement.speed              = 0.00f;
+	// ----------  ----------    ----------   ---------- //
+	else
+	{
+	movement.speed              = speed;	
+	this.gameObject.name        = "walk";
+	}
+	}
 	
     
 	
