@@ -8,6 +8,7 @@ TagManager:
   - Gallery
   - Discovery
   - Management
+  - Pollenate
   layers:
   - Default
   - TransparentFX

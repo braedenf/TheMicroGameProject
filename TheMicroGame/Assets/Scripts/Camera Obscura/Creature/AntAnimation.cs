@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -17,11 +18,27 @@ public class AntAnimation : MonoBehaviour
 	[Range (0, 1) ]  public float    approximate;
 	// ----------  ----------    ----------   ---------- //
 	public bool                      hardboiled;
-//	public bool                      gather;
+
+	
+	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
+	// Defines A Class For The Pollination Process
+	[System.Serializable]
+	public class Pollination 
+	{	
+	[HideInInspector]
+	public  bool                      gather;
+	public  bool                      active;
+	public  string                    collectable;
+	public  GameObject                parent;	
+	}
+	// ----------  ----------    ----------   ---------- //
+	public Pollination                pollinate; 
+	
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines A Fresh List For All Transistions
 	public List <float> intersection = new List <float> ();
+	
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Private Attributes That Can Be Manipulated By The System
@@ -31,12 +48,18 @@ public class AntAnimation : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	private Vector2        current;
 	// ----------  ----------    ----------   ---------- //
+	private float          distance;
+	// ----------  ----------    ----------   ---------- //
 	private int            quantity;	
 	private int            zero;
+	// ----------  ----------    ----------   ---------- //
+	private GameObject     mother;
 	// ----------  ----------    ----------   ---------- //
 	private bool           progression;
 	// ----------  ----------    ----------   ---------- //
 	[HideInInspector] public string behaviour;
+	// ----------  ----------    ----------   ---------- //
+	private List <GameObject> index;
 	
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
@@ -143,8 +166,7 @@ public class AntAnimation : MonoBehaviour
 	
 	// ----------  ----------    ----------   ---------- //
 	// Gathers Pollen And Similar Such Goods From Nearby Surroundings
-	if ( (motion & Motion.gather) == Motion.gather)
-	Gather ();
+	Garther ();
 	
 	}
 	
@@ -261,19 +283,61 @@ public class AntAnimation : MonoBehaviour
 	
 	
 	}
-
-
+	
+	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Progressively Goes Through The Creature Animations And Manages Any Necessiary Changes
-	void Gather ()
+	void Garther ()
 	{
 	
+	// ----------  ----------    ----------   ---------- //
+	// Defines All Necessiary Attributes
+
+
+	// ----------  ----------    ----------   ---------- //
+	// Analyzes All Known Collectable(s) And Deciphers Which One May Be The Closest To Collect Pollen From
+	if (pollinate.active)   {
+	if (!pollinate.gather)  {
+	if (behaviour       == Motion.gather.ToString () )
+	{
 	
+	// ----------  ----------    ----------   ---------- //
+	// Determines The Nearest Pollen Generator
+	foreach (GameObject generator in GameObject.FindGameObjectsWithTag ("Pollenate").ToList () )
+    {  
+    // ----------  ----------    ----------   ---------- //       
+    if (distance == zero)
+    distance      = Vector3.Distance (transform.position, generator.transform.position);
+    // ----------  ----------    ----------   ---------- //
+    if (Vector3.Distance (transform.position, generator.transform.position) <= distance)
+    {
+    distance      = Vector3.Distance (transform.position, generator.transform.position);
+    mother        = generator;   
+    }
+    }
+    
+    // ----------  ----------    ----------   ---------- //
+    // Instantiates A Seedling Alongside The Creature
+    Vector3     position            =  pollinate.parent.transform.position;
+    Quaternion  rotation            =  pollinate.parent.transform.rotation;
+    GameObject  seedling            =  mother.GetComponent <Pollinate> ().pollen;
+	// ----------  ----------    ----------   ---------- //
+    seedling                        =  Instantiate (seedling, position, rotation) as GameObject;
+    // ----------  ----------    ----------   ---------- //
+    seedling.transform.SetParent   (pollinate.parent.transform);
+    seedling.transform.position     = new Vector3 (seedling.transform.position.x - 0.5f, seedling.transform.position.y - 0.25f, seedling.transform.position.z);
+    
+    
+	// ----------  ----------    ----------   ---------- //
+	pollinate.gather                =  true;
+    }   
+    }
+    }
+    
+
+    
+    }
 	
-	
-	
-	
-	
-	}
+
 	
 }

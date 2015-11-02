@@ -211,9 +211,6 @@ public class CameraBehaviour : MonoBehaviour
 		// Progresssively Links The Counter With The Current Length Of The "GameDirectory.photographic" List
 		counter ++;
 		
-		
-		
-
 }
 
 }

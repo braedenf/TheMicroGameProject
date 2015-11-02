@@ -190,12 +190,7 @@ public class MoveObject : MonoBehaviour
 		if (direction                  != Vector3.zero)
 		history                         = Quaternion.LookRotation (direction, motion);
 		
-		
-		
-		// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
-		// Deciphers The Position Of Certain Animation Triggers As Set By The Game Designer
-		
-		
+	
 		// ----------  ----------    ----------   ---------- //
 		// Draws A Representative Symbol On The Spline For Each Defined Animation Trigger
 		// Sets The Selected Animation That's Attributed To The Discovered Spline
@@ -272,7 +267,6 @@ public class MoveObject : MonoBehaviour
 	
 		     
         }
-    
     
     
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 

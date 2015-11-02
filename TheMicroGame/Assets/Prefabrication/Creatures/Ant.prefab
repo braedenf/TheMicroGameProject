@@ -540,7 +540,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 103210}
   m_LocalRotation: {x: -.00511188619, y: .817042887, z: -.00706559978, w: -.576510966}
-  m_LocalPosition: {x: 44.0280838, y: -48.6999969, z: -111.98909}
+  m_LocalPosition: {x: 51.9205399, y: -48.6999969, z: -44.2632065}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 426554}
@@ -1681,9 +1681,9 @@ MonoBehaviour:
   motion: {x: 0, y: 4, z: 0}
   sploot: {fileID: 0}
   start:
-    point: 3
+    point: 0
     branch: 0
-    percentage: 100
+    percentage: 65
     color: {r: .442415088, g: .75463897, b: 1, a: 1}
     animation: 0
     speed: 0
@@ -1692,20 +1692,6 @@ MonoBehaviour:
   - point: 0
     branch: 0
     percentage: 30
-    color: {r: 1, g: .502729177, b: .54704535, a: 1}
-    animation: 2
-    speed: 0
-    pause: 2
-  - point: 0
-    branch: 0
-    percentage: 74
-    color: {r: 1, g: .502729177, b: .54704535, a: 1}
-    animation: 2
-    speed: 0
-    pause: 2
-  - point: 0
-    branch: 0
-    percentage: 11
     color: {r: 1, g: .502729177, b: .54704535, a: 1}
     animation: 2
     speed: 0
