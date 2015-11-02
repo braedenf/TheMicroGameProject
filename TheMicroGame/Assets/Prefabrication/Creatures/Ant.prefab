@@ -539,8 +539,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 103210}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28, y: -47.6189995, z: -163.139008}
+  m_LocalRotation: {x: -.00511188619, y: .817042887, z: -.00706559978, w: -.576510966}
+  m_LocalPosition: {x: 44.0280838, y: -48.6999969, z: -111.98909}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 426554}
@@ -577,7 +577,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161590}
   m_LocalRotation: {x: -0, y: -.707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: -.123259343, y: .108999997, z: -.150000006}
+  m_LocalPosition: {x: -.119999997, y: .49000001, z: -.150000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 430944}
@@ -1600,12 +1600,15 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 103210}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 477376ff78c7cc445838ff392214c266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   offset: .00100000005
+  note: 0
+  branch: 0
+  percentage: 0
   originalStartIndex: 0
   isPhysically: 1
   reverse: 0
@@ -1626,7 +1629,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: idle
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   - m_PersistentCalls:
@@ -1641,15 +1644,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: idle
           m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  - m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  - m_PersistentCalls:
-      m_Calls: []
+        m_CallState: 0
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   - m_PersistentCalls:
@@ -1685,23 +1680,36 @@ MonoBehaviour:
   approximate: 5
   motion: {x: 0, y: 4, z: 0}
   sploot: {fileID: 0}
-  animation: {fileID: 0}
-  node:
-  - point: 3
-    percentage: 78
-    color: {r: 1, g: .26534602, b: .261419475, a: 1}
-    animation: 1
+  start:
+    point: 3
+    branch: 0
+    percentage: 100
+    color: {r: .442415088, g: .75463897, b: 1, a: 1}
+    animation: 0
+    speed: 0
     pause: 0
-  - point: 2
-    percentage: 12
-    color: {r: .348053366, g: .629814684, b: 1, a: 1}
-    animation: 2
-    pause: 1
+  node:
   - point: 0
-    percentage: 12
-    color: {r: 1, g: .459245861, b: .298164964, a: 1}
-    animation: 8
-    pause: 1
+    branch: 0
+    percentage: 30
+    color: {r: 1, g: .502729177, b: .54704535, a: 1}
+    animation: 2
+    speed: 0
+    pause: 2
+  - point: 0
+    branch: 0
+    percentage: 74
+    color: {r: 1, g: .502729177, b: .54704535, a: 1}
+    animation: 2
+    speed: 0
+    pause: 2
+  - point: 0
+    branch: 0
+    percentage: 11
+    color: {r: 1, g: .502729177, b: .54704535, a: 1}
+    animation: 2
+    speed: 0
+    pause: 2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

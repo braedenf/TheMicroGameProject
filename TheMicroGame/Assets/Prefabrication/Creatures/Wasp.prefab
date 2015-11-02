@@ -161,7 +161,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 440960}
   - 111: {fileID: 11104950}
-  - 114: {fileID: 11497052}
   - 114: {fileID: 11404126}
   - 114: {fileID: 11480608}
   - 114: {fileID: 11456652}
@@ -175,7 +174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &157236
 GameObject:
   m_ObjectHideFlags: 1
@@ -328,7 +327,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156026}
   m_LocalRotation: {x: 0, y: .887010932, z: 0, w: .461748511}
-  m_LocalPosition: {x: -9.60000038, y: 1, z: -3.19000006}
+  m_LocalPosition: {x: -9.60000038, y: .639999986, z: -3.19000006}
   m_LocalScale: {x: 1, y: .800000012, z: 1.60000002}
   m_Children:
   - {fileID: 453346}
@@ -353,7 +352,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5331974e-05, y: -.900000036, z: -.114436284}
+  m_LocalPosition: {x: 0, y: -.0329999998, z: -.114}
   m_LocalScale: {x: 1, y: 1.25, z: .62500006}
   m_Children:
   - {fileID: 472298}
@@ -983,12 +982,15 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156026}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 477376ff78c7cc445838ff392214c266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   offset: .00100000005
+  note: 0
+  branch: 0
+  percentage: 0
   originalStartIndex: 0
   isPhysically: 1
   reverse: 0
@@ -1068,22 +1070,35 @@ MonoBehaviour:
   approximate: 5
   motion: {x: 0, y: 4, z: 0}
   sploot: {fileID: 0}
-  animation: {fileID: 0}
+  start:
+    point: 0
+    branch: 0
+    percentage: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    animation: 0
+    speed: 0
+    pause: 0
   node:
   - point: 3
+    branch: 0
     percentage: 78
     color: {r: 1, g: .26534602, b: .261419475, a: 1}
     animation: 1
+    speed: 0
     pause: 0
   - point: 2
+    branch: 0
     percentage: 12
     color: {r: .348053366, g: .629814684, b: 1, a: 1}
     animation: 2
+    speed: 0
     pause: 1
   - point: 0
+    branch: 0
     percentage: 12
     color: {r: 1, g: .459245861, b: .298164964, a: 1}
-    animation: 8
+    animation: 16
+    speed: 0
     pause: 1
 --- !u!114 &11480608
 MonoBehaviour:
@@ -1099,44 +1114,6 @@ MonoBehaviour:
   creature: wasp
   state: idle
   interaction: 
---- !u!114 &11497052
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 156026}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e29c413309f564a82b80d2c5d57421f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  framerate: 24
-  speed: 1
-  acceleration: 1
-  approximate: .0500000007
-  hardboiled: 0
-  animate:
-  - {x: 24, y: 72}
-  - {x: 96, y: 140}
-  - {x: 180, y: 236}
-  - {x: 272, y: 296}
-  intersection:
-  - {x: 0, y: 0}
-  - {x: 96, y: 96}
-  - {x: 140, y: 140}
-  - {x: 260, y: 260}
-  - {x: 308, y: 308}
-  obscure:
-  - {x: 24, y: 72}
-  - {x: 180, y: 236}
-  - {x: 272, y: 296}
-  transistion:
-  - {x: 0, y: 24}
-  - {x: 72, y: 96}
-  - {x: 140, y: 180}
-  - {x: 260, y: 260}
-  behaviour: 
-  motion: 8
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
