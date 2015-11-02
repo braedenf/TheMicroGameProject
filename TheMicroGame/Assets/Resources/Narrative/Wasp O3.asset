@@ -15,6 +15,6 @@ MonoBehaviour:
   state: gather
   interaction: 
   quality: 900
-  text: "Wasps will often patrol their kingdom\n in defence against omnious forces.
+  text: "Wasps will often patrol their kingdom\nin defence against omnious forces.
     \nThey're incredibly fierce, \nand quite appreciate a good battle too"
   transistion: goodSnap

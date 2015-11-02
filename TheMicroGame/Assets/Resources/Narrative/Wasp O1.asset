@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: Wasp O1
   m_EditorClassIdentifier: 
   creature: wasp
-  state: idle
+  state: walk
   interaction: 
   quality: 312
-  text: Though mostly airbourne, wasps will occasionally wander around to both rest
-    their wings and mark their terrority
+  text: "Though mostly airbourne, \nwasps will occasionally wander around \nto both
+    rest their wings \nand mark their terrority"
   transistion: badSnap

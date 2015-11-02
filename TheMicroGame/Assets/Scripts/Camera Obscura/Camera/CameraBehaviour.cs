@@ -19,6 +19,7 @@ public class CameraBehaviour : MonoBehaviour
 	public bool            grayscale;
 	public bool            borderline;
 	// ----------  ----------    ----------   ---------- //
+	[ Range (0, 10)    ] public float buffer;
 	[ Range (0, 1)     ] public float grain;
 	[ Range (0, 1)     ] public float shadow;
 	[ Range (0, 1)     ] public float light;
@@ -30,6 +31,9 @@ public class CameraBehaviour : MonoBehaviour
 	private CameraObscura camera; 
 	// ----------  ----------    ----------   ---------- //
 	private int counter;
+	private int zero;
+	// ----------  ----------    ----------   ---------- //
+	private float time;
 	// ----------  ----------    ----------   ---------- //
 	public List <Sprite> photographic = new List <Sprite> (1); 
 	
@@ -40,12 +44,16 @@ public class CameraBehaviour : MonoBehaviour
 	{
 	
 	// ----------  ----------    ----------   ---------- //
+	// Sets The Photograph Buffer For Awake
+	time  = buffer;
+	
+	// ----------  ----------    ----------   ---------- //
 	// Sets A Fresh Cross-Dimensional Link To The "Camera Obscura" Class
 	camera = new CameraObscura ();
 	
 	// ----------  ----------    ----------   ---------- //
 	// References Whether The Necessiary Attributes Have Been Selected 
-	if (canvas == null)
+	if (canvas  == null)
 	print ("apply the camera interface here");
 	if (display == null)
 	print ("apply the photograph prefabrication here");
@@ -63,8 +71,14 @@ public class CameraBehaviour : MonoBehaviour
 	// - Publishes A Photograph And Attaches It To The 'CameraObscura' Discoverability List
 	// - Converts To A Sprite File (To Make It Useable Within The Audience Interface)
 	// - Attaches A Visual Component To The Audience Interface With The Incorporated Sprite
+	time        += Time.deltaTime;
+	// ----------  ----------    ----------   ---------- //
     if (Input.GetMouseButtonDown (0)  )
+	if (time    >= buffer)
+	{
 	StartCoroutine ("Photography");
+	time         = zero;
+	}
     
     }
     
@@ -125,14 +139,14 @@ public class CameraBehaviour : MonoBehaviour
 		// Due To The Step-By-Step Shenangins - This Process May Become A Little Finnicky,
 		// So Consistent Care Should Be Retained When Handelling This Code
 		// Attaches The Visual Component To A Staticallly Available List Function
-	    var representation     = Instantiate (display);
-		var distinction        = representation.transform.GetChild (1).GetChild (0);
+//	    var representation     = Instantiate (display);
+//		var distinction        = representation.transform.GetChild (1).GetChild (0);
 		// ----------  ----------    ----------   ---------- //
 //		representation.transform.SetParent (canvas.transform, false);
 		// ----------  ----------    ----------   ---------- //
-        distinction.GetComponent <Image> ().sprite   =   photographic  [ (int) (photographic.Count - 1.00f) ];
+//        distinction.GetComponent <Image> ().sprite   =   photographic  [ (int) (photographic.Count - 1.00f) ];
 		// ----------  ----------    ----------   ---------- //
-        GameDirectory.photographic [counter].representation  = representation;
+//        GameDirectory.photographic [counter].representation  = representation;
 
 			
 		// ----------  ----------    ----------   ---------- //
@@ -154,9 +168,9 @@ public class CameraBehaviour : MonoBehaviour
 		float count            = Mathematics.Percentage (vertice.Count, difference); 
 		count                  = (int) count * 10;
 		// ----------  ----------    ----------   ---------- //
-        distinction            = representation.transform.GetChild (2);
+//        distinction            = representation.transform.GetChild (2);
 		// ----------  ----------    ----------   ---------- //
-        distinction.GetComponent <Text> ().text  = (count + "   " + "pts");
+//        distinction.GetComponent <Text> ().text  = (count + "   " + "pts");
 		// ----------  ----------    ----------   ---------- //
 		GameDirectory.photographic [counter].scoreboard = (int) count;
 		}

@@ -139,8 +139,12 @@ namespace SplineTool
             if (Move == null) Debug.LogError("No move method found");
             // setting the starting point
             SetUpStartingPoint();
-            if (moveOnAwake) StartMoving(_currPoint);
+            if (moveOnAwake) 
+            StartMoving(_currPoint);
             rpp = 0.1f;
+            
+            
+            
         }
 
         /// <summary>
@@ -149,7 +153,10 @@ namespace SplineTool
         void SetUpStartingPoint()
         {
             startIndex = originalStartIndex;
-            if (reverse) startIndex = spline.Length - 1 - startIndex;
+            
+            if (reverse) 
+            startIndex = spline.Length - 1 - startIndex;
+            
             _currPoint = startIndex;
             if (_currPoint > spline.Length - 1) _currPoint = spline.Length - 1;
         }
@@ -465,8 +472,8 @@ namespace SplineTool
 //            return false;
 
               
-            _currPoint    = (int) note;
-            _currSubway   = (int) branch;
+            _currPoint    = note;
+            _currSubway   = branch;
             currSeg       = percentage;
 //            
             moving = true;
@@ -512,11 +519,11 @@ namespace SplineTool
         /// </summary>
         public void ResetToDefaults()
         {
-            moving = false;
-            paused = false;
-            currSeg = 0;
-            _currSubway = 0;
-            SetUpStartingPoint();
+//            moving = false;
+//            paused = false;
+//            currSeg = 0;
+//            _currSubway = 0;
+//            SetUpStartingPoint();
         }
 
         /// <summary>

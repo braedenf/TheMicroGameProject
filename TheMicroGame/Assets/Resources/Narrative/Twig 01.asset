@@ -15,5 +15,8 @@ MonoBehaviour:
   state: 
   interaction: 
   quality: 600
-  text: What's brown and sticky?
+  text: 'What''s brown and sticky?
+
+
+'
   transistion: snappedTwig

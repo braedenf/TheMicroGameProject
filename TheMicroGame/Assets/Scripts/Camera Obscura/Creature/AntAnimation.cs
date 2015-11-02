@@ -17,6 +17,7 @@ public class AntAnimation : MonoBehaviour
 	[Range (0, 1) ]  public float    approximate;
 	// ----------  ----------    ----------   ---------- //
 	public bool                      hardboiled;
+//	public bool                      gather;
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines A Fresh List For All Transistions
@@ -139,6 +140,12 @@ public class AntAnimation : MonoBehaviour
 	if (animation [name].time >= animation [name].length - approximate)
 	animation [name].time      = 0.00f;
 	
+	
+	// ----------  ----------    ----------   ---------- //
+	// Gathers Pollen And Similar Such Goods From Nearby Surroundings
+	if ( (motion & Motion.gather) == Motion.gather)
+	Gather ();
+	
 	}
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
@@ -255,5 +262,18 @@ public class AntAnimation : MonoBehaviour
 	
 	}
 
+
+	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
+	// Progressively Goes Through The Creature Animations And Manages Any Necessiary Changes
+	void Gather ()
+	{
+	
+	
+	
+	
+	
+	
+	
+	}
 	
 }

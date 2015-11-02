@@ -81,14 +81,15 @@ public class MoveObject : MonoBehaviour
 	// Determines The Start Position Of The Spline Animation
 	FollowSpline follow                 = this.gameObject.GetComponent <FollowSpline> ();
 	// ----------  ----------    ----------   ---------- //
-	
+	if (sploot               != null)	
+	{
 	follow.note                         = (int) Mathematics.limitation (start.point,  zero,  sploot.spline.Length - 1);
 	follow.branch                       = (int) Mathematics.limitation (start.branch, zero, sploot.spline.GetSubwaysLength (follow.note) - 1);
 	follow.percentage                   = start.percentage / 100.00f;
-
+     
 	// ----------  ----------    ----------   ---------- //
 	follow.enabled                      = true;
-	
+	}
 	
 	// ----------  ----------    ----------   ---------- //
 	// Determines The Certain Speed Attributes For The Animation
@@ -179,7 +180,9 @@ public class MoveObject : MonoBehaviour
 		// Manuevers The Selected Creature Position Along The Spline Over An Interval Of Time
 		transistion                   += Time.deltaTime;
 		// ----------  ----------    ----------   ---------- //
+		if (velocity                   > zero)
         transform.position             = Vector3.Lerp (creature, point, transistion * velocity);
+       
         
 		
 		// ----------  ----------    ----------   ---------- //
@@ -275,12 +278,13 @@ public class MoveObject : MonoBehaviour
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Draws A Series Of Visual Gizmos To Represent The Spline Animation Triggers
 	[ExecuteInEditMode]
-	void OnDrawGizmosOnSelect ()
+	void OnDrawGizmos ()
 	{
 	
 	// ----------  ----------    ----------   ---------- //
 	// Positions The Creature Along The Selected Start Position
 	if (!Application.isPlaying)
+	if (sploot               != null)
 	{
 	float  _percentage        =    start.percentage / 100.00f;
 	int    _point             =   (int) Mathematics.limitation (start.point,  zero,  sploot.spline.Length - 1);
@@ -293,6 +297,7 @@ public class MoveObject : MonoBehaviour
 
 	// ----------  ----------    ----------   ---------- //
 	// Draws A Representative Symbol On The Spline For Each Defined Animation Trigger
+	if (sploot               != null)	
 	foreach (Transistion transit in node)
 	{
 	
@@ -310,7 +315,7 @@ public class MoveObject : MonoBehaviour
 	// Draws A Sphere Representing The Trigger Position
 	Gizmos.color        = transit.color;
 	Gizmos.color        = new Color (Gizmos.color.r, Gizmos.color.g, Gizmos.color.b, 1.0f);
-	Gizmos.DrawSphere (position, 2);
+	Gizmos.DrawSphere (position, 3);
 	
 	}
 	

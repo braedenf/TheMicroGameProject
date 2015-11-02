@@ -17,8 +17,8 @@ public class Transistion : MonoBehaviour
 	public GameObject instance;
 	public GameObject illustration;
 	public GameObject description;
-	
-	
+	public GameObject title;
+		
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All Private Attributes That'll Be Manipulated By The System
 	private int        zero;
@@ -44,6 +44,8 @@ public class Transistion : MonoBehaviour
 	Debug.Log ("You Should Possibly Select An 'Illustration' For The Transistion Code");
 	if (!description)
 	Debug.Log ("You Should Possibly Select A  'Description' For The Transistion Code");
+	if (!title)
+	Debug.Log ("You Should Possibly Select A  'Title' For The Transistion Code");
 	
 	// ----------  ----------    ----------   ---------- //
 	// Deciphers The "Instance" Parent
@@ -75,10 +77,7 @@ public class Transistion : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	// Refines The List Count After Each Respective Code Call
 	count    = GameDirectory.photographic.Count;
-	
-	
 
-   
 	
 	}
 	
@@ -178,6 +177,7 @@ public class Transistion : MonoBehaviour
 	{
 	illustration.GetComponent <Image> ().sprite  = GameDirectory.photographic [discover].sprite;
 	description.GetComponent  <Text>  ().text    = GameDirectory.photographic [discover].text;
+	title.GetComponent        <Text>  ().text    = GameDirectory.photographic [discover].creature;
 	}
 
 	

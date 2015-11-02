@@ -15,6 +15,6 @@ MonoBehaviour:
   state: flight
   interaction: 
   quality: 600
-  text: Much like dragons and similar such creatures, wasps are prone to becoming
-    drowsy
+  text: "Much like dragons and similar such creatures, \nwasps are prone to becoming
+    drowsy"
   transistion: mediumSnap
