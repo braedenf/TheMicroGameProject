@@ -45,9 +45,11 @@ GameObject:
   - 111: {fileID: 11190784}
   - 114: {fileID: 11403046}
   - 114: {fileID: 11406422}
-  - 114: {fileID: 11490234}
   - 114: {fileID: 11475346}
   - 114: {fileID: 11449356}
+  - 23: {fileID: 2393746}
+  - 33: {fileID: 3356694}
+  - 65: {fileID: 6517614}
   m_Layer: 0
   m_Name: Ant
   m_TagString: Untagged
@@ -538,7 +540,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 103210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -28, y: -47.6189995, z: -163.139008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 426554}
@@ -575,7 +577,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161590}
   m_LocalRotation: {x: -0, y: -.707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: -.123259343, y: .520876825, z: -.277465343}
+  m_LocalPosition: {x: -.123259343, y: .108999997, z: -.150000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 430944}
@@ -1337,6 +1339,30 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!23 &2393746
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103210}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 3c21b2f67a08d41a59ee4dfe3493086f, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!33 &3308292
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1428,6 +1454,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137284}
   m_Mesh: {fileID: 4300032, guid: 9b12ec7f900a54e64a5b0a2e438c0b30, type: 3}
+--- !u!33 &3356694
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103210}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &3363294
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1477,6 +1510,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 133648}
   m_Mesh: {fileID: 4300028, guid: 9b12ec7f900a54e64a5b0a2e438c0b30, type: 3}
+--- !u!65 &6517614
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103210}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.03844166, z: 2.03375053}
+  m_Center: {x: 0, y: .517532349, z: -.249908447}
 --- !u!111 &11190784
 Animation:
   m_ObjectHideFlags: 1
@@ -1530,7 +1575,11 @@ MonoBehaviour:
     rythm: 1
     transistion: {x: 96, y: 132}
     loop: {x: 260, y: 282}
-  motion: 8
+  flight:
+    rythm: 0
+    transistion: {x: 0, y: 0}
+    loop: {x: 0, y: 0}
+  motion: 1
 --- !u!114 &11406422
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1567,23 +1616,8 @@ MonoBehaviour:
   events:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11403046}
-        m_MethodName: set_name
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: walk
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11403046}
-        m_MethodName: set_name
+      - m_Target: {fileID: 103210}
+        m_MethodName: 
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1593,6 +1627,41 @@ MonoBehaviour:
           m_StringArgument: idle
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: idle
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   pointOffset: {x: 0, y: 0, z: 0}
@@ -1611,26 +1680,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  orientation: 3
+  clamp: 30
+  approximate: 5
   motion: {x: 0, y: 4, z: 0}
-  lookRotation: 1
---- !u!114 &11490234
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a039015449c7463a834faccd8f5a983, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  awareness: 0
-  speed: 10
-  motion:
-  - animation: idle
-    time: 6
-  - animation: attack
-    time: 1
+  sploot: {fileID: 0}
+  animation: {fileID: 0}
+  node:
+  - point: 3
+    percentage: 78
+    color: {r: 1, g: .26534602, b: .261419475, a: 1}
+    animation: 1
+    pause: 0
+  - point: 2
+    percentage: 12
+    color: {r: .348053366, g: .629814684, b: 1, a: 1}
+    animation: 2
+    pause: 1
+  - point: 0
+    percentage: 12
+    color: {r: 1, g: .459245861, b: .298164964, a: 1}
+    animation: 8
+    pause: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

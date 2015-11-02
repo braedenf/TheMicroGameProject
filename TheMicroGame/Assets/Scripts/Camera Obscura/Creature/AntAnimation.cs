@@ -53,6 +53,7 @@ public class AntAnimation : MonoBehaviour
 	public beetlejuice idle;
 	public beetlejuice gather;
 	public beetlejuice attack;
+	public beetlejuice flight;
 		
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
@@ -62,7 +63,8 @@ public class AntAnimation : MonoBehaviour
 		walk          = 1,
 		idle          = 2,
 		attack        = 4, 
-		gather        = 8,		
+		gather        = 8,	
+		flight        = 16	
 	}
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
@@ -117,16 +119,19 @@ public class AntAnimation : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	// Defines All "Motion" Enum Animation Transistions
 	if ( (motion & Motion.walk)   == Motion.walk)
-	Interference (walk.loop, walk.transistion, walk.rythm);
+	Interference (walk.loop, walk.transistion, walk.rythm, Motion.walk);
 	// ----------  ----------    ----------   ---------- //
 	if ( (motion & Motion.idle)   == Motion.idle)
-	Interference (idle.loop, idle.transistion, idle.rythm);
+	Interference (idle.loop, idle.transistion, idle.rythm, Motion.idle);
 	// ----------  ----------    ----------   ---------- //
 	if ( (motion & Motion.gather) == Motion.gather)
-	Interference (gather.loop, gather.transistion, gather.rythm);
+	Interference (gather.loop, gather.transistion, gather.rythm, Motion.gather);
+	// ----------  ----------    ----------   ---------- //
+	if ( (motion & Motion.flight) == Motion.flight)
+	Interference (flight.loop, flight.transistion, flight.rythm, Motion.flight);
 	// ----------  ----------    ----------   ---------- //
 	if ( (motion & Motion.attack) == Motion.attack)
-	Attack (attack.loop, attack.transistion);
+	Attack (attack.loop, attack.transistion, Motion.attack);
 	
 	
 	// ----------  ----------    ----------   ---------- //
@@ -138,7 +143,7 @@ public class AntAnimation : MonoBehaviour
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Progressively Manipulates The Creature Attack Animation
-	void Attack (Vector2 loop, Vector2 transistion)
+	void Attack (Vector2 loop, Vector2 transistion, Motion mute)
 	{
 	
 	// ----------  ----------    ----------   ---------- //
@@ -161,6 +166,12 @@ public class AntAnimation : MonoBehaviour
     progression           = true;
     }
     }
+    
+    
+	// ----------  ----------    ----------   ---------- //
+    if (animation [name].time > loop.x && animation [name].time < loop.y)
+	behaviour            = mute.ToString ();
+    
 	}
 
 	// ----------  ----------    ----------   ---------- //
@@ -177,7 +188,7 @@ public class AntAnimation : MonoBehaviour
 
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Progressively Manipulates The Creature Animation Transistions 
-	void  Interference (Vector2 loop, Vector2 transistion, bool rythm)
+	void  Interference (Vector2 loop, Vector2 transistion, bool rythm, Motion mute)
 	{
 	
 	
@@ -231,6 +242,11 @@ public class AntAnimation : MonoBehaviour
 	if (animation [name].time < loop.x || animation [name].time > loop.y)
 	animation [name].time  = loop.x;
 	
+	
+	// ----------  ----------    ----------   ---------- //
+	// Defines The Behavioural Animation Of The Creature 
+	if (animation [name].time > loop.x && animation [name].time < loop.y)
+	behaviour              = mute.ToString ();
 	
 	// ----------  ----------    ----------   ---------- //
 	animation [name].speed = speed;

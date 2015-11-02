@@ -37,6 +37,13 @@ namespace SplineTool
         /// the distance between player and the target pos
         /// </summary>
         public float offset = 0.4f;
+        
+		
+		// ----------  ----------    ----------   ---------- //
+		public int    note;
+		public int    branch;
+		public float  percentage;
+		
 
         /// <summary>
         /// the point index in the spline this object will start moving from
@@ -450,19 +457,26 @@ namespace SplineTool
         /// otherwise put it 0</param>
         /// <param name="segment">a float value that detremain where to start exactly if you set it to 0.5 it will start half way throw the given point</param>
         /// <returns>false if the inputs you gave are invalid</returns>
-        public bool StartMoving(int point, int subway = 0, float segment = 0, bool bReverse = false)
+        public bool StartMoving(int point , int subway = 0, float segment = 0, bool bReverse = false)
         {
-            if (spline.Length <= point && spline.GetSubwaysLength(point) <= subway && segment >= 1 && segment < 0) return false;
+        
+        
+//            if (spline.Length <= point && spline.GetSubwaysLength(point) <= subway && segment >= 1 && segment < 0) 
+//            return false;
 
-            _currPoint = point;
-            _currSubway = subway;
-            currSeg = segment;
+              
+            _currPoint    = (int) note;
+            _currSubway   = (int) branch;
+            currSeg       = percentage;
+//            
             moving = true;
+            
+            
             if (currSeg == 0)
-            {
-                if (events.Length > _currPoint)
-                    events[_currPoint].Invoke();
-            }
+
+            if (events.Length > _currPoint)
+            events[_currPoint].Invoke();
+            
             rpp = GetRPP(_currPoint, _currSubway);
             reverse = bReverse;
             return true;

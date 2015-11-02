@@ -17,6 +17,8 @@ public class MoveObject : MonoBehaviour
 	[Range (0, 10)  ]  public float   approximate;
 	// ----------  ----------    ----------   ---------- //
     public Vector3 motion;
+	// ----------  ----------    ----------   ---------- //
+	public  SplineWindow         sploot;
     
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Private Attributes That Can Be Manipulated By The System
@@ -33,13 +35,13 @@ public class MoveObject : MonoBehaviour
 	private float      moment;
 	private float      velocity;
 	private float      time;
+	private float      sand;
 	// ----------  ----------    ----------   ---------- //
 	private int     zero;
 	// ----------  ----------    ----------   ---------- //
 	private bool    awake;
 	// ----------  ----------    ----------   ---------- //
-	public SplineWindow         sploot;
-	public AntAnimation         animation;
+	private AntAnimation         animation;
 	
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
@@ -48,29 +50,60 @@ public class MoveObject : MonoBehaviour
 	public class Transistion 
 	{
 	[Range (0, 100) ]  public int   point; 
+	[Range (0, 100) ]  public int   branch; 
 	[Range (0, 100) ]  public float percentage;
 	// ----------  ----------    ----------   ---------- //
 	public Color  color;
 	public AntAnimation.Motion animation;
 	// ----------  ----------    ----------   ---------- //
+	[Range (0, 100) ]   public float speed;
 	[Range (0, 100) ]   public float pause;
 	}
 	
 	
 	// ----------  ----------    ----------   ---------- //
+	public Transistion        start;
 	public List <Transistion> node = new List <Transistion> ();
- 
+	// ----------  ----------    ----------   ---------- //
+	private Transistion       pause = new Transistion ();
  
  
     #endregion
     
+    
+	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
+	// Determines All Necessiary Attributes Needed On Awake
+	void Awake ()
+	{
+	
+	
+	// ----------  ----------    ----------   ---------- //
+	// Determines The Start Position Of The Spline Animation
+	FollowSpline follow                 = this.gameObject.GetComponent <FollowSpline> ();
+	// ----------  ----------    ----------   ---------- //
+	
+	follow.note                         = (int) Mathematics.limitation (start.point,  zero,  sploot.spline.Length - 1);
+	follow.branch                       = (int) Mathematics.limitation (start.branch, zero, sploot.spline.GetSubwaysLength (follow.note) - 1);
+	follow.percentage                   = start.percentage / 100.00f;
+
+	// ----------  ----------    ----------   ---------- //
+	follow.enabled                      = true;
+	
+	
+	// ----------  ----------    ----------   ---------- //
+	// Determines The Certain Speed Attributes For The Animation
+	pause.speed              = speed;
+	pause.pause              = zero;	
+	
+	
+	}
     
 
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Connects With This Creatures Registered Spline And Calculates All Necessiary Spline Animations 
     public void Move (Vector3 position, Spline spline)
     {
-        
+	
 		// ----------  ----------    ----------   ---------- //
 		// Calculates The Direction Between The Creature And The Spline Point Position
 		Vector3 direction               = position - this.transform.position;
@@ -82,6 +115,8 @@ public class MoveObject : MonoBehaviour
 		// Determines Certain Attribute Values On Awake
 		if (!awake)
 		{
+	
+		// ----------  ----------    ----------   ---------- //
 		rotation                        = transform.rotation;
 		axis                            = Quaternion.LookRotation (direction, motion);
 		// ----------  ----------    ----------   ---------- //
@@ -167,10 +202,10 @@ public class MoveObject : MonoBehaviour
 			// ----------  ----------    ----------   ---------- //
 			// Determines All Necessiary Attributes Needed
 			float   percentage  =   transit.percentage / 100.00f;
-			int     place       =   transit.point;
-			place               =   (int) Mathematics.limitation (place, zero, sploot.spline.Length - 1);
+			int     place       =   (int) Mathematics.limitation (transit.point, zero, sploot.spline.Length - 1);
+			int		branch      =   (int) Mathematics.limitation (transit.branch, zero, sploot.spline.GetSubwaysLength (place) - 1);
 			// ----------  ----------    ----------   ---------- //
-			Vector3 note        =   sploot.spline.GetPointAtTime (percentage, place, zero);
+			Vector3 note        =   sploot.spline.GetPointAtTime (percentage, place, branch);
 			
 			// ----------  ----------    ----------   ---------- //
 		    Vector3 maximum     = Vector3.zero + (Vector3.one / approximate);
@@ -183,10 +218,54 @@ public class MoveObject : MonoBehaviour
 		    if (distance        >= minimum.x && distance  <= maximum.x)
 			if (distance        >= minimum.y && distance  <= maximum.y)
 			if (distance        >= minimum.z && distance  <= maximum.z)
-		    animation.motion        = transit.animation;
+		    animation.motion     = transit.animation;
 		
+			// ----------  ----------    ----------   ---------- //
+			// Determines The Speed Of The Animation
+			if (transit.pause        > zero)
+			if (animation.motion    == transit.animation)
+			if (animation.behaviour == transit.animation.ToString () )
+			{
+			pause.speed              = transit.speed;
+			pause.pause              = transit.pause;	
+			// ----------  ----------    ----------   ---------- //	
+			pause.animation          = transit.animation;
+			}
 			
 		}
+		
+		// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
+		// Deciphers The Momentum Of Certain Animations As They're Concievably Triggered
+		
+		// ----------  ----------    ----------   ---------- //
+		// Deciphers Whether The Momentum Is In Dire Wish Of Some Change
+		if (pause.animation         != null )
+		if (animation.motion        == pause.animation)
+		{		
+		time                       += Time.deltaTime;
+		// ----------  ----------    ----------   ---------- //
+		if (time                    < pause.pause)
+		velocity                    = Mathf.Lerp (speed, pause.speed, time * 2.00f);
+		// ----------  ----------    ----------   ---------- //
+		else 
+		{
+		time                        = zero;		
+		animation.motion            = AntAnimation.Motion.walk;
+		}		
+		}
+		
+		// ----------  ----------    ----------   ---------- //
+		// Transistions Back Into A Pre-Determined Motion 
+		if (pause.animation         != null )
+		if (animation.behaviour     != pause.animation.ToString () )
+		{
+		sand                        += Time.deltaTime;
+        velocity                     = Mathf.Lerp (pause.speed, speed, sand * 3.00f);    
+        }
+		// ----------  ----------    ----------   ---------- //
+		else
+		sand                         = zero;
+        
 	
 		     
         }
@@ -195,9 +274,23 @@ public class MoveObject : MonoBehaviour
     
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Draws A Series Of Visual Gizmos To Represent The Spline Animation Triggers
-	void OnDrawGizmos ()
+	[ExecuteInEditMode]
+	void OnDrawGizmosOnSelect ()
 	{
 	
+	// ----------  ----------    ----------   ---------- //
+	// Positions The Creature Along The Selected Start Position
+	if (!Application.isPlaying)
+	{
+	float  _percentage        =    start.percentage / 100.00f;
+	int    _point             =   (int) Mathematics.limitation (start.point,  zero,  sploot.spline.Length - 1);
+	int	   _branch            =   (int) Mathematics.limitation (start.branch, zero,  sploot.spline.GetSubwaysLength (_point) - 1);	
+	// ----------  ----------    ----------   ---------- //
+	Vector3 _position         =   sploot.spline.GetPointAtTime (_percentage, _point, _branch);
+	// ----------  ----------    ----------   ---------- //
+	this.transform.position   =   _position;
+    }
+
 	// ----------  ----------    ----------   ---------- //
 	// Draws A Representative Symbol On The Spline For Each Defined Animation Trigger
 	foreach (Transistion transit in node)
@@ -206,15 +299,19 @@ public class MoveObject : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	// Determines All Necessiary Attributes Needed
 	float   percentage  =   transit.percentage / 100.00f;
-	int     point       =   transit.point;
-	point               =   (int) Mathematics.limitation (point, zero, sploot.spline.Length - 1);
+	int     point       =   (int) Mathematics.limitation (transit.point,  zero,  sploot.spline.Length - 1);
+	int		branch      =   (int) Mathematics.limitation (transit.branch, zero, sploot.spline.GetSubwaysLength (point) - 1);
+	
+	
 	// ----------  ----------    ----------   ---------- //
-	Vector3 position    =   sploot.spline.GetPointAtTime (percentage, point, zero);
+	Vector3 position    =   sploot.spline.GetPointAtTime (percentage, point, branch);
 	
 	// ----------  ----------    ----------   ---------- //
 	// Draws A Sphere Representing The Trigger Position
 	Gizmos.color        = transit.color;
-	Gizmos.DrawSphere (position, 1);
+	Gizmos.color        = new Color (Gizmos.color.r, Gizmos.color.g, Gizmos.color.b, 1.0f);
+	Gizmos.DrawSphere (position, 2);
+	
 	}
 	
 	}

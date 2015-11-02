@@ -162,7 +162,10 @@ GameObject:
   - 4: {fileID: 440960}
   - 111: {fileID: 11104950}
   - 114: {fileID: 11497052}
+  - 114: {fileID: 11404126}
   - 114: {fileID: 11480608}
+  - 114: {fileID: 11456652}
+  - 114: {fileID: 11448060}
   - 33: {fileID: 3340552}
   - 64: {fileID: 6433708}
   - 23: {fileID: 2358340}
@@ -930,6 +933,158 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &11404126
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e947ff53ffd64248a4dde2ff8504b85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  framerate: 24
+  speed: 1
+  acceleration: 1
+  approximate: .0500000007
+  hardboiled: 0
+  intersection:
+  - 0
+  - 140
+  - 260
+  - 308
+  - 96
+  behaviour: 
+  walk:
+    rythm: 1
+    transistion: {x: 0, y: 24}
+    loop: {x: 24, y: 72}
+  idle:
+    rythm: 0
+    transistion: {x: 0, y: 0}
+    loop: {x: 96, y: 140}
+  gather:
+    rythm: 1
+    transistion: {x: 260, y: 272}
+    loop: {x: 272, y: 296}
+  attack:
+    rythm: 0
+    transistion: {x: 0, y: 0}
+    loop: {x: 0, y: 0}
+  flight:
+    rythm: 1
+    transistion: {x: 140, y: 180}
+    loop: {x: 180, y: 236}
+  motion: 1
+--- !u!114 &11448060
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 477376ff78c7cc445838ff392214c266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: .00100000005
+  originalStartIndex: 0
+  isPhysically: 1
+  reverse: 0
+  moveOnAwake: 1
+  controlType: 2
+  offsetType: 0
+  splineWindow: {fileID: 0}
+  events:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: idle
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: idle
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  pointOffset: {x: 0, y: 0, z: 0}
+  minOffset: {x: 0, y: 0, z: 0}
+  maxOffset: {x: 0, y: 0, z: 0}
+  arrow: {fileID: 0}
+--- !u!114 &11456652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5222933308b16f1488908925dc79a9e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  orientation: 3
+  clamp: 30
+  approximate: 5
+  motion: {x: 0, y: 4, z: 0}
+  sploot: {fileID: 0}
+  animation: {fileID: 0}
+  node:
+  - point: 3
+    percentage: 78
+    color: {r: 1, g: .26534602, b: .261419475, a: 1}
+    animation: 1
+    pause: 0
+  - point: 2
+    percentage: 12
+    color: {r: .348053366, g: .629814684, b: 1, a: 1}
+    animation: 2
+    pause: 1
+  - point: 0
+    percentage: 12
+    color: {r: 1, g: .459245861, b: .298164964, a: 1}
+    animation: 8
+    pause: 1
 --- !u!114 &11480608
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -941,7 +1096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0587bc8d57bd4688a3ddc660e25e58f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  creature: Wasp
+  creature: wasp
   state: idle
   interaction: 
 --- !u!114 &11497052
@@ -950,7 +1105,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156026}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e29c413309f564a82b80d2c5d57421f2, type: 3}
   m_Name: 
@@ -964,18 +1119,24 @@ MonoBehaviour:
   - {x: 24, y: 72}
   - {x: 96, y: 140}
   - {x: 180, y: 236}
-  - {x: 265, y: 295}
+  - {x: 272, y: 296}
   intersection:
   - {x: 0, y: 0}
   - {x: 96, y: 96}
   - {x: 140, y: 140}
-  - {x: 265, y: 265}
-  - {x: 296, y: 296}
+  - {x: 260, y: 260}
+  - {x: 308, y: 308}
   obscure:
   - {x: 24, y: 72}
   - {x: 180, y: 236}
+  - {x: 272, y: 296}
+  transistion:
+  - {x: 0, y: 24}
+  - {x: 72, y: 96}
+  - {x: 140, y: 180}
+  - {x: 260, y: 260}
   behaviour: 
-  motion: 4
+  motion: 8
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
