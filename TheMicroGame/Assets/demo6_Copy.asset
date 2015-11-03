@@ -1,0 +1,208 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 004f13b5120f2ba4f82b355eb1e305e9, type: 3}
+  m_Name: demo6_Copy
+  m_EditorClassIdentifier: 
+  waypoints:
+  - method: 
+    localPosition: {x: 5.11215687, y: 0, z: -17.7139492}
+    subways: 0100000006000000
+    reversedWays: 0e000000
+    handles:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    localHandles:
+    - {x: 8.70632648, y: 0, z: -16.7857761}
+    - {x: 1.96481442, y: 0, z: -18.1778393}
+    - {x: 1.96481442, y: 0, z: -18.1778393}
+    segments: []
+  - method: 
+    localPosition: {x: 11.1054602, y: 0, z: -12.9761066}
+    subways: 02000000
+    reversedWays: 00000000
+    handles:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    localHandles:
+    - {x: 12.6665659, y: 0, z: -10.9595966}
+    - {x: 9.29992676, y: 0, z: -15.2981491}
+    segments: []
+  - method: 
+    localPosition: {x: 16.6989517, y: 0, z: -6.84460402}
+    subways: 03000000
+    reversedWays: 010000000600000005000000
+    handles:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    localHandles:
+    - {x: 17.9223957, y: 0, z: -5.97674227}
+    - {x: 15.4755049, y: 0, z: -7.71246576}
+    - {x: 15.2900381, y: 0, z: -6.3298564}
+    - {x: 15.7500486, y: 0, z: -5.68288755}
+    segments: []
+  - method: 
+    localPosition: {x: 20.3720589, y: 0, z: -.724774599}
+    subways: 04000000
+    reversedWays: 02000000
+    handles:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    localHandles:
+    - {x: 20.5401154, y: 0, z: .765780926}
+    - {x: 20.2040062, y: 0, z: -2.21533084}
+    segments: []
+  - method: 
+    localPosition: {x: 17.4389553, y: 0, z: 7.56207514}
+    subways: 05000000
+    reversedWays: 03000000
+    handles:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    localHandles:
+    - {x: 12.0616684, y: 0, z: 9.42871284}
+    - {x: 21.2274857, y: 0, z: 5.87875509}
+    segments: []
+  - method: 
+    localPosition: {x: 7.00487137, y: 0, z: 5.0236125}
+    subways: 0600000002000000
+    reversedWays: 0400000008000000
+    handles:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    localHandles:
+    - {x: 3.65434384, y: 0, z: 2.69367647}
+    - {x: 7.9537735, y: 0, z: 3.86189604}
+    - {x: 9.13326836, y: 0, z: 6.43694448}
+    - {x: 5.91420078, y: 0, z: 6.05338717}
+    segments: []
+  - method: 
+    localPosition: {x: .316001177, y: 0, z: -.859076738}
+    subways: 0700000002000000
+    reversedWays: 0500000000000000
+    handles:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    localHandles:
+    - {x: -1.17890286, y: 0, z: -.982623339}
+    - {x: 1.72491384, y: 0, z: -1.37382436}
+    - {x: 1.8109045, y: 0, z: -.735532522}
+    - {x: .726537704, y: 0, z: -2.30180311}
+    segments: []
+  - method: 
+    localPosition: {x: -7.96213627, y: 0, z: 5.23771238}
+    subways: 080000000b000000
+    reversedWays: 060000000a000000
+    handles:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    localHandles:
+    - {x: -8.09636497, y: 0, z: 10.5509911}
+    - {x: -7.77943802, y: 0, z: -.461484909}
+    - {x: -7.77943802, y: 0, z: -.461484909}
+    - {x: -8.5410738, y: 0, z: 6.62148619}
+    segments: []
+  - method: 
+    localPosition: {x: -.889137983, y: 0, z: 12.4768715}
+    subways: 0900000005000000
+    reversedWays: 07000000
+    handles:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    localHandles:
+    - {x: .599267006, y: 0, z: 13.2320004}
+    - {x: .201533079, y: 0, z: 11.4470959}
+    - {x: -2.62196898, y: 0, z: 11.4773178}
+    segments: []
+  - method: 
+    localPosition: {x: 5.22057629, y: 0, z: 20.2042961}
+    subways: 0a000000
+    reversedWays: 08000000
+    handles:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    localHandles:
+    - {x: 4.8705864, y: 0, z: 24.7960777}
+    - {x: 5.322402, y: 0, z: 15.9713287}
+    segments: []
+  - method: 
+    localPosition: {x: -14.9769955, y: 0, z: 22.004612}
+    subways: 0b00000007000000
+    reversedWays: 09000000
+    handles:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    localHandles:
+    - {x: -21.9307976, y: 0, z: 19.9982986}
+    - {x: -14.3980579, y: 0, z: 20.6208382}
+    - {x: -3.58319545, y: 0, z: 24.1299629}
+    segments: []
+  - method: 
+    localPosition: {x: -18.6648521, y: 0, z: 6.55388021}
+    subways: 0c000000
+    reversedWays: 0a00000007000000
+    handles:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    localHandles:
+    - {x: -18.5257797, y: 0, z: 4.21575308}
+    - {x: -18.6817093, y: 0, z: 8.34205055}
+    - {x: -17.1760674, y: 0, z: 6.37079668}
+    segments: []
+  - method: 
+    localPosition: {x: -17.4418907, y: 0, z: -3.26159239}
+    subways: 0d0000000e000000
+    reversedWays: 0b000000
+    handles:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    localHandles:
+    - {x: -17.6661377, y: 0, z: -5.71608305}
+    - {x: -17.29319, y: 0, z: -1.16517401}
+    - {x: -17.29319, y: 0, z: -1.16517401}
+    segments: []
+  - method: 
+    localPosition: {x: -17.3809357, y: 0, z: -18.6172123}
+    subways: 0e000000
+    reversedWays: 0c000000
+    handles:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    localHandles:
+    - {x: -16.3851662, y: 0, z: -18.5253296}
+    - {x: -17.3081627, y: 0, z: -17.6198635}
+    segments: []
+  - method: 
+    localPosition: {x: -5.95308781, y: 0, z: -18.0657425}
+    subways: 00000000
+    reversedWays: 0d0000000c000000
+    handles:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    localHandles:
+    - {x: -3.11037469, y: 0, z: -18.0284805}
+    - {x: -8.31303596, y: 0, z: -18.5811977}
+    - {x: -6.87272453, y: 0, z: -16.880724}
+    segments: []
+  resolution: 2

@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 004f13b5120f2ba4f82b355eb1e305e9, type: 3}
+  m_Name: demo4_Copy
+  m_EditorClassIdentifier: 
+  waypoints:
+  - method: 
+    localPosition: {x: 97.4520416, y: -1391.52356, z: -5.43921661}
+    subways: 0100000002000000
+    reversedWays: 
+    handles:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    localHandles:
+    - {x: 101.978439, y: -1393.02344, z: -47.7552719}
+    - {x: 90.3758698, y: -1390.02368, z: 23.4905624}
+    segments: []
+  - method: 
+    localPosition: {x: -64.1872864, y: -1392.54932, z: -40.0843887}
+    subways: 
+    reversedWays: 000000000400000005000000
+    handles:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    localHandles:
+    - {x: -84.8486938, y: -1392.45349, z: -41.5808182}
+    - {x: -65.4077454, y: -1392.54932, z: -39.2123337}
+    - {x: -244.126663, y: -1392.52893, z: -91.5134201}
+    - {x: -65.5971985, y: -1392.52893, z: -39.5727921}
+    segments: []
+  - method: 
+    localPosition: {x: 12.7487526, y: -1391.17322, z: 14.9796371}
+    subways: 0300000004000000
+    reversedWays: 00000000
+    handles:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    localHandles:
+    - {x: 2.66918564, y: -1391.16711, z: 15.2573318}
+    - {x: 22.8283195, y: -1391.17932, z: 14.7019424}
+    - {x: 22.8283195, y: -1391.17932, z: 14.7019424}
+    segments: []
+  - method: 
+    localPosition: {x: -78.7931519, y: -1392.54932, z: 42.3997574}
+    subways: 04000000
+    reversedWays: 02000000
+    handles:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    localHandles:
+    - {x: -94.6344528, y: -1392.5719, z: 61.4708252}
+    - {x: -62.9518509, y: -1392.52673, z: 23.3286896}
+    segments: []
+  - method: 
+    localPosition: {x: -124.300034, y: -1392.54932, z: 2.86815643}
+    subways: 0100000005000000
+    reversedWays: 0200000003000000
+    handles:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    localHandles:
+    - {x: -122.442139, y: -1392.54932, z: -47.4052048}
+    - {x: -125.755463, y: -1392.51392, z: 3.22934723}
+    - {x: -124.850922, y: -1392.54932, z: 23.577034}
+    - {x: -122.805939, y: -1392.5343, z: 3.00019073}
+    segments: []
+  - method: 
+    localPosition: {x: -212.2397, y: -1390.40747, z: 13.6375504}
+    subways: 01000000
+    reversedWays: 04000000
+    handles:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    localHandles:
+    - {x: -210.829788, y: -1390.42786, z: 13.1259537}
+    - {x: -210.829788, y: -1390.42786, z: 13.1259537}
+    - {x: -150.637314, y: -1333.6095, z: 36.8555222}
+    segments: []
+  resolution: 2

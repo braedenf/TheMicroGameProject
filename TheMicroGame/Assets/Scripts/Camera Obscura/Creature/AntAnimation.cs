@@ -54,6 +54,7 @@ public class AntAnimation : MonoBehaviour
 	private int            zero;
 	// ----------  ----------    ----------   ---------- //
 	private GameObject     mother;
+	private GameObject     seedling;
 	// ----------  ----------    ----------   ---------- //
 	private bool           progression;
 	// ----------  ----------    ----------   ---------- //
@@ -293,11 +294,11 @@ public class AntAnimation : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	// Defines All Necessiary Attributes
 
-
 	// ----------  ----------    ----------   ---------- //
 	// Analyzes All Known Collectable(s) And Deciphers Which One May Be The Closest To Collect Pollen From
-	if (pollinate.active)   {
-	if (!pollinate.gather)  {
+	// Gathers Pollen And Holds Onto It Until The Animation State Is No Longer 'Gather'
+	if (pollinate.active)   
+	if (!pollinate.gather)  
 	if (behaviour       == Motion.gather.ToString () )
 	{
 	
@@ -320,8 +321,8 @@ public class AntAnimation : MonoBehaviour
     // Instantiates A Seedling Alongside The Creature
     Vector3     position            =  pollinate.parent.transform.position;
     Quaternion  rotation            =  pollinate.parent.transform.rotation;
-    GameObject  seedling            =  mother.GetComponent <Pollinate> ().pollen;
 	// ----------  ----------    ----------   ---------- //
+	seedling                        =  mother.GetComponent <Pollinate> ().pollen;
     seedling                        =  Instantiate (seedling, position, rotation) as GameObject;
     // ----------  ----------    ----------   ---------- //
     seedling.transform.SetParent   (pollinate.parent.transform);
@@ -331,10 +332,24 @@ public class AntAnimation : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	pollinate.gather                =  true;
     }   
-    }
-    }
     
-
+	// ----------  ----------    ----------   ---------- //
+	// Deposits The Gathered Pollen If The Animation State Is No Longer 'Gather'
+	// Attaches A Rigidbody To The Deposited Seedling
+	if (pollinate.active) 
+    if (pollinate.gather)  
+    if (behaviour       != Motion.gather.ToString () )
+    {
+    
+    GameObject parent    = seedling.transform.parent.gameObject;
+    // ----------  ----------    ----------   ---------- //
+    parent.transform.DetachChildren ();
+    seedling.AddComponent <Rigidbody> ();
+    seedling.GetComponent <Rigidbody> ().AddForce (Vector3.forward);
+    
+    // ----------  ----------    ----------   ---------- //
+    pollinate.gather     = false;  
+    }
     
     }
 	

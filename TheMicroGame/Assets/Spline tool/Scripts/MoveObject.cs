@@ -181,7 +181,7 @@ public class MoveObject : MonoBehaviour
 		transistion                   += Time.deltaTime;
 		// ----------  ----------    ----------   ---------- //
 		if (velocity                   > zero)
-        transform.position             = Vector3.Lerp (creature, point, transistion * velocity);
+        transform.position             = Vector3.Lerp (creature, point, transistion * speed);
        
         
 		
