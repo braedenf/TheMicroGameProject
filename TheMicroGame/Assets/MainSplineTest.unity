@@ -328,6 +328,449 @@ Transform:
   - {fileID: 1645789759}
   m_Father: {fileID: 654166373}
   m_RootOrder: 2
+--- !u!1001 &16747277
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1791637649}
+    m_Modifications:
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: node.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -6.13502693
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -28.6629333
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 5.46437216
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 5.46437073
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 5.46437073
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406422, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: state
+      value: walk
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: splineWindow
+      value: 
+      objectReference: {fileID: 1791637648}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[2].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[3].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[4].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[5].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[6].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[7].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: sploot
+      value: 
+      objectReference: {fileID: 1791637648}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: approximate
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: node.Array.data[0].point
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: node.Array.data[0].percentage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: start.branch
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: node.Array.data[0].branch
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: node.Array.data[0].animation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: start.point
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: start.speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: node.Array.data[0].speed
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[8].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[9].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[10].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[11].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[12].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[13].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[14].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[15].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[16].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[17].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[18].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[19].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[20].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[21].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[22].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[23].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[24].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[25].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[26].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[27].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[28].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[29].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[30].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[31].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[32].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517614, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_Size.x
+      value: .714719117
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517614, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_Size.y
+      value: .68988055
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517614, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_Center.y
+      value: .691813767
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517614, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_Center.z
+      value: -.101183146
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517614, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_Center.x
+      value: -.142639294
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517614, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_Size.z
+      value: 1.73630154
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[33].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[34].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[35].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[36].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[37].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[38].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[39].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[40].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[41].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[42].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[43].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[44].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[45].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[46].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[47].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[48].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[49].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[50].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[51].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[52].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[53].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[54].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[55].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[56].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[57].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[58].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[59].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[60].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[61].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[62].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 103210, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_Name
+      value: Ant (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &17856802
 Prefab:
   m_ObjectHideFlags: 0
@@ -579,7 +1022,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 331189405}
+    m_TransformParent: {fileID: 324074506}
     m_Modifications:
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: node.Array.size
@@ -591,15 +1034,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 57.0610504
+      value: 136.316147
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.93455315
+      value: -11.4620829
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 11.8674316
+      value: -38.1001129
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1570,7 +2013,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalScale.x
@@ -4187,17 +4630,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints:
   - method: 
-    localPosition: {x: -129.787521, y: -6.83218765, z: -149.479797}
+    localPosition: {x: -129.787521, y: -5.59088707, z: -124.866211}
     subways: 01000000
-    reversedWays: 03000000
+    reversedWays: 06000000
     handles:
-    - {x: 189.281647, y: 5.89392757, z: -430.079803}
-    - {x: 146.32019, y: 5.96409798, z: -430.079803}
+    - {x: 238.251495, y: 7.13522816, z: -405.466217}
+    - {x: 138.680695, y: 5.97739887, z: -403.065491}
     localHandles:
-    - {x: -109.718353, y: -6.90607262, z: -149.479797}
-    - {x: -152.67981, y: -6.83590221, z: -149.479797}
+    - {x: -60.7485046, y: -5.66477203, z: -124.866211}
+    - {x: -160.319305, y: -6.82260132, z: -122.465485}
     segments:
-    - .00275302981
+    - .0029927874
   - method: 
     localPosition: {x: 10, y: -6.13502693, z: -28.6629333}
     subways: 0200000005000000
@@ -4205,59 +4648,88 @@ MonoBehaviour:
     handles:
     - {x: 309, y: 6.6643343, z: -294.069305}
     - {x: 309, y: 6.66497326, z: -307.762939}
-    - {x: 325.930908, y: 11.8759604, z: -344.236298}
+    - {x: 299.939758, y: 6.62085629, z: -344.236298}
     localHandles:
     - {x: 10, y: -6.13566589, z: -13.4692993}
     - {x: 10, y: -6.13502693, z: -27.1629333}
-    - {x: 26.9309082, y: -.924039841, z: -63.6362915}
+    - {x: .939758301, y: -6.17914391, z: -63.6362915}
     segments:
     - .00433640787
-    - .014353022
+    - .0149209704
   - method: 
     localPosition: {x: 106.43634, y: -7.57230854, z: 40.7792358}
     subways: 04000000
     reversedWays: 01000000
     handles:
-    - {x: 390.968628, y: 5.15409851, z: -239.82077}
+    - {x: 250.177185, y: 5.15409851, z: -239.82077}
     - {x: 410.43634, y: 5.24565697, z: -258.732697}
     localHandles:
-    - {x: 91.9686279, y: -7.64590168, z: 40.7792358}
+    - {x: -48.8228149, y: -7.64590168, z: 40.7792358}
     - {x: 111.43634, y: -7.55434322, z: 21.8673096}
     segments:
-    - .00344567676
+    - .00261050486
   - method: 
     localPosition: {x: -52.5681, y: -6.43376637, z: -16.2471619}
-    subways: 00000000
-    reversedWays: 04000000
+    subways: 07000000
+    reversedWays: 0400000005000000
     handles:
     - {x: 234.395432, y: 6.14023495, z: -301.847168}
     - {x: 272.346802, y: 6.36267853, z: -291.847198}
+    - {x: 247.828568, y: 6.38054657, z: -297.394104}
     localHandles:
     - {x: -64.6045685, y: -6.65976524, z: -21.2471619}
     - {x: -26.6531982, y: -6.43732166, z: -11.2471924}
+    - {x: -51.1714325, y: -6.41945362, z: -16.7940979}
     segments:
-    - .0032396852
+    - .00397842191
   - method: 
-    localPosition: {x: -39.1795654, y: -7.03196812, z: 73.9405975}
+    localPosition: {x: -57.789856, y: -7.03196812, z: 116.663452}
     subways: 03000000
     reversedWays: 02000000
     handles:
-    - {x: 230.258942, y: 5.77788544, z: -185.209305}
-    - {x: 261.266541, y: 5.75995111, z: -228.155853}
+    - {x: 170.95433, y: 5.77788544, z: -142.48645}
+    - {x: 242.65625, y: 5.75995111, z: -185.432999}
     localHandles:
-    - {x: -68.7410583, y: -7.02211475, z: 95.3907013}
-    - {x: -37.7334595, y: -7.04004908, z: 52.4441528}
+    - {x: -128.04567, y: -7.02211475, z: 138.113556}
+    - {x: -56.34375, y: -7.04004908, z: 95.1670074}
     segments:
-    - .00508717122
+    - .00323491334
   - method: 
-    localPosition: {x: -23.4163818, y: -6.13502693, z: -27.6629333}
-    subways: 
+    localPosition: {x: -23.4163818, y: -6.13502693, z: -29.2569275}
+    subways: 03000000
     reversedWays: 01000000
     handles:
-    - {x: 266.188049, y: 6.66497326, z: -309.762939}
+    - {x: 274.186951, y: 6.65066051, z: -300.294281}
+    - {x: 280.059479, y: 6.66497326, z: -326.583008}
     localHandles:
-    - {x: -32.8119507, y: -6.13502693, z: -29.1629333}
-    segments: []
+    - {x: -24.8130493, y: -6.14933968, z: -19.6942749}
+    - {x: -18.9405212, y: -6.13502693, z: -45.9830017}
+    segments:
+    - .0155451614
+  - method: 
+    localPosition: {x: -238.610397, y: -7.5936985, z: -84.7384644}
+    subways: 00000000
+    reversedWays: 07000000
+    handles:
+    - {x: 37.4550171, y: 5.2038641, z: -424.386169}
+    - {x: 80.431839, y: 5.21128941, z: -334.422699}
+    localHandles:
+    - {x: -261.544983, y: -7.59613609, z: -143.786163}
+    - {x: -218.568161, y: -7.58871078, z: -53.8226929}
+    segments:
+    - .00385494134
+  - method: 
+    localPosition: {x: -179.923111, y: -7.0966115, z: -24.3212585}
+    subways: 06000000
+    reversedWays: 03000000
+    handles:
+    - {x: 63.1400452, y: 5.69604111, z: -288.26828}
+    - {x: 120.471359, y: 5.7136569, z: -325.102814}
+    localHandles:
+    - {x: -235.859955, y: -7.10395908, z: -7.66827393}
+    - {x: -178.528641, y: -7.08634329, z: -44.5028076}
+    segments:
+    - .0055477689
   resolution: 2
 --- !u!1 &165908144 stripped
 GameObject:
@@ -5443,6 +5915,10 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 3b484de57248f5b48b4da36d0330eaa6, type: 3}
+--- !u!4 &230835116 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+  m_PrefabInternal: {fileID: 16747277}
 --- !u!1 &230848206
 GameObject:
   m_ObjectHideFlags: 0
@@ -7129,7 +7605,12 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -98.1699982, y: 17.2800007, z: -120.300003}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1421867542}
+  - {fileID: 212100505}
+  - {fileID: 1737450911}
+  - {fileID: 1642470200}
+  - {fileID: 354448230}
   m_Father: {fileID: 0}
   m_RootOrder: 25
 --- !u!1 &326436988
@@ -7282,12 +7763,7 @@ Transform:
   m_LocalPosition: {x: -18.9149017, y: 7.75247097, z: -170.267548}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1421867542}
   - {fileID: 245163660}
-  - {fileID: 212100505}
-  - {fileID: 1737450911}
-  - {fileID: 1642470200}
-  - {fileID: 354448230}
   m_Father: {fileID: 0}
   m_RootOrder: 23
 --- !u!1001 &331190046
@@ -9690,6 +10166,449 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300006, guid: f54e91433fbb847bfa803ebab8e2c1bf, type: 3}
+--- !u!1001 &444389088
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1791637649}
+    m_Modifications:
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: node.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -238.610397
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -7.5936985
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -84.7384644
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 5.46437216
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 5.46437073
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 5.46437073
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406422, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: state
+      value: walk
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: splineWindow
+      value: 
+      objectReference: {fileID: 1791637648}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[2].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[3].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[4].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[5].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[6].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[7].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: sploot
+      value: 
+      objectReference: {fileID: 1791637648}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: approximate
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: node.Array.data[0].point
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: node.Array.data[0].percentage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: start.branch
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: node.Array.data[0].branch
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: node.Array.data[0].animation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: start.point
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: start.speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: node.Array.data[0].speed
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[8].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[9].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[10].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[11].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[12].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[13].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[14].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[15].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[16].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[17].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[18].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[19].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[20].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[21].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[22].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[23].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[24].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[25].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[26].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[27].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[28].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[29].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[30].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[31].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[32].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517614, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_Size.x
+      value: .714719117
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517614, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_Size.y
+      value: .68988055
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517614, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_Center.y
+      value: .691813767
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517614, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_Center.z
+      value: -.101183146
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517614, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_Center.x
+      value: -.142639294
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517614, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_Size.z
+      value: 1.73630154
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[33].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[34].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[35].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[36].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[37].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[38].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[39].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[40].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[41].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[42].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[43].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[44].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[45].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[46].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[47].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[48].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[49].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[50].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[51].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[52].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[53].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[54].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[55].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[56].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[57].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[58].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[59].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[60].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[61].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[62].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 103210, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_Name
+      value: Ant (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &444600106
 Prefab:
   m_ObjectHideFlags: 0
@@ -12924,7 +13843,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 331189405}
+    m_TransformParent: {fileID: 324074506}
     m_Modifications:
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: node.Array.size
@@ -12936,15 +13855,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -37.0686188
+      value: 42.1864777
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 89.9771805
+      value: 80.4496536
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -53.7414551
+      value: -103.709
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalRotation.x
@@ -12964,7 +13883,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalScale.x
@@ -16405,6 +17324,10 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 50a3a74fb08da3b44a6dd9083e4375bd, type: 3}
+--- !u!4 &828046133 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+  m_PrefabInternal: {fileID: 1344242147}
 --- !u!1 &832939924
 GameObject:
   m_ObjectHideFlags: 0
@@ -22068,7 +22991,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 331189405}
+    m_TransformParent: {fileID: 324074506}
     m_Modifications:
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: node.Array.size
@@ -22080,15 +23003,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -50.8737946
+      value: 28.3813019
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -.585345745
+      value: -10.112875
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -30.5396118
+      value: -80.5071564
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalRotation.x
@@ -22108,7 +23031,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalScale.x
@@ -22713,7 +23636,7 @@ Transform:
   - {fileID: 1584233134}
   - {fileID: 896745734}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
 --- !u!1 &1088473392 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 3b492600eb4189347817ee83090b4e07, type: 3}
@@ -27641,6 +28564,449 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 15c3542ad782dcf4b901025cd4a954f1, type: 3}
+--- !u!1001 &1344242147
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1791637649}
+    m_Modifications:
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: node.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -57.789856
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -7.03196812
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 116.663452
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 5.46437216
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 5.46437073
+      objectReference: {fileID: 0}
+    - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 5.46437073
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406422, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: state
+      value: walk
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: splineWindow
+      value: 
+      objectReference: {fileID: 1791637648}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[2].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[3].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[4].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[5].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[6].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[7].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: sploot
+      value: 
+      objectReference: {fileID: 1791637648}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: approximate
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: node.Array.data[0].point
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: node.Array.data[0].percentage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: start.branch
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: node.Array.data[0].branch
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: node.Array.data[0].animation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: start.point
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: start.speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: node.Array.data[0].speed
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[8].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[9].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[10].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[11].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[12].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[13].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[14].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[15].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[16].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[17].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[18].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[19].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[20].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[21].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[22].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[23].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[24].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[25].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[26].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[27].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[28].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[29].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[30].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[31].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[32].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517614, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_Size.x
+      value: .714719117
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517614, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_Size.y
+      value: .68988055
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517614, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_Center.y
+      value: .691813767
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517614, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_Center.z
+      value: -.101183146
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517614, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_Center.x
+      value: -.142639294
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517614, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_Size.z
+      value: 1.73630154
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[33].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[34].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[35].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[36].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[37].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[38].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[39].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[40].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[41].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[42].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[43].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[44].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[45].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[46].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[47].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[48].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[49].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[50].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[51].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[52].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[53].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[54].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[55].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[56].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[57].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[58].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[59].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[60].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[61].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: events.Array.data[62].m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 103210, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+      propertyPath: m_Name
+      value: Ant (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1345440501
 Prefab:
   m_ObjectHideFlags: 0
@@ -28666,6 +30032,10 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 783e89ac13b39724d90804af7b932fe7, type: 3}
+--- !u!4 &1401309274 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
+  m_PrefabInternal: {fileID: 444389088}
 --- !u!1001 &1402927256
 Prefab:
   m_ObjectHideFlags: 0
@@ -33513,6 +34883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
   animate: {fileID: 438807506}
+  pause: {fileID: 0}
   speed: 1.79999995
   visibility: 10
   distinction:
@@ -34209,7 +35580,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 331189405}
+    m_TransformParent: {fileID: 324074506}
     m_Modifications:
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: node.Array.size
@@ -34221,15 +35592,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 110.052246
+      value: 189.307343
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.4349308
+      value: -11.9624605
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -73.6967468
+      value: -123.664291
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalRotation.x
@@ -34249,7 +35620,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalScale.x
@@ -35165,7 +36536,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 331189405}
+    m_TransformParent: {fileID: 324074506}
     m_Modifications:
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: node.Array.size
@@ -35177,15 +36548,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -90.84375
+      value: -11.5886536
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 36.9984741
+      value: 27.4709454
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 20.5237579
+      value: -29.4437866
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalRotation.x
@@ -35205,7 +36576,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalScale.x
@@ -37047,7 +38418,7 @@ GameObject:
   - 4: {fileID: 1791637649}
   - 114: {fileID: 1791637648}
   m_Layer: 0
-  m_Name: Splinetest
+  m_Name: SplineAroundEntrance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37079,7 +38450,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 299, y: 12.8000002, z: -280.600006}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1401309274}
+  - {fileID: 230835116}
+  - {fileID: 828046133}
   m_Father: {fileID: 0}
   m_RootOrder: 24
 --- !u!1001 &1793273730
