@@ -44527,18 +44527,6 @@ MeshCollider:
 GameObject:
   m_PrefabParentObject: {fileID: 139052, guid: 29342bf3ea03d9e40852ad4d46ff0f4f, type: 2}
   m_PrefabInternal: {fileID: 1583176695}
---- !u!64 &1730583501
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1730583500}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 1
-  m_Mesh: {fileID: 4300000, guid: 0783c6a5595040e4ab6fc9bacb45508d, type: 3}
 --- !u!114 &1730583502
 MonoBehaviour:
   m_ObjectHideFlags: 0
