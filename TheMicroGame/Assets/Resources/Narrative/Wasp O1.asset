@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Name: Wasp O1
   m_EditorClassIdentifier: 
   creature: wasp
+<<<<<<< HEAD
   state: 
+=======
+  state: walk
+>>>>>>> origin/master
   interaction: 
   quality: 312
   text: "Though mostly airbourne, \nwasps will occasionally wander around \nto both
