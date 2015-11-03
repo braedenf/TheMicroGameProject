@@ -11,7 +11,7 @@ public class MoveObject : MonoBehaviour
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Public Attributes That Can Be Manipulated By The Game Designer
     #region variables
-    [Range (0, 10)  ]  public float   speed;
+    [Range (0, 100)  ]  public float   speed;
 	[Range (0, 10)  ]  public float   orientation;
 	[Range (0, 100) ]  public float   clamp;
 	[Range (0, 10)  ]  public float   approximate;
