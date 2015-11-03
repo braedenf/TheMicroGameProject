@@ -63,6 +63,8 @@ public class GameManagement : MonoBehaviour
 	void Update () 
 	{
 	
+	
+	Camera.main.clearStencilAfterLightingPass = true;
 	// ----------  ----------    ----------   ---------- //
 	//  Exists The Application Depending On Audience Interaction
 	if (Input.GetKeyDown (KeyCode.Escape) )

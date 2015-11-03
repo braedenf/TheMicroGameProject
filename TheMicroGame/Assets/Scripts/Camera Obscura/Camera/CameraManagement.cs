@@ -17,16 +17,20 @@ public class CameraObscura
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	//  Captures A Screenshot From The Lead Camera And Positions It Within The Public Screenshot List Library
-	public int screenshot
+	public int screenshot (Texture texture)
 	{ 
-	set
-	{
-	  Texture2D texture  = new Texture2D ( Screen.width, Screen.height, TextureFormat.RGB24, false );
-	  texture.ReadPixels ( new Rect ( 0, 0, Screen.width, Screen.height), 0, 0 );
-	  texture.Apply (); 
+	
+//	  Texture2D texture  = new Texture2D ( Screen.width, Screen.height, TextureFormat.RGB24, false );
+//	  texture.ReadPixels ( new Rect ( 0, 0, Screen.width, Screen.height), 0, 0 );
+//	  texture.Apply (); 
 	  // ----------  ----------    ----------   ---------- //
-	  discoverablity.Add (texture); 
-	}
+		Texture2D mute = new Texture2D ( Screen.width, Screen.height, TextureFormat.RGB24, false );
+	  mute.ReadPixels ( new Rect ( 0, 0, texture.width, texture.height), 0, 0 );
+	  mute.Apply ();
+	  discoverablity.Add ( mute ); 
+//	  
+	  return discoverablity.Count;
+	
 	}
 	
 	

@@ -23,6 +23,8 @@ public class CameraBehaviour : MonoBehaviour
 	[ Range (0, 1)     ] public float light;
 	[ Range (1, 10000) ] public float tear;
 	[ Range (0, 100)   ] public float border;
+	// ----------  ----------    ----------   ---------- //
+	public Texture texture;
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Private Attributes That'll Be Run On Within The "Camera Obscura" Class
@@ -48,6 +50,11 @@ public class CameraBehaviour : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	// Sets A Fresh Cross-Dimensional Link To The "Camera Obscura" Class
 	camera = new CameraObscura ();
+	
+	// ----------  ----------    ----------   ---------- //
+	// Defines The Fresh Render Texture Dimensions
+	texture.width  = Screen.width;
+	texture.height = Screen.height;
 	
 	
 	}
@@ -104,13 +111,13 @@ public class CameraBehaviour : MonoBehaviour
 		else
 		creature = this.gameObject.GetComponent <RaycastBehaviour> ().creature;
 		
-		
-//		Debug.Log (creature);
-		
+
     	
 		// ----------  ----------    ----------   ---------- //
 		// Captures A Screenshot From The Active Camera 
-		camera.screenshot           = camera.discoverablity.Count;
+//		camera.screenshot           = camera.discoverablity.Count;
+        camera.screenshot (texture);
+
 		
 		// ----------  ----------    ----------   ---------- //
 		// Converts The Screenshot Into A Grayscale Capture
@@ -191,8 +198,9 @@ public class CameraBehaviour : MonoBehaviour
 	    if (narrative != null)
 	    GameDirectory.photographic [counter].transistion  =  narrative.transistion;
 	    GameDirectory.photographic [counter].text         =  narrative.text;
+	    
 		}
-	
+
 		
 		// ----------  ----------    ----------   ---------- //
 		// Progresssively Links The Counter With The Current Length Of The "GameDirectory.photographic" List
