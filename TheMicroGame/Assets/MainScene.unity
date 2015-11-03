@@ -579,7 +579,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 37510050}
+    m_TransformParent: {fileID: 331189405}
     m_Modifications:
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: node.Array.size
@@ -591,15 +591,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -211.228119
+      value: 4.58677578
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -5.19525766
+      value: -2.44772863
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 34.4235992
+      value: 25.8911438
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalRotation.x
@@ -640,7 +640,7 @@ Prefab:
     - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: splineWindow
       value: 
-      objectReference: {fileID: 37510049}
+      objectReference: {fileID: 0}
     - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: events.Array.data[2].m_TypeName
       value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -674,7 +674,7 @@ Prefab:
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: sploot
       value: 
-      objectReference: {fileID: 37510049}
+      objectReference: {fileID: 0}
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: approximate
       value: 8
@@ -1278,57 +1278,6 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: b21781cefd531c64fb760c028e2cf8d3, type: 3}
---- !u!1 &37510048
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 37510050}
-  - 114: {fileID: 37510049}
-  m_Layer: 0
-  m_Name: Spline
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &37510049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 37510048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53ce6495fb91f0b47944ba9976fa9edf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spline: {fileID: 1199664827}
-  splineRefernce: {fileID: 0}
-  splineColor: {r: 1, g: .921568632, b: .0156862754, a: 1}
-  pointColor: {r: 1, g: 1, b: 1, a: 1}
-  handlesColor: {r: 0, g: 0, b: 1, a: 1}
-  selectedColor: {r: 0, g: 1, b: 0, a: 1}
---- !u!4 &37510050
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 37510048}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 196.899994, y: 10.5, z: -178.800003}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1421867542}
-  - {fileID: 245163660}
-  - {fileID: 1870617785}
-  - {fileID: 212100505}
-  - {fileID: 1737450911}
-  - {fileID: 1642470200}
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
 --- !u!1001 &38249233
 Prefab:
   m_ObjectHideFlags: 0
@@ -1581,7 +1530,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 37510050}
+    m_TransformParent: {fileID: 331189405}
     m_Modifications:
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: node.Array.size
@@ -1593,15 +1542,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -7.27992249
+      value: 208.534973
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -59.5884476
+      value: -56.8409195
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -186.857773
+      value: -195.390228
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1642,7 +1591,7 @@ Prefab:
     - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: splineWindow
       value: 
-      objectReference: {fileID: 37510049}
+      objectReference: {fileID: 0}
     - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: events.Array.data[2].m_TypeName
       value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -1676,7 +1625,7 @@ Prefab:
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: sploot
       value: 
-      objectReference: {fileID: 37510049}
+      objectReference: {fileID: 0}
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: approximate
       value: 8
@@ -3438,6 +3387,51 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 773dd7af22c06624d905c5e99170917d, type: 3}
+--- !u!1 &127227576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 127227578}
+  - 114: {fileID: 127227577}
+  m_Layer: 0
+  m_Name: Spline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &127227577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 127227576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ce6495fb91f0b47944ba9976fa9edf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spline: {fileID: 376498321}
+  splineRefernce: {fileID: 11400000, guid: 5fd7f6d81abab7f4c91827fd9f73d91c, type: 2}
+  splineColor: {r: 1, g: .921568632, b: .0156862754, a: 1}
+  pointColor: {r: 1, g: 1, b: 1, a: 1}
+  handlesColor: {r: 0, g: 0, b: 1, a: 1}
+  selectedColor: {r: 0, g: 1, b: 0, a: 1}
+--- !u!4 &127227578
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 127227576}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -38.2000008, y: 16.7299995, z: -35.3899994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
 --- !u!1 &127342561 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: b21781cefd531c64fb760c028e2cf8d3, type: 3}
@@ -7185,9 +7179,15 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -18.9149017, y: 7.75247097, z: -170.267548}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1421867542}
+  - {fileID: 245163660}
+  - {fileID: 1870617785}
+  - {fileID: 212100505}
+  - {fileID: 1737450911}
+  - {fileID: 1642470200}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
 --- !u!1001 &331190046
 Prefab:
   m_ObjectHideFlags: 0
@@ -7875,6 +7875,199 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 7c11ec6aacad1324b856ed31c1f1e124, type: 3}
+--- !u!114 &376498321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 004f13b5120f2ba4f82b355eb1e305e9, type: 3}
+  m_Name: demo6
+  m_EditorClassIdentifier: 
+  waypoints:
+  - method: 
+    localPosition: {x: 2.50518513, y: 3.65723389e-16, z: -13.8664713}
+    subways: 01000000
+    reversedWays: 0e000000
+    handles:
+    - {x: -32.100647, y: 16.7299995, z: -48.3282967}
+    - {x: -38.8421593, y: 16.7299995, z: -49.7203598}
+    localHandles:
+    - {x: 6.09935474, y: 3.45113781e-16, z: -12.9382982}
+    - {x: -.642157555, y: 3.76023813e-16, z: -14.3303614}
+    segments:
+    - .0711965188
+  - method: 
+    localPosition: {x: 8.49848843, y: 2.71974206e-16, z: -9.12862873}
+    subways: 02000000
+    reversedWays: 00000000
+    handles:
+    - {x: -28.1404076, y: 16.7299995, z: -42.5021172}
+    - {x: -31.5070457, y: 16.7299995, z: -46.8406715}
+    localHandles:
+    - {x: 10.0595942, y: 2.27198695e-16, z: -7.11211872}
+    - {x: 6.69295502, y: 3.23533922e-16, z: -11.4506721}
+    segments:
+    - .0641978905
+  - method: 
+    localPosition: {x: 14.091979, y: 1.3582749e-16, z: -2.99712658}
+    subways: 03000000
+    reversedWays: 01000000
+    handles:
+    - {x: -22.8845787, y: 16.7299995, z: -37.5192642}
+    - {x: -25.3314667, y: 16.7299995, z: -39.2549896}
+    localHandles:
+    - {x: 15.315423, y: 1.16557107e-16, z: -2.12926483}
+    - {x: 12.8685331, y: 1.550979e-16, z: -3.86498833}
+    segments:
+    - .0745137855
+  - method: 
+    localPosition: {x: 17.7650871, y: -6.00190556e-20, z: 3.12270284}
+    subways: 04000000
+    reversedWays: 02000000
+    handles:
+    - {x: -20.2668571, y: 16.7299995, z: -30.776741}
+    - {x: -20.6029663, y: 16.7299995, z: -33.7578545}
+    localHandles:
+    - {x: 17.9331436, y: -3.31569988e-17, z: 4.61325836}
+    - {x: 17.5970345, y: 3.30369816e-17, z: 1.6321466}
+    segments:
+    - .0603795499
+  - method: 
+    localPosition: {x: 14.8319826, y: -1.8406505e-16, z: 11.4095526}
+    subways: 05000000
+    reversedWays: 03000000
+    handles:
+    - {x: -28.7453041, y: 16.7299995, z: -22.1138077}
+    - {x: -19.5794868, y: 16.7299995, z: -25.6637669}
+    localHandles:
+    - {x: 9.45469666, y: -2.25512755e-16, z: 13.2761908}
+    - {x: 18.6205139, y: -1.46687842e-16, z: 9.72623253}
+    segments:
+    - .0476251245
+  - method: 
+    localPosition: {x: 4.39789963, y: -1.27699865e-16, z: 8.87108994}
+    subways: 06000000
+    reversedWays: 04000000
+    handles:
+    - {x: -37.1526299, y: 16.7299995, z: -28.8488464}
+    - {x: -31.6737041, y: 16.7299995, z: -25.1055775}
+    localHandles:
+    - {x: 1.04737186, y: -7.59648859e-17, z: 6.54115391}
+    - {x: 6.52629662, y: -1.59082131e-16, z: 10.2844219}
+    segments:
+    - .058798071
+  - method: 
+    localPosition: {x: -2.2909708, y: 2.92208913e-18, z: 2.9884007}
+    subways: 07000000
+    reversedWays: 05000000
+    handles:
+    - {x: -41.9858742, y: 16.7299995, z: -32.5251465}
+    - {x: -38.996067, y: 16.7299995, z: -32.2780533}
+    localHandles:
+    - {x: -3.78587484, y: 5.66537449e-18, z: 2.8648541}
+    - {x: -.796067476, y: 1.78856301e-19, z: 3.11194491}
+    segments:
+    - .0503861271
+  - method: 
+    localPosition: {x: -10.569108, y: -1.32453837e-16, z: 9.08518982}
+    subways: 08000000
+    reversedWays: 06000000
+    handles:
+    - {x: -48.9033356, y: 16.7299995, z: -20.9915314}
+    - {x: -48.5864105, y: 16.7299995, z: -32.0040054}
+    localHandles:
+    - {x: -10.7033367, y: -2.50432332e-16, z: 14.398469}
+    - {x: -10.3864098, y: -5.90622508e-18, z: 3.38599253}
+    segments:
+    - .0488032475
+  - method: 
+    localPosition: {x: -3.49610996, y: -2.93195452e-16, z: 16.3243484}
+    subways: 09000000
+    reversedWays: 07000000
+    handles:
+    - {x: -40.2077065, y: 16.7299995, z: -18.3105221}
+    - {x: -43.4289398, y: 16.7299995, z: -20.0652046}
+    localHandles:
+    - {x: -2.00770497, y: -3.09962654e-16, z: 17.0794773}
+    - {x: -5.22894096, y: -2.71000912e-16, z: 15.3247957}
+    segments:
+    - .0547509529
+  - method: 
+    localPosition: {x: 2.61360407, y: -4.64778784e-16, z: 24.0517731}
+    subways: 0a000000
+    reversedWays: 08000000
+    handles:
+    - {x: -35.9363861, y: 16.7299995, z: -6.7464447}
+    - {x: -35.4845695, y: 16.7299995, z: -15.5711937}
+    localHandles:
+    - {x: 2.26361465, y: -5.66736775e-16, z: 28.6435547}
+    - {x: 2.71543026, y: -3.70788011e-16, z: 19.8188057}
+    segments:
+    - .0269954484
+  - method: 
+    localPosition: {x: -17.5839672, y: -5.04753762e-16, z: 25.8520889}
+    subways: 0b000000
+    reversedWays: 09000000
+    handles:
+    - {x: -62.7377701, y: 16.7299995, z: -11.5442238}
+    - {x: -44.3901672, y: 16.7299995, z: -7.41255951}
+    localHandles:
+    - {x: -24.5377693, y: -4.602047e-16, z: 23.8457756}
+    - {x: -6.19016743, y: -5.51946044e-16, z: 27.9774399}
+    segments:
+    - .0302180294
+  - method: 
+    localPosition: {x: -21.2718239, y: -1.61678631e-16, z: 10.4013577}
+    subways: 0c000000
+    reversedWays: 0a000000
+    handles:
+    - {x: -59.3327522, y: 16.7299995, z: -27.3267689}
+    - {x: -59.4886818, y: 16.7299995, z: -23.2004719}
+    localHandles:
+    - {x: -21.1327515, y: -1.09761772e-16, z: 8.06323051}
+    - {x: -21.288681, y: -2.01383976e-16, z: 12.1895275}
+    segments:
+    - .0544605702
+  - method: 
+    localPosition: {x: -20.0488625, y: 5.40701563e-17, z: .585885048}
+    subways: 0d000000
+    reversedWays: 0b000000
+    handles:
+    - {x: -58.4731102, y: 16.7299995, z: -37.258606}
+    - {x: -58.1001625, y: 16.7299995, z: -32.707695}
+    localHandles:
+    - {x: -20.2731094, y: 1.08570817e-16, z: -1.86860561}
+    - {x: -19.9001617, y: 7.52031916e-18, z: 2.68230343}
+    segments:
+    - .033893574
+  - method: 
+    localPosition: {x: -19.9879074, y: 3.97231877e-16, z: -14.7697344}
+    subways: 0e000000
+    reversedWays: 0c000000
+    handles:
+    - {x: -57.1921387, y: 16.7299995, z: -50.067852}
+    - {x: -58.1151352, y: 16.7299995, z: -49.162384}
+    localHandles:
+    - {x: -18.9921379, y: 3.95191692e-16, z: -14.6778517}
+    - {x: -19.9151344, y: 3.75086306e-16, z: -13.7723856}
+    segments:
+    - .047292456
+  - method: 
+    localPosition: {x: -8.56005955, y: 3.84986798e-16, z: -14.2182646}
+    subways: 00000000
+    reversedWays: 0d000000
+    handles:
+    - {x: -43.917347, y: 16.7299995, z: -49.571003}
+    - {x: -49.1200104, y: 16.7299995, z: -50.1237183}
+    localHandles:
+    - {x: -5.71734667, y: 3.84159405e-16, z: -14.1810026}
+    - {x: -10.9200077, y: 3.96432172e-16, z: -14.7337198}
+    segments:
+    - .0496343449
+  resolution: 2
 --- !u!1001 &376527133
 Prefab:
   m_ObjectHideFlags: 0
@@ -12414,7 +12607,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 37510050}
+    m_TransformParent: {fileID: 331189405}
     m_Modifications:
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: node.Array.size
@@ -12426,15 +12619,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -116.790222
+      value: 99.0246735
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -5.40000153
+      value: -2.6524725
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 68.8296204
+      value: 60.2971649
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalRotation.x
@@ -12475,7 +12668,7 @@ Prefab:
     - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: splineWindow
       value: 
-      objectReference: {fileID: 37510049}
+      objectReference: {fileID: 0}
     - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: events.Array.data[2].m_TypeName
       value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -12509,7 +12702,7 @@ Prefab:
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: sploot
       value: 
-      objectReference: {fileID: 37510049}
+      objectReference: {fileID: 0}
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: approximate
       value: 8
@@ -15631,7 +15824,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 37510050}
+    m_TransformParent: {fileID: 331189405}
     m_Modifications:
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: node.Array.size
@@ -15643,15 +15836,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -28.9552307
+      value: 186.859665
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.78696442
+      value: -2.03943539
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -31.2333832
+      value: -39.7658386
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalRotation.x
@@ -15692,7 +15885,7 @@ Prefab:
     - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: splineWindow
       value: 
-      objectReference: {fileID: 37510049}
+      objectReference: {fileID: 0}
     - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: events.Array.data[2].m_TypeName
       value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -15726,7 +15919,7 @@ Prefab:
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: sploot
       value: 
-      objectReference: {fileID: 37510049}
+      objectReference: {fileID: 0}
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: approximate
       value: 8
@@ -24425,713 +24618,6 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 3b484de57248f5b48b4da36d0330eaa6, type: 3}
---- !u!114 &1199664827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 004f13b5120f2ba4f82b355eb1e305e9, type: 3}
-  m_Name: Spline 4
-  m_EditorClassIdentifier: 
-  waypoints:
-  - method: 
-    localPosition: {x: -13.540329, y: -5.13386917, z: -70.0852509}
-    subways: 0100000003000000
-    reversedWays: 
-    handles:
-    - {x: 182.805359, y: 6.50404072, z: -224.010315}
-    - {x: 183.914017, y: 4.32551384, z: -254.659058}
-    localHandles:
-    - {x: -14.094635, y: -3.99595928, z: -45.2103119}
-    - {x: -12.9859772, y: -6.17448616, z: -75.8590546}
-    segments:
-    - .00848966092
-    - .00665401714
-  - method: 
-    localPosition: {x: -45.4174805, y: -4.43054771, z: -15.3688507}
-    subways: 0200000004000000
-    reversedWays: 00000000
-    handles:
-    - {x: 137.684296, y: 5.09999847, z: -180.866577}
-    - {x: 129.429474, y: 5.09999847, z: -168.369476}
-    - {x: 168.644012, y: 5.09999847, z: -208.573303}
-    localHandles:
-    - {x: -59.2156982, y: -5.40000153, z: -2.0665741}
-    - {x: -67.47052, y: -5.40000153, z: 10.4305267}
-    - {x: -28.2559814, y: -5.40000153, z: -29.7733002}
-    segments:
-    - .0110515486
-    - .00426901923
-  - method: 
-    localPosition: {x: -42.4299927, y: -5.40000248, z: 24.1907196}
-    subways: 250000000b000000
-    reversedWays: 01000000
-    handles:
-    - {x: 174.611786, y: 5.09999752, z: -153.109283}
-    - {x: 197.805161, y: 5.09999752, z: -144.342636}
-    - {x: 134.328186, y: 5.09999752, z: -156.109283}
-    localHandles:
-    - {x: -22.288208, y: -5.40000248, z: 25.6907196}
-    - {x: .905166626, y: -5.40000248, z: 34.4573669}
-    - {x: -62.5718079, y: -5.40000248, z: 22.6907196}
-    segments:
-    - .00420401571
-    - .00762342336
-  - method: 
-    localPosition: {x: -7.27990723, y: -39.2224617, z: -141.029099}
-    subways: 0e000000
-    reversedWays: 00000000
-    handles:
-    - {x: 189.620087, y: -32.0021439, z: -326.72937}
-    - {x: 189.620087, y: -26.0627823, z: -312.928833}
-    localHandles:
-    - {x: -7.27990723, y: -42.5021439, z: -147.929367}
-    - {x: -7.27990723, y: -36.5627823, z: -134.12883}
-    segments:
-    - .00531211495
-  - method: 
-    localPosition: {x: -161.849274, y: -3.92634487, z: -11.8127441}
-    subways: 0500000007000000
-    reversedWays: 01000000
-    handles:
-    - {x: 21.9017029, y: 6.98445988, z: -188.97525}
-    - {x: 28.4606323, y: 6.57365513, z: -189.112747}
-    - {x: 35.0507202, y: 6.57365513, z: -192.112747}
-    localHandles:
-    - {x: -174.998291, y: -3.51554012, z: -10.1752472}
-    - {x: -168.439362, y: -3.92634487, z: -10.3127441}
-    - {x: -161.849274, y: -3.92634487, z: -13.3127441}
-    segments:
-    - .00632192474
-    - .0122300135
-  - method: 
-    localPosition: {x: -242.763626, y: -5.40000153, z: 4.81065369}
-    subways: 06000000
-    reversedWays: 04000000
-    handles:
-    - {x: -98.903595, y: 8.68568039, z: -175.034927}
-    - {x: -38.9498596, y: 5.09999847, z: -172.943756}
-    localHandles:
-    - {x: -295.803589, y: -1.81431961, z: 3.76507568}
-    - {x: -235.849854, y: -5.40000153, z: 5.85624695}
-    segments:
-    - .00566162914
-  - method: 
-    localPosition: {x: -311.381409, y: -5.40000153, z: 42.4714203}
-    subways: 15000000
-    reversedWays: 05000000
-    handles:
-    - {x: -115.814972, y: 25.3737564, z: -141.470596}
-    - {x: -87.3760986, y: 5.15090132, z: -88.7225494}
-    localHandles:
-    - {x: -312.714966, y: 14.8737564, z: 37.3294067}
-    - {x: -284.276093, y: -5.34909868, z: 90.0774536}
-    segments:
-    - .0102681229
-  - method: 
-    localPosition: {x: -202.41008, y: -3.69442701, z: 6.61131287}
-    subways: 08000000
-    reversedWays: 04000000
-    handles:
-    - {x: -12.4130249, y: 5.61043835, z: -166.406036}
-    - {x: 2.96325684, y: 5.09999847, z: -186.354599}
-    localHandles:
-    - {x: -209.313019, y: -4.88956165, z: 12.3939667}
-    - {x: -193.936737, y: -5.40000153, z: -7.55459595}
-    segments:
-    - .0103169642
-  - method: 
-    localPosition: {x: -208.90863, y: -5.40000153, z: 61.4182129}
-    subways: 09000000
-    reversedWays: 07000000
-    handles:
-    - {x: -6.36984253, y: 5.09999847, z: -97.3129578}
-    - {x: -17.6474457, y: 5.12183237, z: -146.537262}
-    localHandles:
-    - {x: -203.269836, y: -5.40000153, z: 81.4870453}
-    - {x: -214.54744, y: -5.37816763, z: 32.2627411}
-    segments:
-    - .0160345417
-  - method: 
-    localPosition: {x: -184.964233, y: -5.40000153, z: 54.9358673}
-    subways: 0a000000
-    reversedWays: 08000000
-    handles:
-    - {x: 27.106781, y: 5.09999847, z: -128.993317}
-    - {x: 3.81491089, y: 5.09999847, z: -120.397949}
-    localHandles:
-    - {x: -169.793213, y: -5.40000153, z: 49.8066864}
-    - {x: -193.085083, y: -5.40000153, z: 58.4020538}
-    segments:
-    - .0157824103
-  - method: 
-    localPosition: {x: -153.72876, y: -5.40000153, z: 66.2968597}
-    subways: 11000000
-    reversedWays: 09000000
-    handles:
-    - {x: 76.6170349, y: 5.09999847, z: -102.497147}
-    - {x: 33.3506775, y: 5.09999847, z: -115.775406}
-    localHandles:
-    - {x: -120.282959, y: -5.40000153, z: 76.3028564}
-    - {x: -163.549316, y: -5.40000153, z: 63.0245972}
-    segments:
-    - .00991592929
-  - method: 
-    localPosition: {x: -49.7280884, y: -5.40000153, z: 56.3672943}
-    subways: 0c000000
-    reversedWays: 02000000
-    handles:
-    - {x: 101.061371, y: 5.09999847, z: -117.144592}
-    - {x: 193.28241, y: 5.09999847, z: -127.72081}
-    localHandles:
-    - {x: -95.838623, y: -5.40000153, z: 61.6554108}
-    - {x: -3.61758423, y: -5.40000153, z: 51.0791931}
-    segments:
-    - .00815133471
-  - method: 
-    localPosition: {x: -49.7280884, y: -5.35623312, z: 92.217865}
-    subways: 0d000000
-    reversedWays: 0b000000
-    handles:
-    - {x: 170.451401, y: 6.01298046, z: -87.7116394}
-    - {x: 127.123535, y: 5.09999847, z: -88.0821228}
-    localHandles:
-    - {x: -26.4485931, y: -4.48701954, z: 91.0883636}
-    - {x: -69.7764587, y: -5.40000153, z: 90.7178802}
-    segments:
-    - .00841627363
-  - method: 
-    localPosition: {x: -28.9730225, y: -5.40000153, z: 39.354599}
-    subways: 14000000
-    reversedWays: 0c000000
-    handles:
-    - {x: 167.926971, y: 4.6856308, z: -184.273941}
-    - {x: 167.926971, y: 5.09999847, z: -135.20462}
-    localHandles:
-    - {x: -28.9730225, y: -5.8143692, z: -5.47393799}
-    - {x: -28.9730225, y: -5.40000153, z: 43.5953827}
-    segments:
-    - .00618622778
-  - method: 
-    localPosition: {x: -7.27990723, y: -78.4001694, z: -228.944901}
-    subways: 0f000000
-    reversedWays: 03000000
-    handles:
-    - {x: 206.767975, y: -64.7754898, z: -406.244904}
-    - {x: 189.620087, y: -68.2016296, z: -409.244873}
-    localHandles:
-    - {x: 9.86798096, y: -75.2754898, z: -227.444901}
-    - {x: -7.27990723, y: -78.7016296, z: -230.44487}
-    segments:
-    - .00272440515
-  - method: 
-    localPosition: {x: 77.2082825, y: -94.4224243, z: -405.581177}
-    subways: 26000000
-    reversedWays: 0e000000
-    handles:
-    - {x: 268.065552, y: -80.1309204, z: -605.830505}
-    - {x: 280.151001, y: -83.647316, z: -528.489441}
-    localHandles:
-    - {x: 71.1655579, y: -90.6309204, z: -427.030518}
-    - {x: 83.2510071, y: -94.147316, z: -349.689453}
-    segments:
-    - .00718231685
-  - method: 
-    localPosition: {x: -80.7304077, y: -2.25880718, z: -23.8051758}
-    subways: 17000000
-    reversedWays: 
-    handles:
-    - {x: 118.724548, y: 8.1364727, z: -201.110092}
-    localHandles:
-    - {x: -78.1754456, y: -2.3635273, z: -22.3100891}
-    segments:
-    - .00736826658
-  - method: 
-    localPosition: {x: -116.791443, y: -5.40000153, z: 50.4524384}
-    subways: 12000000
-    reversedWays: 0a000000
-    handles:
-    - {x: 72.1041412, y: 5.09999847, z: -161.678482}
-    - {x: 85.5612335, y: 5.09999847, z: -102.373291}
-    localHandles:
-    - {x: -124.795853, y: -5.40000153, z: 17.121521}
-    - {x: -111.33876, y: -5.40000153, z: 76.426712}
-    segments:
-    - .00864927564
-  - method: 
-    localPosition: {x: -156.912506, y: -5.40000153, z: 46.2416992}
-    subways: 13000000
-    reversedWays: 11000000
-    handles:
-    - {x: 45.2557983, y: 5.09999847, z: -108.625168}
-    - {x: 34.1977844, y: 5.09999847, z: -152.809052}
-    localHandles:
-    - {x: -151.644196, y: -5.40000153, z: 70.1748352}
-    - {x: -162.702209, y: -5.40000153, z: 25.9909515}
-    segments:
-    - .0144984554
-  - method: 
-    localPosition: {x: -132.50705, y: -5.40000153, z: 42.1374359}
-    subways: 24000000
-    reversedWays: 12000000
-    handles:
-    - {x: 76.6181412, y: 5.09999847, z: -156.603928}
-    - {x: 59.2203674, y: 5.09999847, z: -130.229431}
-    localHandles:
-    - {x: -120.281853, y: -5.40000153, z: 22.1960754}
-    - {x: -137.679626, y: -5.40000153, z: 48.5705719}
-    segments:
-    - .00672060298
-  - method: 
-    localPosition: {x: -28.5854797, y: -3.350348, z: -45.0547333}
-    subways: 17000000
-    reversedWays: 0d0000002400000025000000
-    handles:
-    - {x: 168.754852, y: 5.09999847, z: -234.046463}
-    - {x: 167.874054, y: 5.43925524, z: -213.66301}
-    - {x: 161.430237, y: 6.56343555, z: -195.008621}
-    - {x: 169.631287, y: 7.10365725, z: -193.798004}
-    localHandles:
-    - {x: -28.1451416, y: -5.40000153, z: -55.24646}
-    - {x: -29.0259399, y: -5.06074476, z: -34.8630066}
-    - {x: -35.4697571, y: -3.93656445, z: -16.2086182}
-    - {x: -27.2687073, y: -3.39634275, z: -14.9980011}
-    segments:
-    - .0238475427
-  - method: 
-    localPosition: {x: -304.714539, y: 48.6219711, z: 25.254837}
-    subways: 16000000
-    reversedWays: 06000000
-    handles:
-    - {x: -107.814545, y: 77.5075378, z: -161.351517}
-    - {x: -106.270966, y: 29.6538315, z: -141.034256}
-    localHandles:
-    - {x: -304.714539, y: 67.0075378, z: 17.4484863}
-    - {x: -303.170959, y: 19.1538315, z: 37.7657471}
-    segments:
-    - .0211977921
-  - method: 
-    localPosition: {x: -302.752411, y: 72.8911743, z: 16.7271881}
-    subways: 18000000
-    reversedWays: 15000000
-    handles:
-    - {x: -98.4580078, y: 98.4056854, z: -166.827362}
-    - {x: -110.340057, y: 74.8706818, z: -158.404297}
-    localHandles:
-    - {x: -295.358002, y: 87.9056854, z: 11.972641}
-    - {x: -307.240051, y: 64.3706818, z: 20.3957062}
-    segments:
-    - .0250839666
-  - method: 
-    localPosition: {x: -26.7311096, y: -5.84935427, z: -70.1470032}
-    subways: 28000000
-    reversedWays: 1000000014000000
-    handles:
-    - {x: 170.168839, y: -2.43252754, z: -264.663422}
-    - {x: 170.710968, y: 6.92126989, z: -233.230621}
-    - {x: 166.925873, y: 6.875772, z: -232.92543}
-    localHandles:
-    - {x: -26.7311554, y: -12.9325275, z: -85.8634186}
-    - {x: -26.1890259, y: -3.57873011, z: -54.4306183}
-    - {x: -29.9741211, y: -3.624228, z: -54.1254272}
-    segments:
-    - .00306685618
-  - method: 
-    localPosition: {x: -302.801117, y: 92.9289093, z: 9.57640076}
-    subways: 19000000
-    reversedWays: 16000000
-    handles:
-    - {x: -105.901123, y: 109.344849, z: -172.264313}
-    - {x: -103.033539, y: 93.3753357, z: -164.734085}
-    localHandles:
-    - {x: -302.801117, y: 98.8448486, z: 6.53569031}
-    - {x: -299.933533, y: 82.8753357, z: 14.065918}
-    segments:
-    - .0280122869
-  - method: 
-    localPosition: {x: -296.726746, y: 110.503052, z: 2.1023407}
-    subways: 1a000000
-    reversedWays: 18000000
-    handles:
-    - {x: -99.684845, y: 123.736778, z: -178.855667}
-    - {x: -98.7895203, y: 112.379616, z: -173.542191}
-    localHandles:
-    - {x: -296.584839, y: 113.236778, z: -.0556640625}
-    - {x: -295.689514, y: 101.879616, z: 5.2578125}
-    segments:
-    - .0401887484
-  - method: 
-    localPosition: {x: -292.329254, y: 121.404831, z: -2.96606445}
-    subways: 1b000000
-    reversedWays: 19000000
-    handles:
-    - {x: -93.2980042, y: 132.221924, z: -182.239746}
-    - {x: -97.5605164, y: 131.587738, z: -181.292389}
-    localHandles:
-    - {x: -290.197998, y: 121.721924, z: -3.43974304}
-    - {x: -294.46051, y: 121.087738, z: -2.49238586}
-    segments:
-    - .0142340465
-  - method: 
-    localPosition: {x: -269.860168, y: 114.069588, z: -30.6385498}
-    subways: 1c000000
-    reversedWays: 1a000000
-    handles:
-    - {x: -72.2105408, y: 122.132759, z: -210.672256}
-    - {x: -73.7098083, y: 124.977005, z: -208.204849}
-    localHandles:
-    - {x: -269.110535, y: 111.632759, z: -31.8722534}
-    - {x: -270.609802, y: 114.477005, z: -29.4048462}
-    segments:
-    - .0143609233
-  - method: 
-    localPosition: {x: -252.022842, y: 86.7736816, z: -46.1419067}
-    subways: 1d000000
-    reversedWays: 1b000000
-    handles:
-    - {x: -59.8139648, y: 96.1353683, z: -226.848999}
-    - {x: -55.8441467, y: 98.4119949, z: -224.283142}
-    localHandles:
-    - {x: -256.713959, y: 85.6353683, z: -48.048996}
-    - {x: -252.744141, y: 87.9119949, z: -45.483139}
-    segments:
-    - .0351291709
-  - method: 
-    localPosition: {x: -259.907745, y: 76.1306076, z: -40.3536682}
-    subways: 1e000000
-    reversedWays: 1c000000
-    handles:
-    - {x: -63.7298279, y: 82.994545, z: -217.250549}
-    - {x: -62.285675, y: 90.2666702, z: -221.056793}
-    localHandles:
-    - {x: -260.629822, y: 72.494545, z: -38.4505463}
-    - {x: -259.185669, y: 79.7666702, z: -42.2567902}
-    segments:
-    - .0101464791
-  - method: 
-    localPosition: {x: -270.356689, y: 26.6066017, z: -31.2257233}
-    subways: 1f000000
-    reversedWays: 1d000000
-    handles:
-    - {x: -73.7658997, y: 33.5690422, z: -209.801117}
-    - {x: -73.1474915, y: 40.6441612, z: -210.250336}
-    localHandles:
-    - {x: -270.665894, y: 23.0690422, z: -31.0011139}
-    - {x: -270.047485, y: 30.1441612, z: -31.4503326}
-    segments:
-    - .0182213075
-  - method: 
-    localPosition: {x: -271.285645, y: -3.11104345, z: -28.8932495}
-    subways: 20000000
-    reversedWays: 1e000000
-    handles:
-    - {x: -74.4135437, y: 7.64835453, z: -197.810562}
-    - {x: -74.3578186, y: 14.1825466, z: -207.807007}
-    localHandles:
-    - {x: -271.313538, y: -2.85164547, z: -19.0105591}
-    - {x: -271.257812, y: 3.68254662, z: -29.0070038}
-    segments:
-    - .0234537311
-  - method: 
-    localPosition: {x: -253.803375, y: -4.91019201, z: -17.2762909}
-    subways: 21000000
-    reversedWays: 1f000000
-    handles:
-    - {x: -51.4963074, y: 5.39916182, z: -189.377975}
-    - {x: -62.3104858, y: 6.00474977, z: -197.555267}
-    localHandles:
-    - {x: -248.396301, y: -5.10083818, z: -10.5779724}
-    - {x: -259.21048, y: -4.49525023, z: -18.7552643}
-    segments:
-    - .0241074562
-  - method: 
-    localPosition: {x: -235.636993, y: -4.92164612, z: -4.63609314}
-    subways: 22000000
-    reversedWays: 20000000
-    handles:
-    - {x: -35.2480774, y: 5.57757759, z: -182.579376}
-    - {x: -46.055481, y: 5.79338551, z: -183.496368}
-    localHandles:
-    - {x: -232.148071, y: -4.92242241, z: -3.77937317}
-    - {x: -242.955475, y: -4.70661449, z: -4.69636536}
-    segments:
-    - .0223005526
-  - method: 
-    localPosition: {x: -211.927338, y: -4.63669586, z: -11.3244171}
-    subways: 23000000
-    reversedWays: 21000000
-    handles:
-    - {x: -9.14494324, y: 5.73607683, z: -189.664459}
-    - {x: -22.1095581, y: 5.99053144, z: -189.354706}
-    localHandles:
-    - {x: -206.044937, y: -4.76392317, z: -10.8644562}
-    - {x: -219.009552, y: -4.50946856, z: -10.5547028}
-    segments:
-    - .00692736916
-  - method: 
-    localPosition: {x: -138.309753, y: -4.5286293, z: -22.4198914}
-    subways: 
-    reversedWays: 22000000
-    handles:
-    - {x: 57.1098022, y: 5.96951866, z: -200.978348}
-    localHandles:
-    - {x: -139.790192, y: -4.53048134, z: -22.1783447}
-    segments: []
-  - method: 
-    localPosition: {x: -79.7121582, y: -3.45976257, z: -16.7978973}
-    subways: 14000000
-    reversedWays: 13000000
-    handles:
-    - {x: 118.500534, y: 7.06207132, z: -196.32341}
-    - {x: 80.0627213, y: 7.00064087, z: -194.555054}
-    localHandles:
-    - {x: -78.3994598, y: -3.43792868, z: -17.523407}
-    - {x: -116.837273, y: -3.49935913, z: -15.7550507}
-    segments:
-    - .00920372922
-  - method: 
-    localPosition: {x: 55.1803131, y: -5.40000153, z: -47.4130707}
-    subways: 14000000
-    reversedWays: 02000000
-    handles:
-    - {x: 250.182907, y: 5.22045898, z: -255.231964}
-    - {x: 256.680786, y: 5.09999847, z: -209.988373}
-    localHandles:
-    - {x: 53.2829132, y: -5.27954102, z: -76.4319611}
-    - {x: 59.7807922, y: -5.40000153, z: -31.1883698}
-    segments:
-    - .00563761778
-  - method: 
-    localPosition: {x: 77.2082825, y: -91.7715912, z: -475.802429}
-    subways: 27000000
-    reversedWays: 0f000000
-    handles:
-    - {x: 274.108276, y: -81.3361282, z: -652.049011}
-    - {x: 274.108276, y: -81.2336731, z: -656.102417}
-    localHandles:
-    - {x: 77.2082825, y: -91.8361282, z: -473.249023}
-    - {x: 77.2082825, y: -91.7336731, z: -477.302429}
-    segments:
-    - .00425142981
-  - method: 
-    localPosition: {x: 15.0947571, y: -83.2465668, z: -581.34491}
-    subways: 
-    reversedWays: 2600000037000000
-    handles:
-    - {x: 229.592407, y: -74.2885742, z: -760.339966}
-    - {x: 195.033569, y: -71.7930679, z: -750.868835}
-    localHandles:
-    - {x: 32.6924133, y: -84.7885742, z: -581.539978}
-    - {x: -1.86642456, y: -82.2930679, z: -572.068848}
-    segments: []
-  - method: 
-    localPosition: {x: -24.2701569, y: -76.6429825, z: -222.060013}
-    subways: 29000000
-    reversedWays: 17000000
-    handles:
-    - {x: 172.651871, y: -66.6906738, z: -402.22052}
-    - {x: 172.607803, y: -65.5952911, z: -399.499512}
-    localHandles:
-    - {x: -24.2481232, y: -77.1906738, z: -223.420517}
-    - {x: -24.2921906, y: -76.0952911, z: -220.699509}
-    segments:
-    - .00522698089
-  - method: 
-    localPosition: {x: -61.6533203, y: -83.9653168, z: -313.162354}
-    subways: 2a000000
-    reversedWays: 28000000
-    handles:
-    - {x: 134.678802, y: -73.5765457, z: -493.346191}
-    - {x: 135.814545, y: -73.3540878, z: -490.578491}
-    localHandles:
-    - {x: -62.2211914, y: -84.0765457, z: -314.546204}
-    - {x: -61.0854492, y: -83.8540878, z: -311.778503}
-    segments:
-    - .0047278977
-  - method: 
-    localPosition: {x: -105.602592, y: -89.118454, z: -414.502502}
-    subways: 2b000000
-    reversedWays: 29000000
-    handles:
-    - {x: 90.8133087, y: -78.1579895, z: -601.919312}
-    - {x: 91.7815018, y: -79.0347672, z: -585.456604}
-    localHandles:
-    - {x: -106.086685, y: -88.6579895, z: -423.119324}
-    - {x: -105.118492, y: -89.5347672, z: -406.656616}
-    segments:
-    - .00424798252
-  - method: 
-    localPosition: {x: -151.139481, y: -80.4053879, z: -541.275696}
-    subways: 2c000000
-    reversedWays: 2a000000
-    handles:
-    - {x: 19.0763702, y: -65.6489105, z: -760.721741}
-    - {x: 82.5753021, y: -75.0914764, z: -669.559448}
-    localHandles:
-    - {x: -177.823624, y: -76.1489105, z: -581.921753}
-    - {x: -114.324692, y: -85.5914764, z: -490.75946}
-    segments:
-    - .00574560883
-  - method: 
-    localPosition: {x: -208.131668, y: -74.8270645, z: -617.049011}
-    subways: 2d000000
-    reversedWays: 2b000000
-    handles:
-    - {x: -53.1716309, y: -64.8243866, z: -815.96228}
-    - {x: 8.2645874, y: -64.6185913, z: -775.735718}
-    localHandles:
-    - {x: -250.071625, y: -75.3243866, z: -637.162292}
-    - {x: -188.635406, y: -75.1185913, z: -596.93573}
-    segments:
-    - .00832229108
-  - method: 
-    localPosition: {x: -270.750824, y: -79.0673447, z: -650.622681}
-    subways: 2e000000
-    reversedWays: 2c000000
-    handles:
-    - {x: -129.214966, y: -78.0421829, z: -864.934692}
-    - {x: -36.7445831, y: -61.3702011, z: -807.326599}
-    localHandles:
-    - {x: -326.11496, y: -88.5421829, z: -686.134705}
-    - {x: -233.644577, y: -71.8702011, z: -628.526611}
-    segments:
-    - .00354670966
-  - method: 
-    localPosition: {x: -390.528809, y: -118.011795, z: -726.759827}
-    subways: 2f000000
-    reversedWays: 2d000000
-    handles:
-    - {x: -207.623566, y: -114.625824, z: -904.059814}
-    - {x: -172.450226, y: -99.2531967, z: -907.059814}
-    localHandles:
-    - {x: -404.52356, y: -125.125824, z: -725.259827}
-    - {x: -369.35022, y: -109.753197, z: -728.259827}
-    segments:
-    - .00228559575
-  - method: 
-    localPosition: {x: -597.132935, y: -181.486633, z: -807.439392}
-    subways: 30000000
-    reversedWays: 2e000000
-    handles:
-    - {x: -416.396027, y: -174.491425, z: -986.382263}
-    - {x: -374.186798, y: -164.676468, z: -986.096436}
-    localHandles:
-    - {x: -613.296021, y: -184.991425, z: -807.582275}
-    - {x: -571.086792, y: -175.176468, z: -807.296448}
-    segments:
-    - .00701484177
-  - method: 
-    localPosition: {x: -675.04541, y: -196.621948, z: -815.816101}
-    subways: 31000000
-    reversedWays: 2f000000
-    handles:
-    - {x: -501.033722, y: -190.339478, z: -999.143188}
-    - {x: -449.156158, y: -180.940292, z: -1000.07239}
-    localHandles:
-    - {x: -697.933716, y: -200.839478, z: -820.343201}
-    - {x: -646.056152, y: -191.440292, z: -821.2724}
-    segments:
-    - .00471902359
-  - method: 
-    localPosition: {x: -695.508667, y: -194.404388, z: -718.5271}
-    subways: 32000000
-    reversedWays: 30000000
-    handles:
-    - {x: -453.444366, y: -177.700867, z: -909.827698}
-    - {x: -520.564819, y: -186.959778, z: -897.327209}
-    localHandles:
-    - {x: -650.34436, y: -188.200867, z: -731.02771}
-    - {x: -717.464844, y: -197.459778, z: -718.527222}
-    segments:
-    - .00651252409
-  - method: 
-    localPosition: {x: -653.563477, y: -178.203888, z: -662.294922}
-    subways: 3300000038000000
-    reversedWays: 31000000
-    handles:
-    - {x: -389.50705, y: -154.992706, z: -825.436462}
-    - {x: -456.663483, y: -167.703888, z: -839.59491}
-    - {x: -506.501556, y: -173.505341, z: -843.157715}
-    localHandles:
-    - {x: -586.407043, y: -165.492706, z: -646.636475}
-    - {x: -653.563477, y: -178.203888, z: -660.794922}
-    - {x: -703.40155, y: -184.005341, z: -664.357727}
-    segments:
-    - .00195911061
-    - .488345742
-  - method: 
-    localPosition: {x: -405.167175, y: -118.03186, z: -609.557617}
-    subways: 34000000
-    reversedWays: 32000000
-    handles:
-    - {x: -207.007538, y: -106.869583, z: -787.630981}
-    - {x: -209.526825, y: -108.194183, z: -789.084412}
-    localHandles:
-    - {x: -403.907532, y: -117.369583, z: -608.830994}
-    - {x: -406.426819, y: -118.694183, z: -610.284424}
-    segments:
-    - .00455407519
-  - method: 
-    localPosition: {x: -301.272125, y: -83.8505478, z: -637.220581}
-    subways: 35000000
-    reversedWays: 33000000
-    handles:
-    - {x: -104.372131, y: -73.3505478, z: -814.520569}
-    - {x: -104.372131, y: -73.3505478, z: -817.520569}
-    localHandles:
-    - {x: -301.272125, y: -83.8505478, z: -635.720581}
-    - {x: -301.272125, y: -83.8505478, z: -638.720581}
-    segments:
-    - .00420492794
-  - method: 
-    localPosition: {x: -180.49704, y: -73.8050003, z: -620.366821}
-    subways: 36000000
-    reversedWays: 34000000
-    handles:
-    - {x: 16.4029541, y: -63.3050003, z: -797.666809}
-    - {x: 16.4029541, y: -63.3050003, z: -800.666809}
-    localHandles:
-    - {x: -180.49704, y: -73.8050003, z: -618.866821}
-    - {x: -180.49704, y: -73.8050003, z: -621.866821}
-    segments:
-    - .00411998248
-  - method: 
-    localPosition: {x: -67.3461914, y: -83.0411453, z: -567.594421}
-    subways: 37000000
-    reversedWays: 35000000
-    handles:
-    - {x: 130.909515, y: -72.6518097, z: -745.762146}
-    - {x: 128.19809, y: -72.430481, z: -747.026672}
-    localHandles:
-    - {x: -65.9904785, y: -83.1518097, z: -566.962158}
-    - {x: -68.7019043, y: -82.930481, z: -568.226685}
-    segments:
-    - .0100867525
-  - method: 
-    localPosition: {x: -16.8891449, y: -82.0944061, z: -556.963135}
-    subways: 27000000
-    reversedWays: 36000000
-    handles:
-    - {x: 185.177948, y: -71.7041626, z: -736.679443}
-    - {x: 173.667496, y: -71.8617401, z: -727.678467}
-    localHandles:
-    - {x: -11.7220459, y: -82.2041626, z: -557.879456}
-    - {x: -23.2324982, y: -82.3617401, z: -548.878479}
-    segments:
-    - .0143986242
-  - method: 
-    localPosition: {x: -653.563477, y: -178.203888, z: -661.294922}
-    subways: 
-    reversedWays: 32000000
-    handles:
-    - {x: -456.663483, y: -167.703888, z: -841.59491}
-    localHandles:
-    - {x: -653.563477, y: -178.203888, z: -662.794922}
-    segments: []
-  resolution: 2
 --- !u!1 &1200089795 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 3b492600eb4189347817ee83090b4e07, type: 3}
@@ -34275,7 +33761,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 37510050}
+    m_TransformParent: {fileID: 331189405}
     m_Modifications:
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: node.Array.size
@@ -34287,15 +33773,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -55.5031738
+      value: 160.311722
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -5.35843706
+      value: -2.61090803
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 15.5569611
+      value: 7.02450562
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalRotation.x
@@ -34336,7 +33822,7 @@ Prefab:
     - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: splineWindow
       value: 
-      objectReference: {fileID: 37510049}
+      objectReference: {fileID: 0}
     - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: events.Array.data[2].m_TypeName
       value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -34370,7 +33856,7 @@ Prefab:
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: sploot
       value: 
-      objectReference: {fileID: 37510049}
+      objectReference: {fileID: 0}
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: approximate
       value: 8
@@ -35231,7 +34717,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 37510050}
+    m_TransformParent: {fileID: 331189405}
     m_Modifications:
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: node.Array.size
@@ -35243,15 +34729,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -292.693665
+      value: -76.8787766
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.52088976
+      value: -1.77336073
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 52.7299652
+      value: 44.1975098
       objectReference: {fileID: 0}
     - target: {fileID: 417928, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: m_LocalRotation.x
@@ -35292,7 +34778,7 @@ Prefab:
     - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: splineWindow
       value: 
-      objectReference: {fileID: 37510049}
+      objectReference: {fileID: 0}
     - target: {fileID: 11449356, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: events.Array.data[2].m_TypeName
       value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -35326,7 +34812,7 @@ Prefab:
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: sploot
       value: 
-      objectReference: {fileID: 37510049}
+      objectReference: {fileID: 0}
     - target: {fileID: 11475346, guid: 4f0c8395bfc794205b3a7ab7bd0acf40, type: 2}
       propertyPath: approximate
       value: 8
@@ -37099,7 +36585,7 @@ Transform:
   m_Children:
   - {fileID: 354448230}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
 --- !u!1001 &1793273730
 Prefab:
   m_ObjectHideFlags: 0
@@ -40849,7 +40335,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 54ea8fe8e1adc46469ce1344d795f5ef, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54ea8fe8e1adc46469ce1344d795f5ef, type: 3}
