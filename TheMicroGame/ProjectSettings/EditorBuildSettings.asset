@@ -5,7 +5,5 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Main.unity
   - enabled: 1
-    path: Assets/Demi-MAin.unity
+    path: Assets/Main Plus.unity

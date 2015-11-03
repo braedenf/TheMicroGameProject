@@ -79,6 +79,10 @@ public class GameManagement : MonoBehaviour
 	 gameState ^= GameState.discovery; 
 	 }
 
+    if (Input.GetKeyDown (KeyCode.R) )
+    Application.LoadLevel (0);
+	
+
 	// ----------  ----------    ----------   ---------- //
 	// References Whether The Gallery State Has Been Activated
 	// - Expresses All Necessiary Gallery Attributes
