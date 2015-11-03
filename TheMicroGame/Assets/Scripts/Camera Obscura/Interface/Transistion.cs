@@ -139,11 +139,10 @@ public class Transistion : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	// Defines The Quantity Of Sprites Within The Sprite List
 	int counter       = GameDirectory.photographic.Count - 1;
-	
-	
+
 	// ----------  ----------    ----------   ---------- //
 	// Manuvers Through The Image Interface At All Whim Of The Conducter
-	if (Input.GetKeyDown (KeyCode.DownArrow) )
+	if (Input.GetAxis ("Down") == 1)
 	if (discover < counter)
 	{
 	float distance  = (seperation / 100.00f) * Screen.height;
@@ -157,9 +156,10 @@ public class Transistion : MonoBehaviour
 	
 	
 	// ----------  ----------    ----------   ---------- //
-	if (Input.GetKeyDown (KeyCode.UpArrow) )
+	if (Input.GetAxis ("Down") == -1)
 	if (discover > zero)
 	{
+
 	float distance  = (seperation / 100.00f) * Screen.height;
 	Vector3 point   = parent.transform.position;
 	// ----------  ----------    ----------   ---------- //
@@ -177,7 +177,7 @@ public class Transistion : MonoBehaviour
 	{
 	illustration.GetComponent <Image> ().sprite  = GameDirectory.photographic [discover].sprite;
 	description.GetComponent  <Text>  ().text    = GameDirectory.photographic [discover].text;
-	title.GetComponent        <Text>  ().text    = GameDirectory.photographic [discover].creature;
+	//title.GetComponent        <Text>  ().text    = GameDirectory.photographic [discover].creature;
 	}
 
 	

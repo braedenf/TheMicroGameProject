@@ -73,8 +73,8 @@ public class CameraBehaviour : MonoBehaviour
 	// - Attaches A Visual Component To The Audience Interface With The Incorporated Sprite
 	time        += Time.deltaTime;
 	// ----------  ----------    ----------   ---------- //
-    if (Input.GetMouseButtonDown (0)  )
 	if (time    >= buffer)
+    if (Input.GetAxis ("Capture") != zero )
 	{
 	StartCoroutine ("Photography");
 	time         = zero;

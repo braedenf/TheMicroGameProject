@@ -70,7 +70,8 @@ public class GameManagement : MonoBehaviour
 	
 	// ----------  ----------    ----------   ---------- //
 	// Toggles The Game State Depending On Audience Interaction
-	 if (Input.GetMouseButtonDown (1) )
+
+	 if (Input.GetButtonDown ("Mode"))
 	 {
 	 gameState ^= GameState.gallery;
 	 gameState ^= GameState.discovery; 
