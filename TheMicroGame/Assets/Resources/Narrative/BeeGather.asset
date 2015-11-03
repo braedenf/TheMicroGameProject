@@ -15,6 +15,6 @@ MonoBehaviour:
   state: gather
   interaction: 
   quality: 1000
-  text: 
+  text: vvvhvj
   transistion: snappedBeeGather
-  destructable: 0
+  destructable: 1

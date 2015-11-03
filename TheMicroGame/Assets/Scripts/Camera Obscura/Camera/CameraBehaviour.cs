@@ -167,7 +167,7 @@ public class CameraBehaviour : MonoBehaviour
 //        Debug.Log (GameDirectory.photographic [counter].scoreboard);
 		// ----------  ----------    ----------   ---------- //
 		// Figures Out Whether The Creature Is Visible
-		if (GameDirectory.photographic [counter].scoreboard == zero)
+		if (GameDirectory.photographic [counter].scoreboard <= 250.00f)
 		creature  = null;
 
 		// ----------  ----------    ----------   ---------- //
@@ -189,6 +189,10 @@ public class CameraBehaviour : MonoBehaviour
 	    if (narrative != null)
 	    GameDirectory.photographic [counter].transistion  =  narrative.transistion;
 	    GameDirectory.photographic [counter].text         =  narrative.text;
+	    
+	    
+	    if (narrative.destructable)
+		NarrativeManagement.narrative.Remove (narrative);
 		}
 		// ----------  ----------    ----------   ---------- //
 		else
@@ -200,8 +204,8 @@ public class CameraBehaviour : MonoBehaviour
 	    GameDirectory.photographic [counter].text         =  narrative.text;
 	    
 		}
-
-		
+        
+       
 		// ----------  ----------    ----------   ---------- //
 		// Progresssively Links The Counter With The Current Length Of The "GameDirectory.photographic" List
 		counter ++;

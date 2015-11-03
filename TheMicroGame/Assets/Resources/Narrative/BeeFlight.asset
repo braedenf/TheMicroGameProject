@@ -15,6 +15,6 @@ MonoBehaviour:
   state: flight
   interaction: 
   quality: 1000
-  text: 
+  text: vvvhvj
   transistion: snappedBeeFlying
-  destructable: 0
+  destructable: 1
