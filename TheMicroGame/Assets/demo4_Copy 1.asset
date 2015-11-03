@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 004f13b5120f2ba4f82b355eb1e305e9, type: 3}
-  m_Name: demo4
+  m_Name: demo4_Copy 1
   m_EditorClassIdentifier: 
   waypoints:
   - method: 
@@ -24,36 +24,36 @@ MonoBehaviour:
     - {x: -5, y: 0, z: -10}
     segments: []
   - method: 
-    localPosition: {x: 10, y: 0, z: -2.38418579e-07}
+    localPosition: {x: 10, y: 0, z: 0}
     subways: 02000000
     reversedWays: 00000000
     handles:
     - {x: 0, y: 0, z: 0}
     - {x: 0, y: 0, z: 0}
     localHandles:
-    - {x: 10, y: 0, z: 5}
-    - {x: 10, y: 0, z: -5}
+    - {x: 10, y: 0, z: 5.00000095}
+    - {x: 10, y: 0, z: -4.99999952}
     segments: []
   - method: 
-    localPosition: {x: 0, y: 0, z: 10}
+    localPosition: {x: 0, y: 0, z: 10.000001}
     subways: 03000000
     reversedWays: 01000000
     handles:
     - {x: 0, y: 0, z: 0}
     - {x: 0, y: 0, z: 0}
     localHandles:
-    - {x: -5, y: 0, z: 10}
-    - {x: 5, y: 0, z: 10}
+    - {x: -5, y: 0, z: 10.000001}
+    - {x: 5, y: 0, z: 10.000001}
     segments: []
   - method: 
-    localPosition: {x: -10, y: 0, z: -2.38418579e-07}
+    localPosition: {x: -10, y: 0, z: 0}
     subways: 00000000
     reversedWays: 02000000
     handles:
     - {x: 0, y: 0, z: 0}
     - {x: 0, y: 0, z: 0}
     localHandles:
-    - {x: -10, y: 0, z: -5}
-    - {x: -10, y: 0, z: 5}
+    - {x: -10, y: 0, z: -4.99999952}
+    - {x: -10, y: 0, z: 5.00000095}
     segments: []
   resolution: 2
