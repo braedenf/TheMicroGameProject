@@ -14,6 +14,7 @@ public class RaycastBehaviour : MonoBehaviour
 	// Defines All  Public Attributes That Can Be Manipulated By The Game Designer
 	public Camera    camera; 
 	public Animator  animate;
+	public Animator  pause;
 	// ----------  ----------    ----------   ---------- //
 	[ Range (0, 5)    ] public float speed;
 	[ Range (0, 1000) ] public float visibility;

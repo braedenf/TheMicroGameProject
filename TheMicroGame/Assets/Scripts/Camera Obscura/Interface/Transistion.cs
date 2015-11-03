@@ -142,7 +142,7 @@ public class Transistion : MonoBehaviour
 
 	// ----------  ----------    ----------   ---------- //
 	// Manuvers Through The Image Interface At All Whim Of The Conducter
-	if (Input.GetAxis ("Down") == 1)
+		if (Input.GetAxis ("Down") == 1 || Input.GetButton ("Down") )
 	if (discover < counter)
 	{
 	float distance  = (seperation / 100.00f) * Screen.height;
@@ -156,7 +156,7 @@ public class Transistion : MonoBehaviour
 	
 	
 	// ----------  ----------    ----------   ---------- //
-	if (Input.GetAxis ("Down") == -1)
+		if (Input.GetAxis ("Down") == -1 ||  Input.GetButton ("Up") )
 	if (discover > zero)
 	{
 
