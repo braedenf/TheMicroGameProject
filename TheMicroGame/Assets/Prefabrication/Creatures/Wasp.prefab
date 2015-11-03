@@ -242,7 +242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &179560
 GameObject:
   m_ObjectHideFlags: 1
@@ -388,7 +388,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178600}
   m_LocalRotation: {x: 0, y: .887010932, z: 0, w: .461748511}
-  m_LocalPosition: {x: -9.60000038, y: 2.79999995, z: -3.19000006}
+  m_LocalPosition: {x: -41.9164352, y: 7.70193195, z: 68.4820709}
   m_LocalScale: {x: 1, y: .800000012, z: 1.60000002}
   m_Children:
   - {fileID: 430520}
@@ -1104,7 +1104,7 @@ MonoBehaviour:
     rythm: 1
     transistion: {x: 140, y: 180}
     loop: {x: 180, y: 236}
-  motion: 8
+  motion: 16
 --- !u!114 &11462862
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1116,8 +1116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0587bc8d57bd4688a3ddc660e25e58f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  creature: wasp
-  state: idle
+  creature: bee
+  state: 
   interaction: 
 --- !u!1001 &100100000
 Prefab:

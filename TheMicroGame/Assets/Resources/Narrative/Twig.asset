@@ -9,12 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38e1bf2b6b3764c3485a88a3d14ff8ec, type: 3}
-  m_Name: Wasp O2
+  m_Name: Twig
   m_EditorClassIdentifier: 
-  creature: wasp
+  creature: twig
   state: 
   interaction: 
-  quality: 600
-  text: "Much like dragons and similar such creatures, \nwasps are prone to becoming
-    drowsy"
-  transistion: mediumSnap
+  quality: 662
+  text: 'What''s brown and sticky?
+
+
+'
+  transistion: snappedTwig
+  destructable: 1

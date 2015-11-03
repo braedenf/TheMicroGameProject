@@ -105,7 +105,7 @@ public class CameraBehaviour : MonoBehaviour
 		creature = this.gameObject.GetComponent <RaycastBehaviour> ().creature;
 		
 		
-		Debug.Log (creature);
+//		Debug.Log (creature);
 		
     	
 		// ----------  ----------    ----------   ---------- //
@@ -147,7 +147,7 @@ public class CameraBehaviour : MonoBehaviour
 		// ----------  ----------    ----------   ---------- //
 		// Calculates The Remaining Visiblity Of The Mesh Within The Active Viewport
 		vertice                = camera.raycast (vertice, vision, creature); 
-			Debug.Log  (vertice.Count);
+//			Debug.Log  (vertice.Count);
 		// ----------  ----------    ----------   ---------- //
 		// Transfers The Calculated Photograph Percentage And Positions It Alongside The Photograph
 		float count            = Mathematics.Percentage (vertice.Count, difference); 
@@ -157,7 +157,7 @@ public class CameraBehaviour : MonoBehaviour
 		}
 
 
-        Debug.Log (GameDirectory.photographic [counter].scoreboard);
+//        Debug.Log (GameDirectory.photographic [counter].scoreboard);
 		// ----------  ----------    ----------   ---------- //
 		// Figures Out Whether The Creature Is Visible
 		if (GameDirectory.photographic [counter].scoreboard == zero)

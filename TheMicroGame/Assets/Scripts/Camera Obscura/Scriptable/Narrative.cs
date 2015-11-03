@@ -19,5 +19,6 @@ public string    interaction;
 [Multiline] public string    text;
 // ----------  ----------    ----------   ---------- //
 public string    transistion;
+public bool      destructable;
 
 }

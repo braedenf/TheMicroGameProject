@@ -9,11 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38e1bf2b6b3764c3485a88a3d14ff8ec, type: 3}
-  m_Name: Wasp O3
+  m_Name: Mushroom
   m_EditorClassIdentifier: 
-  creature: wasp
+  creature: mushroom
   state: 
   interaction: 
-  quality: 600
-  text: hhh
-  transistion: mediumSnap
+  quality: 662
+  text: 'What''s brown and sticky?
+
+
+'
+  transistion: snappedRedMushroom
+  destructable: 1
