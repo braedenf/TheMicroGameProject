@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e1bf2b6b3764c3485a88a3d14ff8ec, type: 3}
   m_Name: Twig 01
   m_EditorClassIdentifier: 
-  creature: Twig
+  creature: twig
   state: 
   interaction: 
   quality: 600

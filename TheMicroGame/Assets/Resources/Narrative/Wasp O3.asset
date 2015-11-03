@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Wasp O3
   m_EditorClassIdentifier: 
   creature: wasp
-  state: gather
+  state: 
   interaction: 
   quality: 900
   text: "Wasps will often patrol their kingdom\nin defence against omnious forces.

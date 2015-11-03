@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Wasp O2
   m_EditorClassIdentifier: 
   creature: wasp
-  state: flight
+  state: 
   interaction: 
   quality: 600
   text: "Much like dragons and similar such creatures, \nwasps are prone to becoming

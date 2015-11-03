@@ -177,7 +177,9 @@ public class Transistion : MonoBehaviour
 	{
 	illustration.GetComponent <Image> ().sprite  = GameDirectory.photographic [discover].sprite;
 	description.GetComponent  <Text>  ().text    = GameDirectory.photographic [discover].text;
-	//title.GetComponent        <Text>  ().text    = GameDirectory.photographic [discover].creature;
+	// ----------  ----------    ----------   ---------- //
+	if (title.GetComponent        <Text>  ().text != null)
+	title.GetComponent        <Text>  ().text    = GameDirectory.photographic [discover].creature;
 	}
 
 	

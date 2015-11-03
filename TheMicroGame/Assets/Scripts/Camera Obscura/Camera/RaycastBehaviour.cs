@@ -27,7 +27,11 @@ public class RaycastBehaviour : MonoBehaviour
 	// ----------  ----------    ----------   ---------- //
 	private int       counter;
 	// ----------  ----------    ----------   ---------- //
+	private float     time;
+	// ----------  ----------    ----------   ---------- //
 	private string    name;
+	// ----------  ----------    ----------   ---------- //
+	private bool      active;
 	
 	
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
@@ -53,6 +57,8 @@ public class RaycastBehaviour : MonoBehaviour
     // ----------  ----------    ----------   ---------- //
 	// Defines The Animation Transistion Speed
 	animate.speed = 0.00f;
+	pause.speed   = 0.00f;
+
 
 	}
 	
@@ -71,8 +77,28 @@ public class RaycastBehaviour : MonoBehaviour
 	if (counter < GameDirectory.photographic.Count)
 	{
     animate.Play ("Transistion", -1, 0); 
-    animate.speed = speed;
+	// ----------  ----------    ----------   ---------- //
+	animate.speed = speed;
+	// ----------  ----------    ----------   ---------- //
+	active        = true;
     }
+    
+    // ----------  ----------    ----------   ---------- //
+    // Defines The Camera Buffer Animation
+    if (active  == true)
+    {
+    time        += Time.deltaTime;
+    if (time    >= 0.8f)
+    {
+    pause.Play   ("Pause", -1, 0); 
+    pause.speed   = speed;
+    time          = 0.00f;
+	active        = false;
+    }
+    }
+    
+    // ----------  ----------    ----------   ---------- //
+    if (counter < GameDirectory.photographic.Count)
     
   
 	

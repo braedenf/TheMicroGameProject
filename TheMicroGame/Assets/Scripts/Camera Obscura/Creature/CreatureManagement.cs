@@ -26,7 +26,7 @@ public class CreatureManagement
 	    set  
 	    { 
 	    creatures.Add (value);  
-	    // print ( creatures [creatures.Count - 1].name); 
+	     Debug.Log ( creatures [creatures.Count - 1].name); 
 	    }	
 	    	
 	    } 
