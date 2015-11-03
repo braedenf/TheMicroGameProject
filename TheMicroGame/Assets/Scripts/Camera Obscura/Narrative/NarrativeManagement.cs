@@ -51,7 +51,11 @@ public static class NarrativeManagement
 	// ----------  ----------    ----------   ---------- //
 	foreach (Narrative item in narrative) 
 	{
-
+	
+    // ----------  ----------    ----------   ---------- //
+    if (String.IsNullOrEmpty (creature) )
+    creature         = "emptiness";
+    
 	// ----------  ----------    ----------   ---------- //
 	if (creature    == item.creature         || string.IsNullOrEmpty (item.creature)    )
 	if (state       == item.state            || string.IsNullOrEmpty (item.state)       )

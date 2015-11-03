@@ -9,16 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38e1bf2b6b3764c3485a88a3d14ff8ec, type: 3}
-  m_Name: Wasp O1
+  m_Name: Wasp O3
   m_EditorClassIdentifier: 
   creature: wasp
-<<<<<<< HEAD
   state: 
-=======
-  state: walk
->>>>>>> origin/master
   interaction: 
-  quality: 312
-  text: "Though mostly airbourne, \nwasps will occasionally wander around \nto both
-    rest their wings \nand mark their terrority"
-  transistion: badSnap
+  quality: 600
+  text: hhh
+  transistion: mediumSnap

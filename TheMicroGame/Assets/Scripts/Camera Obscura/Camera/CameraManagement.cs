@@ -37,19 +37,19 @@ public class CameraObscura
 	public List <Vector3> visibility (GameObject creature, Camera camera)
 	{
 	
-	Transform      transform              = creature.transform;
+	Transform      transform               = creature.transform;
 	// ----------  ----------    ----------   ---------- //
 	Plane [ ]       planes                 = GeometryUtility.CalculateFrustumPlanes (camera);
 	// ----------  ----------    ----------   ---------- //
 	int             length                 =  (planes.GetLength (0) - 1);
 	// ----------  ----------    ----------   ---------- //
-	var  points                           = creature.GetComponent <MeshFilter> ().mesh.vertices.ToList ();
+	var  points                            = creature.GetComponent <MeshFilter> ().mesh.vertices.ToList ();
 	
 
 	// ----------  ----------    ----------   ---------- //
 	// References Whether An Individual Mesh Vertice Is Visible To The Selected Camera
 	// - Calculates The Score Percentage System For The Taken Photograph
-	for (int vertex = 0; vertex < (points.Count - 1.00f); vertex ++)
+	for (int vertex = 0; vertex < (points.Count); vertex ++)
 	{
 	
 	for (int item   = 0; item   < length; item ++)
@@ -104,6 +104,7 @@ public class CameraObscura
 	if (Physics.Linecast (origin, destination, out collision))
 	{
 	
+
 	// ----------  ----------    ----------   ---------- //
 	if (collision.transform.name != attribute.transform.name)
 	{

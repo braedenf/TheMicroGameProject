@@ -9,9 +9,7 @@ public class CameraBehaviour : MonoBehaviour
 {
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All  Public Attributes That'll Be Run On Within The "Camera Obscura" Class
-	public Canvas          canvas;
 	public Canvas          tutorial;
-	public RectTransform   display;
 	// ----------  ----------    ----------   ---------- //
 	public Camera          vision;
 	// ----------  ----------    ----------   ---------- //
@@ -51,12 +49,6 @@ public class CameraBehaviour : MonoBehaviour
 	// Sets A Fresh Cross-Dimensional Link To The "Camera Obscura" Class
 	camera = new CameraObscura ();
 	
-	// ----------  ----------    ----------   ---------- //
-	// References Whether The Necessiary Attributes Have Been Selected 
-	if (canvas  == null)
-	print ("apply the camera interface here");
-	if (display == null)
-	print ("apply the photograph prefabrication here");
 	
 	}
 	
@@ -113,6 +105,8 @@ public class CameraBehaviour : MonoBehaviour
 		creature = this.gameObject.GetComponent <RaycastBehaviour> ().creature;
 		
 		
+		Debug.Log (creature);
+		
     	
 		// ----------  ----------    ----------   ---------- //
 		// Captures A Screenshot From The Active Camera 
@@ -135,18 +129,6 @@ public class CameraBehaviour : MonoBehaviour
 		// ----------  ----------    ----------   ---------- //
 		GameDirectory.photographic [counter].sprite  = sprite;
 		
-		// ----------  ----------    ----------   ---------- //
-		// Due To The Step-By-Step Shenangins - This Process May Become A Little Finnicky,
-		// So Consistent Care Should Be Retained When Handelling This Code
-		// Attaches The Visual Component To A Staticallly Available List Function
-//	    var representation     = Instantiate (display);
-//		var distinction        = representation.transform.GetChild (1).GetChild (0);
-		// ----------  ----------    ----------   ---------- //
-//		representation.transform.SetParent (canvas.transform, false);
-		// ----------  ----------    ----------   ---------- //
-//        distinction.GetComponent <Image> ().sprite   =   photographic  [ (int) (photographic.Count - 1.00f) ];
-		// ----------  ----------    ----------   ---------- //
-//        GameDirectory.photographic [counter].representation  = representation;
 
 			
 		// ----------  ----------    ----------   ---------- //
@@ -159,22 +141,27 @@ public class CameraBehaviour : MonoBehaviour
 		float difference       = creature.GetComponent <MeshFilter> ().mesh.vertices.Length;
 		List <Vector3> vertice = camera.visibility (creature, vision);
 		
+		
+	
+		
 		// ----------  ----------    ----------   ---------- //
 		// Calculates The Remaining Visiblity Of The Mesh Within The Active Viewport
-		vertice                = camera.raycast (vertice, vision, creature);
-		
+		vertice                = camera.raycast (vertice, vision, creature); 
+			Debug.Log  (vertice.Count);
 		// ----------  ----------    ----------   ---------- //
 		// Transfers The Calculated Photograph Percentage And Positions It Alongside The Photograph
 		float count            = Mathematics.Percentage (vertice.Count, difference); 
 		count                  = (int) count * 10;
 		// ----------  ----------    ----------   ---------- //
-//        distinction            = representation.transform.GetChild (2);
-		// ----------  ----------    ----------   ---------- //
-//        distinction.GetComponent <Text> ().text  = (count + "   " + "pts");
-		// ----------  ----------    ----------   ---------- //
 		GameDirectory.photographic [counter].scoreboard = (int) count;
 		}
 
+
+        Debug.Log (GameDirectory.photographic [counter].scoreboard);
+		// ----------  ----------    ----------   ---------- //
+		// Figures Out Whether The Creature Is Visible
+		if (GameDirectory.photographic [counter].scoreboard == zero)
+		creature  = null;
 
 		// ----------  ----------    ----------   ---------- //
         // Defines The "Narrative" Audio Recording That'll Play In Response To The Photographic Discovery

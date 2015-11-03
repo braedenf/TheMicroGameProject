@@ -20,13 +20,12 @@ public class StateManagement : MonoBehaviour
 
 	// -----------------     ----------------     ----------------     ----------------    ----------------     ----------------      // 
 	// Defines All Attributes And Instances That'll Be Run On Awake
-	void Awake () 
+	void Start () 
 	{
 	
 	// ----------  ----------    ----------   ---------- //
 	// Attaches The Specified Creature To The 'Creature Management' Creature List
-	CreatureManagement.Heirachy creatureManagement   =  new CreatureManagement.Heirachy ();
-	creatureManagement.creature                      =  this.gameObject;
+	CreatureManagement.Heirachy (this.gameObject);
 	
 	// ----------  ----------    ----------   ---------- //
 	// Defines All Necessiary Attributes
