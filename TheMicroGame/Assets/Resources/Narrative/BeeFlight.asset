@@ -17,4 +17,4 @@ MonoBehaviour:
   quality: 1000
   text: vvvhvj
   transistion: snappedBeeFlying
-  destructable: 1
+  destructable: 0

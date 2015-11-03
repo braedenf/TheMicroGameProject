@@ -20,4 +20,4 @@ MonoBehaviour:
 
 '
   transistion: random
-  destructable: 1
+  destructable: 0

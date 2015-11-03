@@ -20,4 +20,4 @@ MonoBehaviour:
 
 '
   transistion: snappedFlax
-  destructable: 0
+  destructable: 1
