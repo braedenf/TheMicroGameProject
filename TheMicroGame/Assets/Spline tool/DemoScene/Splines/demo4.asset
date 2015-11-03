@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Name: demo4
   m_EditorClassIdentifier: 
   waypoints:
-  - localPosition: {x: 0, y: 0, z: -10}
+  - method: 
+    localPosition: {x: 0, y: 0, z: -10}
     subways: 01000000
     reversedWays: 03000000
     handles:
@@ -22,7 +23,8 @@ MonoBehaviour:
     - {x: 5, y: 0, z: -10}
     - {x: -5, y: 0, z: -10}
     segments: []
-  - localPosition: {x: 10, y: 0, z: -2.38418579e-07}
+  - method: 
+    localPosition: {x: 10, y: 0, z: -2.38418579e-07}
     subways: 02000000
     reversedWays: 00000000
     handles:
@@ -32,7 +34,8 @@ MonoBehaviour:
     - {x: 10, y: 0, z: 5}
     - {x: 10, y: 0, z: -5}
     segments: []
-  - localPosition: {x: 0, y: 0, z: 10}
+  - method: 
+    localPosition: {x: 0, y: 0, z: 10}
     subways: 03000000
     reversedWays: 01000000
     handles:
@@ -42,7 +45,8 @@ MonoBehaviour:
     - {x: -5, y: 0, z: 10}
     - {x: 5, y: 0, z: 10}
     segments: []
-  - localPosition: {x: -10, y: 0, z: -2.38418579e-07}
+  - method: 
+    localPosition: {x: -10, y: 0, z: -2.38418579e-07}
     subways: 00000000
     reversedWays: 02000000
     handles:

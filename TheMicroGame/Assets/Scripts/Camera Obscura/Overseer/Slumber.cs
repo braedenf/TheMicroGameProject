@@ -14,6 +14,11 @@ public class Slumber : MonoBehaviour
 	{
 	
 	// ----------  ----------    ----------   ---------- //
+	// Nullifies All Static Attributes On Awake
+	CreatureManagement.creatures.Clear ();
+	NarrativeManagement.narrative.Clear ();
+	
+	// ----------  ----------    ----------   ---------- //
 	// Defines And Accesses The "NarrativeManagement" Script And Loads All Necessiary Narratives
 	bool narrative = NarrativeManagement.Load (); 
 	if (narrative  == false)
