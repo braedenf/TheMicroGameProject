@@ -9,12 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38e1bf2b6b3764c3485a88a3d14ff8ec, type: 3}
-  m_Name: Wasp O3
+  m_Name: RedMushroom 01
   m_EditorClassIdentifier: 
-  creature: wasp
-  state: gather
+  creature: RedMushroom
+  state: 
   interaction: 
-  quality: 900
-  text: "Wasps will often patrol their kingdom\nin defence against omnious forces.
-    \nThey're incredibly fierce, \nand quite appreciate a good battle too"
-  transistion: goodSnap
+  quality: 643
+  text: Amanita muscaria
+  transistion: snappedRedMushroom
